@@ -11,7 +11,25 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/public/img/burger_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/burger_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/croix_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/fleche_bas_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/fleche_bas_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/liste_envie_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/liste_envie_white.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo_noirblanc_png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/logo_png.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/search_black.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/search_white.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/forgot-password.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/auth/login.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/auth/login.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/profile/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/profile/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,10 +172,16 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../Sites_Laravel/cfp_rdv" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../wamp64/www/Extranet_Tremblaye" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
     <property name="settings.editor.selected.configurable" value="org.jetbrains.plugins.github.ui.GithubSettingsConfigurable" />
     <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
+    </key>
   </component>
   <component name="RunManager">
     <configuration name="phpunit.xml" type="PHPUnitRunConfigurationType" factoryName="PHPUnit">
@@ -174,7 +198,7 @@
       <option name="presentableId" value="Default" />
       <updated>1610620326395</updated>
       <workItem from="1610620327521" duration="1453000" />
-      <workItem from="1610997420942" duration="2633000" />
+      <workItem from="1610997420942" duration="7492000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -183,7 +207,14 @@
       <option name="project" value="LOCAL" />
       <updated>1610999946686</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="update 3 : test unversioned files">
+      <created>1611000188551</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1611000188551</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -202,13 +233,22 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Ajout JetStream" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout JetStream" />
+    <MESSAGE value="update 3 : test unversioned files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 3 : test unversioned files" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1610998895376">
+    <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611003190803">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1610998895376" />
+    <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1368.872@0.0.1368.872" timestamp="1611003190803" />
+    <state x="433" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611003844263">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="433" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1/0.0.1368.872@0.0.1368.872" timestamp="1611003844263" />
+    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1611003314826">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1611003314826" />
     <state x="561" y="338" key="Github.ShareDialog" timestamp="1610997876594">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -217,9 +257,28 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="186" y="81" key="SettingsEditor/0.0.1368.872@0.0.1368.872" timestamp="1610997858124" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1610999948795">
+    <state width="247" height="198" key="ShowFilterAction_Filter_Popup" timestamp="1611004067615">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1610999948795" />
+    <state width="247" height="198" key="ShowFilterAction_Filter_Popup/0.0.1368.872@0.0.1368.872" timestamp="1611004067615" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1611000191026">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1611000191026" />
+    <state x="353" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1611004095116">
+      <screen x="0" y="0" width="1368" height="872" />
+    </state>
+    <state x="353" y="190" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1611004095116" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="php">
+          <url>file://$PROJECT_DIR$/resources/views/navigation-menu.blade.php</url>
+          <line>196</line>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>
