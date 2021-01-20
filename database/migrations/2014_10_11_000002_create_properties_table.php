@@ -11,10 +11,19 @@ class CreatePropertiesTable extends Migration
      *
      * @return void
      */
+
     public function up()
     {
         Schema::create('properties', function (Blueprint $table) {
             $table->id();
+            $table->float('price');
+            $table->string('location');
+            $table->float('m²');
+            $table->integer('pieces');
+            $table->string('sate');
+            $table->year('year_construction');
+            $table->string('description');
+            $table->foreignId('propertiesCategories_id')->constrained();
             $table->timestamps();
         });
     }

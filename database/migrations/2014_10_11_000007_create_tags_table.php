@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePropertiesCategoriesTable extends Migration
+class CreateTagsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreatePropertiesCategoriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('propertiesCategories', function (Blueprint $table) {
+        Schema::create('tags', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug');
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreatePropertiesCategoriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('propertiesCategories');
+        Schema::dropIfExists('tags');
     }
 }
