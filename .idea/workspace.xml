@@ -12,12 +12,8 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_205455_create_properties_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000002_create_properties_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_205850_create_properties_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000001_create_properties_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_210002_create_pictures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000003_create_pictures_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_210043_create_articles_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000005_create_articles_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_210132_create_articles_categories_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000004_create_articles_categories_table.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_19_210154_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000007_create_tags_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_11_000006_create_course_tag_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000006_create_article_tag_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_11_000007_create_tags_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000005_create_tags_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -189,7 +185,7 @@
       <workItem from="1610620327521" duration="1453000" />
       <workItem from="1610997420942" duration="7579000" />
       <workItem from="1611086815584" duration="4911000" />
-      <workItem from="1611173754198" duration="3528000" />
+      <workItem from="1611173754198" duration="4135000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -226,7 +222,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611090169355</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="update migrations 2">
+      <created>1611177415852</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1611177415852</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -250,7 +253,8 @@
     <MESSAGE value="Header + header logo jetstream" />
     <MESSAGE value="Liens routes admin : OK" />
     <MESSAGE value="Nouvelles migrations de base" />
-    <option name="LAST_COMMIT_MESSAGE" value="Nouvelles migrations de base" />
+    <MESSAGE value="update migrations 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="update migrations 2" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611003190803">
@@ -277,10 +281,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="247" height="198" key="ShowFilterAction_Filter_Popup/0.0.1368.872@0.0.1368.872" timestamp="1611004067615" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1611090170962">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1611177417500">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1611090170962" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1611177417500" />
     <state x="353" y="190" width="672" height="678" key="search.everywhere.popup" timestamp="1611004095116">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
