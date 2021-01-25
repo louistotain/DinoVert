@@ -17,38 +17,33 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                    <x-jet-nav-link href="{{ route('properties') }}">
                         Biens
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                    <x-jet-nav-link href="{{ route('pictures') }}">
                         Photos biens
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden spsace-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                    <x-jet-nav-link href="{{ route('properties_categories') }}">
                         Catégories biens
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                    <x-jet-nav-link href="{{ route('articles') }}">
                         Articles
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                    <x-jet-nav-link href="{{ route('articles_categories') }}">
                         Catégories articles
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
+                    <x-jet-nav-link href="{{ route('tags') }}">
                         Tags
-                    </x-jet-nav-link>
-                </div>
-                <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('dashboard') }}">
-                        Contact
                     </x-jet-nav-link>
                 </div>
             </div>
@@ -265,3 +260,5 @@
         </div>
     </div>
 </nav>
+
+@yield('content')

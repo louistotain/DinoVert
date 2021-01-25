@@ -19,7 +19,7 @@ class CreateArticlesTable extends Migration
             $table->string('description');
             $table->string('slug');
             $table->string('url_picture');
-            $table->foreignId('articlesCategories_id')->constrained();
+            $table->foreignId('articlescategs_id')->constrained();
             $table->timestamps();
         });
     }

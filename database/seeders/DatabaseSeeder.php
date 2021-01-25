@@ -2,7 +2,11 @@
 
 namespace Database\Seeders;
 
+use App\Models\Picture;
+use App\Models\Property;
+use App\Models\Propertiescateg;
 use Illuminate\Database\Seeder;
+use App\Models\User;
 
 class DatabaseSeeder extends Seeder
 {
@@ -11,8 +15,12 @@ class DatabaseSeeder extends Seeder
      *
      * @return void
      */
+
     public function run()
     {
-        // \App\Models\User::factory(10)->create();
+        User::factory(1)->create();
+        Propertiescateg::factory(3)->create();
+        Property::factory(4)->create();
+        Picture::factory(10)->create();
     }
 }

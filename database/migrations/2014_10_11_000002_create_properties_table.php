@@ -20,10 +20,10 @@ class CreatePropertiesTable extends Migration
             $table->string('location');
             $table->float('m²');
             $table->integer('pieces');
-            $table->string('sate');
+            $table->string('state');
             $table->year('year_construction');
             $table->string('description');
-            $table->foreignId('propertiesCategories_id')->constrained();
+            $table->foreignId('propertiescategs_id')->constrained();
             $table->timestamps();
         });
     }
