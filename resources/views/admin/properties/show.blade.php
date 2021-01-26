@@ -12,6 +12,10 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
+                            <a class="btn btn-light" href="{{route('properties.edit',['property' => $property->id])}}" role="button"
+                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Modifier ce bien</a>
+
+
                             <table class="table" id="table_properties_show">
                                 <thead>
                                 <tr>

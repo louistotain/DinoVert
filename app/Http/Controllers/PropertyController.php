@@ -92,7 +92,7 @@ class PropertyController extends Controller
 
         foreach (picture::all() as $picture) {
             if ($picture['properties_id'] == $property) {
-                $picture->get()->delete();
+                $picture->where('properties_id', $property)->first()->delete();
             }
         }
 
