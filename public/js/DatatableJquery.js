@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    var table = $('#table_properties').DataTable({
+    var table = $('#table_index').DataTable({
         language: {
             url: "//cdn.datatables.net/plug-ins/1.10.21/i18n/French.json"
         },
@@ -11,7 +11,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    var table = $('#table_properties_show').DataTable({
+    var table = $('#table_show').DataTable({
         language: {
             url: "//cdn.datatables.net/plug-ins/1.10.21/i18n/French.json"
         },
@@ -22,7 +22,7 @@ $(document).ready(function () {
 });
 
 $(document).ready(function () {
-    var table = $('#table_properties_edit_create').DataTable({
+    var table = $('#table_edit_create').DataTable({
         language: {
             url: "//cdn.datatables.net/plug-ins/1.10.21/i18n/French.json"
         },

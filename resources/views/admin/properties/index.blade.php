@@ -15,7 +15,7 @@
                             <a class="btn btn-light" href="{{route('properties.create')}}" role="button"
                                style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Créer un nouveau bien</a>
 
-                            <table class="table" id="table_properties">
+                            <table class="table" id="table_index">
                                 <thead>
                                 <tr>
                                     <th>id</th>

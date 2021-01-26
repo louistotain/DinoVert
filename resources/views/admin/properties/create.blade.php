@@ -12,7 +12,7 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <table class="table" id="table_properties_edit_create">
+                            <table class="table" id="table_edit_create">
                                 <thead>
                                 <tr>
                                     <th>price</th>
@@ -22,7 +22,7 @@
                                     <th>state</th>
                                     <th>year_construction</th>
                                     <th>description</th>
-                                    <th>propertiesCategories_id</th>
+                                    <th>propertiescategs_id</th>
                                     <th>envoyer</th>
                                 </tr>
                                 </thead>

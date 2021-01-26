@@ -27,7 +27,7 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden spsace-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('properties_categories') }}">
+                    <x-jet-nav-link href="{{ route('propertiescategs') }}">
                         Catégories biens
                     </x-jet-nav-link>
                 </div>
@@ -37,7 +37,7 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('articles_categories') }}">
+                    <x-jet-nav-link href="{{ route('articlescategs') }}">
                         Catégories articles
                     </x-jet-nav-link>
                 </div>

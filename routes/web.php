@@ -38,9 +38,9 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/register', function () {
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']], function () {
 
 
-Route::resource('articles_categories', ArticlescategController::class, [
+Route::resource('articlescategs', ArticlescategController::class, [
     'names' => [
-        'index' => 'articles_categories'
+        'index' => 'articlescategs'
     ]
 ]);
 
@@ -56,9 +56,9 @@ Route::resource('pictures', PictureController::class, [
     ]
 ]);
 
-Route::resource('properties_categories', PropertiescategController::class, [
+Route::resource('propertiescategs', PropertiescategController::class, [
     'names' => [
-        'index' => 'properties_categories'
+        'index' => 'propertiescategs'
     ]
 ]);
 

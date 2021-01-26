@@ -16,7 +16,7 @@
                                style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Modifier ce bien</a>
 
 
-                            <table class="table" id="table_properties_show">
+                            <table class="table" id="table_show">
                                 <thead>
                                 <tr>
                                     <th>price</th>
