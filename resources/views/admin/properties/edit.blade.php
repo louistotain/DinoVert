@@ -12,10 +12,9 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <table class="table" id="table_id">
+                            <table class="table" id="table_properties_edit_create">
                                 <thead>
                                 <tr>
-                                    <th>id</th>
                                     <th>price</th>
                                     <th>location</th>
                                     <th>m²</th>
@@ -24,37 +23,26 @@
                                     <th>year_construction</th>
                                     <th>description</th>
                                     <th>propertiesCategories_id</th>
-                                    <th>created_at</th>
-                                    <th>updated_at</th>
-                                    <th>Delete</th>
+                                    <th>envoyer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($properties as $property)
-                                    <tr>
-                                        <td>
-                                            <a href="{{route('properties.show', ['property' => $property->id])}}">{{ $property->id }}</a>
-                                        </td>
-                                        <td>{{ $property->price }}</td>
-                                        <td>{{ $property->location }}</td>
-                                        <td>{{ $property->m² }}</td>
-                                        <td>{{ $property->pieces }}</td>
-                                        <td>{{ $property->state }}</td>
-                                        <td>{{ $property->year_construction }}</td>
-                                        <td>{{ $property->description }}</td>
-                                        <td>{{ $property->propertiesCategories_id }}</td>
-                                        <td>{{ $property->created_at }}</td>
-                                        <td>{{ $property->updated_at }}</td>
-                                        <td>
-
-                                            {!!Form::open(['method' => 'DELETE', 'route' => ['properties.destroy', $property->id]])!!}
-                                            {{Form::submit('Supprimer')}}
-                                            {!! Form::close() !!}
-                                        </td>
-                                    </tr>
-                                @endforeach
+                                <tr>
+                                    {!! Form::model($property, ['method' => 'PUT', 'route' => ['properties.update','property' => $property->id]])!!}
+                                    <td>{{Form::text('price',null)}}</td>
+                                    <td>{{Form::text('location',null)}}</td>
+                                    <td>{{Form::text('m²',null)}}</td>
+                                    <td>{{Form::text('pieces',null)}}</td>
+                                    <td>{{Form::text('state',null)}}</td>
+                                    <td>{{Form::text('year_construction',null)}}</td>
+                                    <td>{{Form::text('description',null)}}</td>
+                                    <td>{{Form::text('propertiescategs_id',null)}}</td>
+                                    <td>{{Form::submit('Envoyer')}}</td>
+                                    {!! Form::close() !!}
+                                </tr>
                                 </tbody>
                             </table>
+
                         </div>
                     </div>
                 </div>

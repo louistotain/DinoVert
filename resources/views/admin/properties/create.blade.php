@@ -12,7 +12,7 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <table class="table" id="table_properties_show">
+                            <table class="table" id="table_properties_edit_create">
                                 <thead>
                                 <tr>
                                     <th>price</th>

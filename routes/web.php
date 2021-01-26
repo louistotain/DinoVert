@@ -27,8 +27,16 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');
 
+Route::middleware(['auth:sanctum', 'verified'])->get('/register', function () {
+    return view('auth.register');
+})->name('register');
+
 
 // routes Admin
+
+//resources location
+Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']], function () {
+
 
 Route::resource('articles_categories', ArticlescategController::class, [
     'names' => [
@@ -65,3 +73,14 @@ Route::resource('tags', TagController::class, [
         'index' => 'tags'
     ]
 ]);
+
+});
+
+
+//redirection url inconnues
+
+Route::any('{query}',
+    function () {
+        return redirect('/');
+    })
+    ->where('query', '.*');
