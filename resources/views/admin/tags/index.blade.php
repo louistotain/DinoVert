@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Catégories Biens') }}
+            {{ __('Tags') }}
         </h2>
     </x-slot>
 
@@ -12,14 +12,14 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <a class="btn btn-light" href="{{route('propertiescategs.create')}}" role="button"
-                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Créer une nouvelle catégorie de bien</a>
+                            <a class="btn btn-light" href="{{route('tags.create')}}" role="button"
+                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Créer un nouveau tag</a>
 
                             <table class="table" id="table_index">
                                 <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>name</th>
+                                    <th>title</th>
                                     <th>slug</th>
                                     <th>created_at</th>
                                     <th>updated_at</th>
@@ -27,18 +27,18 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($propertiescategs as $propertiescateg)
+                                @foreach($tags as $tag)
                                     <tr>
                                         <td>
-                                            <a style="color: #0d6efd; text-decoration: underline;" href="{{route('propertiescategs.show', ['propertiescateg' => $propertiescateg->id])}}">{{ $propertiescateg->id }}</a>
+                                            <a style="color: #0d6efd; text-decoration: underline;" href="{{route('tags.show', ['tag' => $tag->id])}}">{{ $tag->id }}</a>
                                         </td>
-                                        <td>{{ $propertiescateg->name }}</td>
-                                        <td>{{ $propertiescateg->slug }}</td>
-                                        <td>{{ $propertiescateg->created_at }}</td>
-                                        <td>{{ $propertiescateg->updated_at }}</td>
+                                        <td>{{ $tag->title }}</td>
+                                        <td>{{ $tag->slug }}</td>
+                                        <td>{{ $tag->created_at }}</td>
+                                        <td>{{ $tag->updated_at }}</td>
                                         <td>
 
-                                            {!!Form::open(['method' => 'DELETE', 'route' => ['propertiescategs.destroy', $propertiescateg->id]])!!}
+                                            {!!Form::open(['method' => 'DELETE', 'route' => ['tags.destroy', $tag->id]])!!}
                                             {{Form::submit('Supprimer')}}
                                             {!! Form::close() !!}
                                         </td>

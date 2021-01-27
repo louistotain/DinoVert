@@ -3,83 +3,67 @@
 namespace App\Http\Controllers;
 
 use App\Models\Article;
+use App\Models\Articlescateg;
 use Illuminate\Http\Request;
 
 class ArticleController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function index()
     {
-        //
+        $articles = article::with(['tags' => function ($query) {
+            $query->select('id', 'title');
+        }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at']);
+
+        return view('admin.articles.index', ['articles' => $articles]);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
-        //
+        $articlescategs = articlescateg::pluck('name', 'id');
+        return view('admin.articles.create', ['articlescategs' => $articlescategs]);
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
-        //
+        $datas = $request->except('_token');
+        Article::create($datas);
+        return view('admin.articles.index', ['articles' => Article::all()]);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
-    public function show(Article $article)
+
+    public function show($article)
     {
-        //
+        $articles = article::with(['tags' => function ($query) {
+            $query->select('id', 'title');
+        }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at'])->find($article);
+
+        return view('admin.articles.show', ['article' => $articles]);
+
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
-    public function edit(Article $article)
+    public function edit($article)
     {
-        //
+        $articles = article::findOrFail($article);
+        return view('admin.articles.edit', ['article' => $articles]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, Article $article)
+
+    public function update(Request $request, $article)
     {
-        //
+        $articles = article::findOrFail($article);
+        $articles->update($request->except('_token'));
+        return view('admin.articles.index', ['articles' => article::all()]);
     }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  \App\Models\Article  $article
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy(Article $article)
+
+    public function destroy($article)
     {
-        //
+
+        article::findOrFail($article)->tags()->detach();
+
+        article::destroy($article);
+
+        return view('admin.articles.index', ['articles' => article::all()]);
+
     }
 }

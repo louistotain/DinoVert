@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Catégories Biens') }} > show
+            {{ __('Catégories Articles') }} > show
         </h2>
     </x-slot>
 
@@ -12,8 +12,8 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <a class="btn btn-light" href="{{route('propertiescategs.edit',['propertiescateg' => $propertiescateg->id])}}" role="button"
-                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Modifier cette catégorie de bien</a>
+                            <a class="btn btn-light" href="{{route('articlescategs.edit',['articlescateg' => $articlescateg->id])}}" role="button"
+                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Modifier cette catégorie d'article</a>
 
 
                             <table class="table" id="table_show">
@@ -26,9 +26,9 @@
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    <td>{{ $propertiescateg->name }}</td>
-                                    <td>{{ $propertiescateg->slug }}</td>
-                                    <td>{{ $propertiescateg->created_at }}</td>
+                                    <td>{{ $articlescateg->name }}</td>
+                                    <td>{{ $articlescateg->slug }}</td>
+                                    <td>{{ $articlescateg->created_at }}</td>
                                 </tr>
                                 </tbody>
                             </table>

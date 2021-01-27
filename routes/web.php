@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ArticlescategController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticleTagController;
 use App\Http\Controllers\PictureController;
 use App\Http\Controllers\PropertiescategController;
 use App\Http\Controllers\PropertyController;
@@ -73,6 +74,14 @@ Route::resource('tags', TagController::class, [
         'index' => 'tags'
     ]
 ]);
+
+    Route::resource('tag_article', ArticleTagController::class, [
+        'names' => [
+            'index' => 'tag_article'
+        ]
+    ]);
+
+    Route::post('tag_article', [ArticleTagController::class, 'sync'])->name('tag_article.sync');
 
 });
 

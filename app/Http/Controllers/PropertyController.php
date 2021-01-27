@@ -6,6 +6,7 @@ use App\Models\Picture;
 use App\Models\Propertiescateg;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use phpDocumentor\Reflection\DocBlock\Tag;
 
 class PropertyController extends Controller
 {

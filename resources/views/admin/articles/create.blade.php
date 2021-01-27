@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Biens') }} > edit
+            {{ __('Articles') }} > create
         </h2>
     </x-slot>
 
@@ -15,28 +15,22 @@
                             <table class="table" id="table_edit_create">
                                 <thead>
                                 <tr>
-                                    <th>price</th>
-                                    <th>location</th>
-                                    <th>m²</th>
-                                    <th>pieces</th>
-                                    <th>state</th>
-                                    <th>year_construction</th>
+                                    <th>title</th>
                                     <th>description</th>
-                                    <th>propertiescategs_id</th>
+                                    <th>slug</th>
+                                    <th>url_picture</th>
+                                    <th>articlescategs_id</th>
                                     <th>envoyer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
-                                    {!! Form::model($property, ['method' => 'PUT', 'route' => ['properties.update','property' => $property->id]])!!}
-                                    <td>{{Form::text('price',null)}}</td>
-                                    <td>{{Form::text('location',null)}}</td>
-                                    <td>{{Form::text('m²',null)}}</td>
-                                    <td>{{Form::text('pieces',null)}}</td>
-                                    <td>{{Form::text('state',null)}}</td>
-                                    <td>{{Form::text('year_construction',null)}}</td>
+                                    {!! Form::open(['route'=>'articles.store'])!!}
+                                    <td>{{Form::text('title',null)}}</td>
                                     <td>{{Form::text('description',null)}}</td>
-                                    <td>{{Form::text('propertiescategs_id',null)}}</td>
+                                    <td>{{Form::text('slug',null)}}</td>
+                                    <td>{{Form::text('url_picture',null)}}</td>
+                                    <td>{{Form::select('articlescategs_id', $articlescategs)}}</td>
                                     <td>{{Form::submit('Envoyer')}}</td>
                                     {!! Form::close() !!}
                                 </tr>

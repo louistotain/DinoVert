@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Catégories Biens') }}
+            {{ __('Catégories Articles') }}
         </h2>
     </x-slot>
 
@@ -12,8 +12,8 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <a class="btn btn-light" href="{{route('propertiescategs.create')}}" role="button"
-                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Créer une nouvelle catégorie de bien</a>
+                            <a class="btn btn-light" href="{{route('articlescategs.create')}}" role="button"
+                               style="border-color: #9ca3af; float: right; margin-bottom: 10px;">Créer une nouvelle catégorie d'article</a>
 
                             <table class="table" id="table_index">
                                 <thead>
@@ -27,18 +27,18 @@
                                 </tr>
                                 </thead>
                                 <tbody>
-                                @foreach($propertiescategs as $propertiescateg)
+                                @foreach($articlescategs as $articlescateg)
                                     <tr>
                                         <td>
-                                            <a style="color: #0d6efd; text-decoration: underline;" href="{{route('propertiescategs.show', ['propertiescateg' => $propertiescateg->id])}}">{{ $propertiescateg->id }}</a>
+                                            <a style="color: #0d6efd; text-decoration: underline;" href="{{route('articlescategs.show', ['articlescateg' => $articlescateg->id])}}">{{ $articlescateg->id }}</a>
                                         </td>
-                                        <td>{{ $propertiescateg->name }}</td>
-                                        <td>{{ $propertiescateg->slug }}</td>
-                                        <td>{{ $propertiescateg->created_at }}</td>
-                                        <td>{{ $propertiescateg->updated_at }}</td>
+                                        <td>{{ $articlescateg->name }}</td>
+                                        <td>{{ $articlescateg->slug }}</td>
+                                        <td>{{ $articlescateg->created_at }}</td>
+                                        <td>{{ $articlescateg->updated_at }}</td>
                                         <td>
 
-                                            {!!Form::open(['method' => 'DELETE', 'route' => ['propertiescategs.destroy', $propertiescateg->id]])!!}
+                                            {!!Form::open(['method' => 'DELETE', 'route' => ['articlescategs.destroy', $articlescateg->id]])!!}
                                             {{Form::submit('Supprimer')}}
                                             {!! Form::close() !!}
                                         </td>

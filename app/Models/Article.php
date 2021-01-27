@@ -9,7 +9,7 @@ class Article extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['title','description','slug','url_picture'];
+    protected $fillable = ['title','description','slug','url_picture','articlescategs_id'];
 
     public function articlescategs(){
         return $this->belongsTo('App\Models\Articlescateg');

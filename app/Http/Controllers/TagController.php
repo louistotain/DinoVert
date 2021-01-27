@@ -10,11 +10,11 @@ class TagController extends Controller
     /**
      * Display a listing of the resource.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\Foundation\Application|\Illuminate\Contracts\View\Factory|\Illuminate\Contracts\View\View|\Illuminate\Http\Response
      */
     public function index()
     {
-        //
+        return view('admin.tags.index', ['tags' => tag::all()]);
     }
 
     /**
@@ -24,62 +24,70 @@ class TagController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tags.create');
     }
 
     /**
      * Store a newly created resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
+     * @param \Illuminate\Http\Request $request
      * @return \Illuminate\Http\Response
      */
     public function store(Request $request)
     {
-        //
+        $datas = $request->except('_token');
+        tag::create($datas);
+        return view('admin.tags.index', ['tags' => tag::all()]);
     }
 
     /**
      * Display the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param \App\Models\tag $tag
      * @return \Illuminate\Http\Response
      */
-    public function show(Tag $tag)
+    public function show($tag)
     {
-        //
+        $tags = tag::findOrFail($tag);
+        return view('admin.tags.show', ['tag' => $tags]);
     }
 
     /**
      * Show the form for editing the specified resource.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param \App\Models\tag $tag
      * @return \Illuminate\Http\Response
      */
-    public function edit(Tag $tag)
+    public function edit($tag)
     {
-        //
+        $tags = tag::findOrFail($tag);
+        return view('admin.tags.edit', ['tag' => $tags]);
     }
 
     /**
      * Update the specified resource in storage.
      *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  \App\Models\Tag  $tag
+     * @param \Illuminate\Http\Request $request
+     * @param \App\Models\tag $tag
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, Tag $tag)
+    public function update(Request $request, $tag)
     {
-        //
+        $tags = tag::findOrFail($tag);
+        $tags->update($request->except('_token'));
+        return view('admin.tags.index', ['tags' => tag::all()]);
     }
 
     /**
      * Remove the specified resource from storage.
      *
-     * @param  \App\Models\Tag  $tag
+     * @param \App\Models\tag $tag
      * @return \Illuminate\Http\Response
      */
-    public function destroy(Tag $tag)
+    public function destroy($tag)
     {
-        //
+        tag::findOrFail($tag)->articles()->detach();
+        tag::destroy($tag);
+        return view('admin.tags.index', ['tags' => tag::all()]);
     }
 }
