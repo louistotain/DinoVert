@@ -31,6 +31,7 @@ class ArticleFactory extends Factory
             'slug' => Str::slug($phrase),
             'url_picture' => $this->faker->imageUrl(),
             'articlescategs_id' => Articlescateg::all()->random()->id,
+
         ];
     }
 }
