@@ -22,7 +22,7 @@ class PropertiescategFactory extends Factory
      */
     public function definition()
     {
-        $categ = $this->faker->randomElement(['Maison individuelle','Appartement','Enclos à dinosaure']);
+        $categ = $this->faker->unique()->randomElement(['Maison individuelle','Appartement','Enclos à dinosaure']);
 
         return [
             'name' => $categ,

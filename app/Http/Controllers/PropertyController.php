@@ -2,6 +2,8 @@
 
 namespace App\Http\Controllers;
 
+use App\Events\BienAjoute;
+use App\Models\Log;
 use App\Models\Picture;
 use App\Models\Propertiescateg;
 use App\Models\Property;
@@ -57,6 +59,10 @@ class PropertyController extends Controller
 
         $datas = $request->except('_token');
         Property::create($datas);
+
+        Log::create(['name' => 'Bien ajouté']);
+        event(BienAjoute::broadcast());
+
         return view('admin.properties.index', ['properties' => Property::all()]);
     }
 
@@ -129,6 +135,8 @@ class PropertyController extends Controller
         }
 
         property::destroy($property);
+
+        Log::create(['name' => 'Bien supprimé']);
 
         return view('admin.properties.index', ['properties' => property::all()]);
     }

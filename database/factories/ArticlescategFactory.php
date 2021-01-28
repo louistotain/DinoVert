@@ -22,7 +22,7 @@ class ArticlescategFactory extends Factory
      */
     public function definition()
     {
-         $categ = $this->faker->randomElement(['Informations','Guide','Aides']);
+         $categ = $this->faker->unique()->randomElement(['Informations','Guide','Aides']);
 
         return [
             'name' => $categ,

@@ -12,7 +12,7 @@ class Article extends Model
 
     protected $fillable = ['title','description','slug','url_picture','articlescategs_id'];
 
-    public function setNameAttribute($value)
+    public function setTitleAttribute($value)
     {
         $this->attributes['title'] = $value;
         $this->attributes['slug'] = Str::slug($value);

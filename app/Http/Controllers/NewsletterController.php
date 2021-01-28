@@ -9,11 +9,12 @@ class NewsletterController extends Controller
 {
     public function store(Request $request)
     {
-        //
+        $datas = $request->except('_token');
+        Newsletter::create($datas);
     }
 
     public function destroy(Newsletter $newsletter)
     {
-        //
+        Newsletter::destroy($newsletter);
     }
 }

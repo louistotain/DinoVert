@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Article;
 use App\Models\Articlescateg;
+use App\Models\Log;
 use Illuminate\Http\Request;
 use Illuminate\Support\Str;
 use Illuminate\Validation\ValidationException;
@@ -27,7 +28,6 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
-
         try {
             $this->validate($request, [
                     'title' => 'required',
@@ -41,6 +41,9 @@ class ArticleController extends Controller
 
         $datas = $request->except('_token');
         Article::create($datas);
+
+        Log::create(['name' => 'Article ajouté']);
+
         return view('admin.articles.index', ['articles' => Article::all()]);
     }
 
@@ -86,8 +89,8 @@ class ArticleController extends Controller
     {
 
         article::findOrFail($article)->tags()->detach();
-
         article::destroy($article);
+        Log::create(['name' => 'Article supprimé']);
 
         return view('admin.articles.index', ['articles' => article::all()]);
 
