@@ -5,7 +5,7 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="flex-shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('public_index') }}">
                         <img src="{{asset('img/logo_png.png')}}" height="50" width="50">
                     </a>
                 </div>
@@ -52,6 +52,8 @@
                     </x-jet-nav-link>
                 </div>
             </div>
+
+
 
             <div class="hidden sm:flex sm:items-center sm:ml-6">
                 <!-- Teams Dropdown -->

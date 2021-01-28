@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Tag;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class TagFactory extends Factory
 {
@@ -21,9 +22,11 @@ class TagFactory extends Factory
      */
     public function definition()
     {
+        $phrase = $this->faker->sentence(1);
+
         return [
-            'title' => $this->faker->title(),
-            'slug' => $this->faker->slug(),
+            'title' => $phrase,
+            'slug' => Str::slug($phrase),
         ];
     }
 }

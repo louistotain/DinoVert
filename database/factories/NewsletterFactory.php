@@ -2,18 +2,17 @@
 
 namespace Database\Factories;
 
-use App\Models\Articlescateg;
+use App\Models\Newsletter;
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 
-class ArticlescategFactory extends Factory
+class NewsletterFactory extends Factory
 {
     /**
      * The name of the factory's corresponding model.
      *
      * @var string
      */
-    protected $model = Articlescateg::class;
+    protected $model = Newsletter::class;
 
     /**
      * Define the model's default state.
@@ -22,11 +21,8 @@ class ArticlescategFactory extends Factory
      */
     public function definition()
     {
-         $categ = $this->faker->randomElement(['Informations','Guide','Aides']);
-
         return [
-            'name' => $categ,
-            'slug' => Str::slug($categ),
+            'email' => $this->faker->email,
         ];
     }
 }

@@ -5,6 +5,7 @@ namespace Database\Factories;
 use App\Models\Article;
 use App\Models\Articlescateg;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class ArticleFactory extends Factory
 {
@@ -22,10 +23,12 @@ class ArticleFactory extends Factory
      */
     public function definition()
     {
+        $phrase = $this->faker->sentence(1);
+
         return [
-            'title' => $this->faker->title,
+            'title' => $phrase,
             'description' => $this->faker->text(),
-            'slug' => $this->faker->slug,
+            'slug' => Str::slug($phrase),
             'url_picture' => $this->faker->imageUrl(),
             'articlescategs_id' => Articlescateg::all()->random()->id,
         ];

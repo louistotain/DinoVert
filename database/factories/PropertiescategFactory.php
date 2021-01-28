@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Propertiescateg;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class PropertiescategFactory extends Factory
 {
@@ -21,9 +22,11 @@ class PropertiescategFactory extends Factory
      */
     public function definition()
     {
+        $categ = $this->faker->randomElement(['Maison individuelle','Appartement','Enclos à dinosaure']);
+
         return [
-            'name' => $this->faker->text(),
-            'slug' => $this->faker->slug,
+            'name' => $categ,
+            'slug' => Str::slug($categ),
         ];
     }
 }

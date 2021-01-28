@@ -4,6 +4,7 @@ namespace Database\Seeders;
 
 use App\Models\Article;
 use App\Models\Articlescateg;
+use App\Models\Newsletter;
 use App\Models\Picture;
 use App\Models\Property;
 use App\Models\Propertiescateg;
@@ -21,6 +22,7 @@ class DatabaseSeeder extends Seeder
 
     public function run()
     {
+        Newsletter::factory(10)->create();
         User::factory(1)->create();
         Propertiescateg::factory(3)->create();
         Property::factory(4)->create();
