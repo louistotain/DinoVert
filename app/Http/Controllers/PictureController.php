@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Picture;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class PictureController extends Controller
 {
@@ -37,6 +38,15 @@ class PictureController extends Controller
      */
     public function store(Request $request)
     {
+        try {
+            $this->validate($request, [
+                    'url' => 'required',
+                    'properties_id' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $datas = $request->except('_token');
         picture::create($datas);
         return view('admin.pictures.index', ['pictures' => picture::all()]);
@@ -75,6 +85,15 @@ class PictureController extends Controller
      */
     public function update(Request $request, $picture)
     {
+        try {
+            $this->validate($request, [
+                    'url' => 'required',
+                    'properties_id' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $pictures = picture::findOrFail($picture);
         $pictures->update($request->except('_token'));
         return view('admin.pictures.index', ['pictures' => picture::all()]);

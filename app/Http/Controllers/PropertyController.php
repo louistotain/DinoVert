@@ -6,6 +6,7 @@ use App\Models\Picture;
 use App\Models\Propertiescateg;
 use App\Models\Property;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 use phpDocumentor\Reflection\DocBlock\Tag;
 
 class PropertyController extends Controller
@@ -39,6 +40,21 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
+        try {
+            $this->validate($request, [
+                    'price' => 'required',
+                    'location' => 'required',
+                    'm²' => 'required',
+                    'pieces' => 'required',
+                    'state' => 'required',
+                    'year_construction' => 'required',
+                    'description' => 'required',
+                    'propertiescategs_id' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $datas = $request->except('_token');
         Property::create($datas);
         return view('admin.properties.index', ['properties' => Property::all()]);
@@ -77,6 +93,21 @@ class PropertyController extends Controller
      */
     public function update(Request $request, $property)
     {
+        try {
+            $this->validate($request, [
+                    'price' => 'required',
+                    'location' => 'required',
+                    'm²' => 'required',
+                    'pieces' => 'required',
+                    'state' => 'required',
+                    'year_construction' => 'required',
+                    'description' => 'required',
+                    'propertiescategs_id' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $properties = property::findOrFail($property);
         $properties->update($request->except('_token'));
         return view('admin.properties.index', ['properties' => property::all()]);

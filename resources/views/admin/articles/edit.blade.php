@@ -17,7 +17,6 @@
                                 <tr>
                                     <th>title</th>
                                     <th>description</th>
-                                    <th>slug</th>
                                     <th>url_picture</th>
                                     <th>articlescategs_id</th>
                                     <th>envoyer</th>
@@ -28,7 +27,6 @@
                                     {!! Form::model($article, ['method' => 'PUT', 'route' => ['articles.update','article' => $article->id]])!!}
                                     <td>{{Form::text('title',null)}}</td>
                                     <td>{{Form::text('description',null)}}</td>
-                                    <td>{{Form::text('slug',null)}}</td>
                                     <td>{{Form::text('url_picture',null)}}</td>
                                     <td>{{Form::text('articlescategs_id',null)}}</td>
                                     <td>{{Form::submit('Envoyer')}}</td>

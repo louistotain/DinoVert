@@ -17,7 +17,6 @@
                                 <tr>
                                     <th>title</th>
                                     <th>description</th>
-                                    <th>slug</th>
                                     <th>url_picture</th>
                                     <th>articlescategs_id</th>
                                     <th>envoyer</th>
@@ -28,7 +27,6 @@
                                     {!! Form::open(['route'=>'articles.store'])!!}
                                     <td>{{Form::text('title',null)}}</td>
                                     <td>{{Form::text('description',null)}}</td>
-                                    <td>{{Form::text('slug',null)}}</td>
                                     <td>{{Form::text('url_picture',null)}}</td>
                                     <td>{{Form::select('articlescategs_id', $articlescategs)}}</td>
                                     <td>{{Form::submit('Envoyer')}}</td>

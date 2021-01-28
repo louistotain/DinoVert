@@ -17,14 +17,12 @@
                                 <thead>
                                 <tr>
                                     <th>name</th>
-                                    <th>slug</th>
                                     <th>envoyer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>{{Form::text('name',null)}}</td>
-                                    <td>{{Form::text('slug',null)}}</td>
                                     <td>{{Form::submit('Envoyer')}}</td>
                                 </tr>
                                 </tbody>

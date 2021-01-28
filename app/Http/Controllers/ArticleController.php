@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Articlescateg;
 use Illuminate\Http\Request;
+use Illuminate\Support\Str;
+use Illuminate\Validation\ValidationException;
 
 class ArticleController extends Controller
 {
@@ -25,6 +27,18 @@ class ArticleController extends Controller
 
     public function store(Request $request)
     {
+
+        try {
+            $this->validate($request, [
+                    'title' => 'required',
+                    'description' => 'required',
+                    'url_picture' => 'required',
+                    'articlescategs_id' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $datas = $request->except('_token');
         Article::create($datas);
         return view('admin.articles.index', ['articles' => Article::all()]);
@@ -50,6 +64,18 @@ class ArticleController extends Controller
 
     public function update(Request $request, $article)
     {
+
+        try {
+            $this->validate($request, [
+                    'title' => 'required',
+                    'description' => 'required',
+                    'url_picture' => 'required',
+                    'articlescategs_id' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $articles = article::findOrFail($article);
         $articles->update($request->except('_token'));
         return view('admin.articles.index', ['articles' => article::all()]);

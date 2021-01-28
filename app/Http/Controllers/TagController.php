@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Tag;
 use Illuminate\Http\Request;
+use Illuminate\Validation\ValidationException;
 
 class TagController extends Controller
 {
@@ -35,6 +36,14 @@ class TagController extends Controller
      */
     public function store(Request $request)
     {
+        try {
+            $this->validate($request, [
+                    'title' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $datas = $request->except('_token');
         tag::create($datas);
         return view('admin.tags.index', ['tags' => tag::all()]);
@@ -73,6 +82,14 @@ class TagController extends Controller
      */
     public function update(Request $request, $tag)
     {
+        try {
+            $this->validate($request, [
+                    'title' => 'required',
+                ]
+            );
+        } catch (ValidationException $e) {
+        }
+
         $tags = tag::findOrFail($tag);
         $tags->update($request->except('_token'));
         return view('admin.tags.index', ['tags' => tag::all()]);
