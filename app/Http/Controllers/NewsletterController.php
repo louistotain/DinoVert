@@ -13,8 +13,10 @@ class NewsletterController extends Controller
         Newsletter::create($datas);
     }
 
-    public function destroy(Newsletter $newsletter)
+    public function destroy($id)
     {
-        Newsletter::destroy($newsletter);
+        dd($id);
+        //Newsletter::destroy($id);
+        //return redirect('/');
     }
 }

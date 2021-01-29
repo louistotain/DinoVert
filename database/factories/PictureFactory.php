@@ -19,11 +19,14 @@ class PictureFactory extends Factory
      * Define the model's default state.
      *
      * @return array
+     * @throws \Exception
      */
     public function definition()
     {
+        $randomUrl = 'https://picsum.photos/'.random_int(1900,2000).'/'.random_int(1000,1100);
+
         return [
-            'url' => $this->faker->imageUrl(),
+            'url' => $randomUrl,
             'properties_id' => Property::all()->random()->id,
         ];
     }

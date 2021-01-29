@@ -23,6 +23,15 @@ class PropertyController extends Controller
         return view('admin.properties.index', ['properties' => Property::all()]);
     }
 
+    public function latestproperties()
+    {
+        $properties = Property::all()->sortByDesc('created_at')->take(3);
+        $pictures = Picture::all();
+        $propertiescategs = Propertiescateg::all();
+
+        return view('welcome', ['properties' => $properties,'pictures' => $pictures,'propertiescategs' => $propertiescategs]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *

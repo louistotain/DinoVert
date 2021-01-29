@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticlescategController;
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticleTagController;
+use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PictureController;
 use App\Http\Controllers\PropertiescategController;
 use App\Http\Controllers\PropertyController;
@@ -20,9 +21,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-})->name('public_index');
+Route::get('/', [PropertyController::class, 'latestproperties'])->name('public_index');
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
@@ -84,6 +83,8 @@ Route::resource('tags', TagController::class, [
     Route::post('tag_article', [ArticleTagController::class, 'sync'])->name('tag_article.sync');
 
 });
+
+Route::delete('Newsletter/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.destroy');
 
 
 //redirection url inconnues

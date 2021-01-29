@@ -54,5 +54,16 @@
         </div>
     </div>
 </nav>
+
+<div class="container">
+    <div class="row">
+        <div class="col-12 row">
+            <h5>3 derniers biens en vente</h5>
+            @include('includes.Derniers_Biens_ventes')
+        </div>
+    </div>
+</div>
+
 </body>
+@include('includes.footer')
 </html>

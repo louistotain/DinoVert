@@ -22,7 +22,7 @@ class NewsletterFactory extends Factory
     public function definition()
     {
         return [
-            'email' => 'louistotain@gmail.com',
+            'email' => $this->faker->unique()->randomElement(['louistotain@gmail.com','louloutotain@gmail.com','info.dinovert@gmail.com']),
         ];
     }
 }

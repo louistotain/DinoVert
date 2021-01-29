@@ -23,7 +23,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
 
-        Newsletter::factory(1)->create();
+        Newsletter::factory(3)->create();
         User::factory(1)->create();
         Propertiescateg::factory(3)->create();
         Property::factory(6)->create();

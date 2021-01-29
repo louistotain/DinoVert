@@ -12,6 +12,7 @@ class Property extends Model
     protected $fillable = ['price','location','m²','pieces','state','year_construction',
                            'description','propertiescategs_id'];
 
+
     public function propertiescategs(){
         return $this->belongsTo('App\Models\Propertiescateg');
     }

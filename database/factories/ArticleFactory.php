@@ -24,12 +24,13 @@ class ArticleFactory extends Factory
     public function definition()
     {
         $phrase = $this->faker->sentence(1);
+        $randomUrl = 'https://picsum.photos/'.random_int(1900,2000).'/'.random_int(1000,1100);
 
         return [
             'title' => $phrase,
             'description' => $this->faker->text(),
             'slug' => Str::slug($phrase),
-            'url_picture' => $this->faker->imageUrl(),
+            'url_picture' => $randomUrl,
             'articlescategs_id' => Articlescateg::all()->random()->id,
 
         ];
