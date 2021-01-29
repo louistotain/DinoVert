@@ -20,7 +20,7 @@
         @endforeach
 
         @foreach($propertiescategs as $propertiescateg)
-            @if($propertiescateg->id == $property->id)
+            @if($property->propertiescategs_id == $propertiescateg->id)
                 <h5>{{ $propertiescateg->name }}</h5>
             @endif
         @endforeach
