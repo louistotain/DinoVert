@@ -85,6 +85,7 @@ Route::resource('tags', TagController::class, [
 });
 
 Route::delete('Newsletter/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.destroy');
+Route::post('Newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 
 //redirection url inconnues

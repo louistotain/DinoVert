@@ -9,7 +9,6 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
           integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.css"/>
-    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
@@ -18,6 +17,8 @@
             crossorigin="anonymous"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
+
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <title>DinoVert</title>
 
@@ -64,6 +65,26 @@
     </div>
 </div>
 
+
+<section class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-12">
+                <div class="content">
+                    <h3>Inscrivez-vous à notre newsletter</h3>
+                    {!! Form::open(['route'=>'newsletter.store'])!!}
+                    <div class="input-group">
+                        <input name="email" value="" type="email" class="form-control" placeholder="ENTREZ VOTRE ADRESSE EMAIL">
+                        <span class="input-group-btn">
+                          <button class="btn" type="submit">ENVOYER</button>
+                        </span>
+                    </div>
+                    {!! Form::close() !!}
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
 </body>
-@include('includes.footer')
 </html>

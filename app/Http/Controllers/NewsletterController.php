@@ -11,6 +11,7 @@ class NewsletterController extends Controller
     {
         $datas = $request->except('_token');
         Newsletter::create($datas);
+        return redirect('/');
     }
 
     public function destroy($id)
