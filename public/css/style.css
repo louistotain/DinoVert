@@ -53,3 +53,7 @@ table{
     color: #fff;
     font-weight:600;
 }
+
+.tox-notifications-container{
+    display: none !important;
+}

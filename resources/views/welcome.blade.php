@@ -18,6 +18,19 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.js"></script>
 
+    <!-- TinyMCE -->
+    <script src="https://cdn.tiny.cloud/1/10sbhhl7qv7e94ooxj70wdr3qr8ny0t8ngayw6ydjm2jqy04/tinymce/5/tinymce.min.js"
+            referrerpolicy="origin"></script>
+
+    <script>
+        tinymce.init({
+            selector: '.myeditablediv',
+            toolbar_mode: 'floating',
+            tinycomments_mode: 'embedded',
+            tinycomments_author: 'Author name',
+        });
+    </script>
+
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
 
     <title>DinoVert</title>
@@ -46,15 +59,18 @@
                 <li class="nav-item">
                     <a class="nav-link" href="#">Contact</a>
                 </li>
-                @auth()
+            </ul>
+            @auth()
+                <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
                         <a class="nav-link" href="{{ route('dashboard') }}">Admin</a>
                     </li>
-                @endauth
-            </ul>
+                </ul>
+            @endauth
         </div>
     </div>
 </nav>
+
 
 <div class="container">
     <div class="row">
@@ -65,7 +81,6 @@
     </div>
 </div>
 
-
 <section class="newsletter">
     <div class="container">
         <div class="row">
@@ -74,7 +89,8 @@
                     <h3>Inscrivez-vous à notre newsletter</h3>
                     {!! Form::open(['route'=>'newsletter.store'])!!}
                     <div class="input-group">
-                        <input name="email" value="" type="email" class="form-control" placeholder="ENTREZ VOTRE ADRESSE EMAIL">
+                        <input name="email" value="" type="email" class="form-control"
+                               placeholder="ENTREZ VOTRE ADRESSE EMAIL">
                         <span class="input-group-btn">
                           <button class="btn" type="submit">ENVOYER</button>
                         </span>
