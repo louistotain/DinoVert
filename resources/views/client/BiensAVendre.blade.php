@@ -39,11 +39,11 @@
 
                     <div class="col-3">
 
-                        @foreach($property->pictures as $picture)
-                            <img style="width: 300px; height: 200px;"
-                                 src="{{ $picture->url ?? "https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg"}}">
-                            @break
-                        @endforeach
+                        @if($property->pictures->isEmpty())
+                            <img style="width: 300px; height: 200px;" src="https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg">
+                        @else
+                            <img style="width: 300px; height: 200px;" src="{{ $property->pictures->first()->url }}">
+                        @endif
 
                         @foreach($propertiescategs as $propertiescateg)
                             @if($property->propertiescategs_id == $propertiescateg->id)
