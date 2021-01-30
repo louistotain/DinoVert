@@ -20,7 +20,6 @@
                                 <tr>
                                     <th>id</th>
                                     <th>url</th>
-                                    <th>properties_id</th>
                                     <th>created_at</th>
                                     <th>updated_at</th>
                                     <th>Delete</th>
@@ -33,7 +32,6 @@
                                             <a style="color: #0d6efd; text-decoration: underline;" href="{{route('pictures.show', ['picture' => $picture->id])}}">{{ $picture->id }}</a>
                                         </td>
                                         <td>{{ $picture->url }}</td>
-                                        <td>{{ $picture->properties_id }}</td>
                                         <td>{{ $picture->created_at }}</td>
                                         <td>{{ $picture->updated_at }}</td>
                                         <td>

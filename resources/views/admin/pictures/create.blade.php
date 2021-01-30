@@ -24,7 +24,6 @@
                                 <tr>
                                     {!! Form::open(['route'=>'pictures.store'])!!}
                                     <td>{{Form::text('url',null)}}</td>
-                                    <td>{{Form::select('properties_id', $properties)}}</td>
                                     <td>{{Form::submit('Envoyer')}}</td>
                                     {!! Form::close() !!}
                                 </tr>

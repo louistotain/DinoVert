@@ -9,9 +9,9 @@ class Picture extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['url','properties_id'];
+    protected $fillable = ['url'];
 
-    public function pictures(){
-        return $this->HasMany('App\Models\Property');
+    public function properties(){
+        return $this->belongsToMany('App\Models\Property');
     }
 }

@@ -41,7 +41,6 @@ class PictureController extends Controller
         try {
             $this->validate($request, [
                     'url' => 'required',
-                    'properties_id' => 'required',
                 ]
             );
         } catch (ValidationException $e) {
@@ -88,7 +87,6 @@ class PictureController extends Controller
         try {
             $this->validate($request, [
                     'url' => 'required',
-                    'properties_id' => 'required',
                 ]
             );
         } catch (ValidationException $e) {

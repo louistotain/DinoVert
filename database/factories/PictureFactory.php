@@ -3,7 +3,6 @@
 namespace Database\Factories;
 
 use App\Models\Picture;
-use App\Models\Property;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class PictureFactory extends Factory
@@ -26,8 +25,7 @@ class PictureFactory extends Factory
         $randomUrl = 'https://picsum.photos/'.random_int(1900,2000).'/'.random_int(1000,1100);
 
         return [
-            'url' => $randomUrl,
-            'properties_id' => Property::all()->random()->id,
+            'url' => $randomUrl
         ];
     }
 }

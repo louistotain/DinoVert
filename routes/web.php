@@ -23,6 +23,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PropertyController::class, 'latestproperties'])->name('public_index');
 
+Route::get('/biens-a-vendre', [PropertyController::class, 'allproperties'])->name('biens_a_vendre');
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

@@ -11,10 +11,29 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/database/migrations/2021_01_28_211933_create_picture_property_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/extention/choices.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/extention/custom-materialize.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/js/extention/flatpickr.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PictureController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PictureController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Picture.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Picture.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/factories/PictureFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/PictureFactory.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_11_000003_create_pictures_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_11_000003_create_pictures_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/Derniers_Biens_ventes.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/Derniers_Biens_ventes.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pictures/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pictures/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pictures/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pictures/edit.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pictures/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pictures/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/admin/pictures/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/admin/pictures/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/Derniers_Biens_ventes.blade.php" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -171,7 +190,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/includes" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -180,13 +199,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\client" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\includes" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tag_article" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tags" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\articlescategs" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\articles" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public" />
     </key>
@@ -210,7 +230,7 @@
       <workItem from="1611086815584" duration="4911000" />
       <workItem from="1611173754198" duration="4847000" />
       <workItem from="1611404558022" duration="54376000" />
-      <workItem from="1611857315960" duration="43982000" />
+      <workItem from="1611857315960" duration="60207000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -359,7 +379,14 @@
       <option name="project" value="LOCAL" />
       <updated>1611933128345</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="update WYSIWYG TinyMCE + navbar accueil Admin">
+      <created>1611937823262</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1611937823262</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -400,7 +427,8 @@
     <MESSAGE value="Update Newsletter controller etc Events + 3 derniers bien en ventes OK" />
     <MESSAGE value="Newsletter + img url aussi tt ça : Full OK" />
     <MESSAGE value="correction bug 3 derniers biens en ventes" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction bug 3 derniers biens en ventes" />
+    <MESSAGE value="update WYSIWYG TinyMCE + navbar accueil Admin" />
+    <option name="LAST_COMMIT_MESSAGE" value="update WYSIWYG TinyMCE + navbar accueil Admin" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611783236682">
@@ -443,22 +471,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="247" height="198" key="ShowFilterAction_Filter_Popup/0.0.1368.872@0.0.1368.872" timestamp="1611004067615" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1611784981602">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1612019454257">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1611784981602" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1611933129505">
+    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612019454257" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1611937824506">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1611933129505" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1611937824506" />
     <state x="505" y="52" width="577" height="566" key="find.popup" timestamp="1611607001880">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1611607001880" />
-    <state x="348" y="205" key="run.anything.popup" timestamp="1611934336801">
+    <state x="349" y="206" key="run.anything.popup" timestamp="1612010709503">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="348" y="205" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1611934336801" />
+    <state x="349" y="206" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612010709503" />
     <state x="355" y="192" width="672" height="678" key="search.everywhere.popup" timestamp="1611685847012">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

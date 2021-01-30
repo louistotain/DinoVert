@@ -9,7 +9,6 @@ use App\Models\Propertiescateg;
 use App\Models\Property;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
-use phpDocumentor\Reflection\DocBlock\Tag;
 
 class PropertyController extends Controller
 {
@@ -25,11 +24,24 @@ class PropertyController extends Controller
 
     public function latestproperties()
     {
-        $properties = Property::all()->sortByDesc('created_at')->take(3);
-        $pictures = Picture::all();
+        $properties = Property::with(['pictures' => function ($query) {
+            $query->select('id', 'url');
+        }])->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at'])->sortByDesc('created_at')->take(3);
+
         $propertiescategs = Propertiescateg::all();
 
-        return view('welcome', ['properties' => $properties,'pictures' => $pictures,'propertiescategs' => $propertiescategs]);
+        return view('client.accueil', ['properties' => $properties, 'propertiescategs' => $propertiescategs]);
+    }
+
+    public function allproperties()
+    {
+        $properties = Property::with(['pictures' => function ($query) {
+            $query->select('id', 'url');
+        }])->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at']);
+
+        $propertiescategs = Propertiescateg::all();
+
+        return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs]);
     }
 
     /**

@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreatePicturesTable extends Migration
+class CreatePicturePropertyTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreatePicturesTable extends Migration
      */
     public function up()
     {
-        Schema::create('pictures', function (Blueprint $table) {
-            $table->id();
-            $table->string('url');
+        Schema::create('picture_property', function (Blueprint $table) {
+            $table->foreignId('picture_id')->constrained();
+            $table->foreignId('property_id')->constrained();
             $table->timestamps();
+            $table->primary(['picture_id', 'property_id']);
         });
     }
 
@@ -27,6 +28,6 @@ class CreatePicturesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pictures');
+        Schema::dropIfExists('picture_property');
     }
 }

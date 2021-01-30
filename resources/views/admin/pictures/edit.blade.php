@@ -17,14 +17,12 @@
                                 <thead>
                                 <tr>
                                     <th>url</th>
-                                    <th>properties_id</th>
                                     <th>envoyer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>{{Form::text('url',null)}}</td>
-                                    <td>{{Form::text('properties_id',null)}}</td>
                                     <td>{{Form::submit('Envoyer')}}</td>
                                 </tr>
                                 </tbody>

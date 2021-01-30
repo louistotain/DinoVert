@@ -24,83 +24,41 @@
 
     <script>
         tinymce.init({
-            selector: '.myeditablediv',
+            selector: '#title_dinovert',
             toolbar_mode: 'floating',
-            tinycomments_mode: 'embedded',
-            tinycomments_author: 'Author name',
+            plugins: "save",
+            toolbar: "save"
+        });
+        tinymce.init({
+            selector: '#under_title_dinovert',
+            toolbar_mode: 'floating',
+            plugins: "save",
+            toolbar: "save"
         });
     </script>
 
     <link rel="stylesheet" href="{{asset('css/style.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet" />
 
     <title>DinoVert</title>
 
 </head>
 <body>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <div class="container">
-        <a class="navbar-brand" href="#"><img src="{{asset('img/logo_png.png')}}" height="50" width="50"></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Biens à vendre</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Actualités</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Qui sommes-nous ?</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
-                </li>
-            </ul>
-            @auth()
-                <ul class="navbar-nav ml-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route('dashboard') }}">Admin</a>
-                    </li>
-                </ul>
-            @endauth
-        </div>
-    </div>
-</nav>
+@include('includes.header')
 
+@yield('content')
 
-<div class="container">
-    <div class="row">
-        <div class="col-12 row">
-            <h5>3 derniers biens en vente</h5>
-            @include('includes.Derniers_Biens_ventes')
-        </div>
-    </div>
-</div>
+@include('includes.footer')
 
-<section class="newsletter">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="content">
-                    <h3>Inscrivez-vous à notre newsletter</h3>
-                    {!! Form::open(['route'=>'newsletter.store'])!!}
-                    <div class="input-group">
-                        <input name="email" value="" type="email" class="form-control"
-                               placeholder="ENTREZ VOTRE ADRESSE EMAIL">
-                        <span class="input-group-btn">
-                          <button class="btn" type="submit">ENVOYER</button>
-                        </span>
-                    </div>
-                    {!! Form::close() !!}
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
+<script src="{{asset('js/extention/choices.js')}}"></script>
+<script>
+    const choices = new Choices('[data-trigger]',
+        {
+            searchEnabled: false,
+            itemSelectText: '',
+        });
 
+</script>
 </body>
 </html>

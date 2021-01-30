@@ -20,14 +20,12 @@
                                 <thead>
                                 <tr>
                                     <th>url</th>
-                                    <th>properties_id</th>
                                     <th>created_at</th>
                                 </tr>
                                 </thead>
                                 <tbody>
                                 <tr>
                                     <td>{{ $picture->url }}</td>
-                                    <td>{{ $picture->properties_id }}</td>
                                     <td>{{ $picture->created_at }}</td>
                                 </tr>
                                 </tbody>
