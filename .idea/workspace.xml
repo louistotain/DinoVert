@@ -11,9 +11,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/client/DetailsBiensAVendre.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +172,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/public/js" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/client" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -179,8 +181,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\client" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\includes" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tag_article" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tags" />
@@ -210,7 +212,7 @@
       <workItem from="1611086815584" duration="4911000" />
       <workItem from="1611173754198" duration="4847000" />
       <workItem from="1611404558022" duration="54376000" />
-      <workItem from="1611857315960" duration="61324000" />
+      <workItem from="1611857315960" duration="78469000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -373,7 +375,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612029843328</updated>
     </task>
-    <option name="localTasksCounter" value="24" />
+    <task id="LOCAL-00024" summary="update pas d'images bien">
+      <created>1612030891115</created>
+      <option name="number" value="00024" />
+      <option name="presentableId" value="LOCAL-00024" />
+      <option name="project" value="LOCAL" />
+      <updated>1612030891115</updated>
+    </task>
+    <option name="localTasksCounter" value="25" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -416,7 +425,8 @@
     <MESSAGE value="correction bug 3 derniers biens en ventes" />
     <MESSAGE value="update WYSIWYG TinyMCE + navbar accueil Admin" />
     <MESSAGE value="update migrations seeder factories + Structure code + Biens a vendre + début formulaire" />
-    <option name="LAST_COMMIT_MESSAGE" value="update migrations seeder factories + Structure code + Biens a vendre + début formulaire" />
+    <MESSAGE value="update pas d'images bien" />
+    <option name="LAST_COMMIT_MESSAGE" value="update pas d'images bien" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611783236682">
@@ -463,22 +473,22 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612019454257" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612029845563">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612030892573">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612029845563" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612030892573" />
     <state x="505" y="52" width="577" height="566" key="find.popup" timestamp="1611607001880">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1611607001880" />
-    <state x="349" y="206" key="run.anything.popup" timestamp="1612010709503">
+    <state x="350" y="207" key="run.anything.popup" timestamp="1612114795521">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="349" y="206" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612010709503" />
-    <state x="355" y="192" width="672" height="678" key="search.everywhere.popup" timestamp="1611685847012">
+    <state x="350" y="207" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612114795521" />
+    <state x="361" y="198" width="672" height="678" key="search.everywhere.popup" timestamp="1612124066898">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="355" y="192" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1611685847012" />
+    <state x="361" y="198" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1612124066898" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

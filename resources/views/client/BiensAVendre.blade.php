@@ -3,20 +3,24 @@
 
     <div class="container">
         <div class="s003">
-            <form>
+            <form action="{{ route('biens_a_vendre.categ') }}" method="POST">
+                @csrf
                 <div class="inner-form">
                     <div class="input-field first-wrap d-flex align-items-center">
                         <div class="input-select w-100">
-                            <select data-trigger="" name="choices-single-defaul">
-                                <option placeholder="">Tout</option>
-                                <option>Maison individuelle</option>
-                                <option>Appartement</option>
-                                <option>Enclos à dinosaure</option>
+                            <select data-trigger="" name="categorie" onchange="this.form.submit()">
+                                <option id="main_categ"></option>
+
+                                @foreach($propertiescategs as $propertiescateg)
+                                    <option
+                                        value="@php echo $propertiescateg->id; @endphp">@php echo $propertiescateg->name; @endphp</option>
+                                @endforeach
+
                             </select>
                         </div>
                     </div>
                     <div class="input-field second-wrap">
-                        <input id="search" type="text" placeholder="Recherche"/>
+                        <input name="search" id="search" type="text" placeholder="Recherche"/>
                     </div>
                     <div class="input-field third-wrap">
                         <button class="btn-search d-flex justify-content-around align-items-center" type="submit">
@@ -35,27 +39,32 @@
         <div class="row p-4 d-flex justify-content-around">
             <div class="col-12 row">
 
+                @if($properties->isEmpty())
+                    <p class="text-center">Aucun résultat</p>
+                @endif
+
                 @foreach($properties as $property)
 
-                    <div class="col-3">
+                        <a href="{{route('biens_a_vendre.details', ['property' => $property->id])}}" class="col-3" style="text-decoration: none; color: unset;">
 
-                        @if($property->pictures->isEmpty())
-                            <img style="width: 300px; height: 200px;" src="https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg">
-                        @else
-                            <img style="width: 300px; height: 200px;" src="{{ $property->pictures->first()->url }}">
-                        @endif
-
-                        @foreach($propertiescategs as $propertiescateg)
-                            @if($property->propertiescategs_id == $propertiescateg->id)
-                                <h5>{{ $propertiescateg->name }}</h5>
+                            @if($property->pictures->isEmpty())
+                                <img style="width: 300px; height: 200px;"
+                                     src="https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg">
+                            @else
+                                <img style="width: 300px; height: 200px;" src="{{ $property->pictures->first()->url }}">
                             @endif
-                        @endforeach
 
-                        <p>{{ $property->price }}€</p>
-                        <p>{{ $property->location }}</p>
-                        <p>{{ $property->m² }} m²</p>
+                            @foreach($propertiescategs as $propertiescateg)
+                                @if($property->propertiescategs_id == $propertiescateg->id)
+                                    <h5>{{ $propertiescateg->name }}</h5>
+                                @endif
+                            @endforeach
 
-                    </div>
+                            <p>{{ $property->price }}€</p>
+                            <p>{{ $property->location }}</p>
+                            <p>{{ $property->m² }} m²</p>
+
+                        </a>
 
                 @endforeach
 
@@ -63,4 +72,26 @@
         </div>
     </div>
 
+    <script type="text/javascript">
+        document.getElementById("main_categ").innerText = '<?php if (isset($mainCategName)) {
+            echo $mainCategName;
+        } else {
+            echo 'Tout';
+        } ?>';
+
+        document.getElementById("main_categ").value = '<?php if (isset($mainCategId)) {
+            echo $mainCategId;
+        } else {
+            echo 0;
+        } ?>';
+
+        document.getElementById("search").value = '<?php if (isset($search)) {
+            echo $search;
+        } else {
+            echo null;
+        } ?>';
+
+    </script>
+
 @endsection
+

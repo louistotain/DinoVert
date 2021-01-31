@@ -25,6 +25,11 @@ Route::get('/', [PropertyController::class, 'latestproperties'])->name('public_i
 
 Route::get('/biens-a-vendre', [PropertyController::class, 'allproperties'])->name('biens_a_vendre');
 
+Route::get('/biens-a-vendre/{property}', [PropertyController::class, 'detailsproperty'])->name('biens_a_vendre.details');
+
+Route::post('/biens-a-vendre', [PropertyController::class, 'categproperties'])->name('biens_a_vendre.categ');
+
+
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return view('dashboard');
 })->name('dashboard');

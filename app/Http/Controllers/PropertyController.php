@@ -44,6 +44,77 @@ class PropertyController extends Controller
         return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs]);
     }
 
+    public function categproperties(Request $request)
+    {
+
+        if ($request->categorie == 0 && $request->search == null) {
+
+            $properties = Property::with(['pictures' => function ($query) {
+                $query->select('id', 'url');
+            }])->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at']);
+
+            $propertiescategs = Propertiescateg::all();
+
+            return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs]);
+
+        } elseif ($request->categorie == 0) {
+
+            $properties = Property::with(['pictures' => function ($query) {
+                $query->select('id', 'url');
+            }])->where('price', 'LIKE', "%{$request->search}%")
+                ->orwhere('location', 'LIKE', "%{$request->search}%")
+                ->orwhere('m²', 'LIKE', "%{$request->search}%")
+                ->orwhere('pieces', 'LIKE', "%{$request->search}%")
+                ->orwhere('state', 'LIKE', "%{$request->search}%")
+                ->orwhere('year_construction', 'LIKE', "%{$request->search}%")
+                ->orwhere('description', 'LIKE', "%{$request->search}%")
+                ->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at']);
+
+            $propertiescategs = Propertiescateg::all();
+
+            return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs, 'search' => $request->search]);
+
+        } elseif ($request->categorie != 0 && $request->search == null) {
+
+            $propertycateg = Propertiescateg::findOrFail($request->categorie);
+
+            $propertiescategs = Propertiescateg::all();
+            $properties = Property::with(['pictures' => function ($query) {
+                $query->select('id', 'url');
+            }])->where('propertiescategs_id', '=', $propertycateg->id)
+                ->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at']);
+
+            return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs, 'mainCategName' => $propertycateg->name, 'mainCategId' => $propertycateg->id]);
+
+        } else {
+
+            $propertycateg = Propertiescateg::findOrFail($request->categorie);
+
+            $propertiescategs = Propertiescateg::all();
+            $properties = Property::with(['pictures' => function ($query) {
+                $query->select('id', 'url');
+            }])->where('propertiescategs_id', '=', $propertycateg->id)
+                ->where('description', 'LIKE', "%{$request->search}%")
+                ->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at']);
+
+            return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs, 'mainCategName' => $propertycateg->name, 'mainCategId' => $propertycateg->id, 'search' => $request->search]);
+
+        }
+    }
+
+    public function detailsproperty($property)
+    {
+        $property = Property::with(['pictures' => function ($query) {
+            $query->select('id', 'url');
+        }])->where('id', '=', $property)
+            ->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at'])
+            ->first();
+
+        $propertiescategs = Propertiescateg::all();
+
+        return view('client.DetailsBiensAVendre', ['property' => $property, 'propertiescategs' => $propertiescategs]);
+    }
+
     /**
      * Show the form for creating a new resource.
      *
@@ -53,6 +124,7 @@ class PropertyController extends Controller
     {
         $propertiescategs = propertiescateg::pluck('name', 'id');
         return view('admin.properties.create', ['propertiescategs' => $propertiescategs]);
+
     }
 
     /**
