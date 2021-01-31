@@ -12,13 +12,13 @@
                     <a class="nav-link" href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Actualités</a>
+                    <a class="nav-link" href="{{ route('actualites') }}">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Qui sommes-nous ?</a>
+                    <a class="nav-link" href="{{ route('qui_sommmes_nous') }}">Qui sommes-nous ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Contact</a>
+                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>
             @auth()

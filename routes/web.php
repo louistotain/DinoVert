@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\ArticlescategController;
 use App\Http\Controllers\ArticleController;
+use App\Http\Controllers\ArticlescategController;
 use App\Http\Controllers\ArticleTagController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PictureController;
@@ -21,13 +21,31 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+/*------------Client---------------*/
+
+
 Route::get('/', [PropertyController::class, 'latestproperties'])->name('public_index');
 
+Route::delete('Newsletter/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.destroy');
+Route::post('Newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
+
 Route::get('/biens-a-vendre', [PropertyController::class, 'allproperties'])->name('biens_a_vendre');
-
 Route::get('/biens-a-vendre/{property}', [PropertyController::class, 'detailsproperty'])->name('biens_a_vendre.details');
-
 Route::post('/biens-a-vendre', [PropertyController::class, 'categproperties'])->name('biens_a_vendre.categ');
+
+Route::get('/actualites', [ArticleController::class, 'allactualites'])->name('actualites');
+Route::get('/actualites/{article}', [ArticleController::class, 'detailsarticle'])->name('actualites.details');
+
+Route::get('/qui-sommmes-nous', function(){
+    return view('client.qui_sommes_nous');
+})->name('qui_sommmes_nous');
+
+Route::get('/contact', function(){
+    return view('client.contact');
+})->name('contact');
+
+
+/*------------JetStream---------------*/
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
@@ -39,47 +57,46 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/register', function () {
 })->name('register');
 
 
-// routes Admin
+/*------------Admin---------------*/
 
-//resources location
+
 Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']], function () {
 
+    Route::resource('articlescategs', ArticlescategController::class, [
+        'names' => [
+            'index' => 'articlescategs'
+        ]
+    ]);
 
-Route::resource('articlescategs', ArticlescategController::class, [
-    'names' => [
-        'index' => 'articlescategs'
-    ]
-]);
+    Route::resource('articles', ArticleController::class, [
+        'names' => [
+            'index' => 'articles'
+        ]
+    ]);
 
-Route::resource('articles', ArticleController::class, [
-    'names' => [
-        'index' => 'articles'
-    ]
-]);
+    Route::resource('pictures', PictureController::class, [
+        'names' => [
+            'index' => 'pictures'
+        ]
+    ]);
 
-Route::resource('pictures', PictureController::class, [
-    'names' => [
-        'index' => 'pictures'
-    ]
-]);
+    Route::resource('propertiescategs', PropertiescategController::class, [
+        'names' => [
+            'index' => 'propertiescategs'
+        ]
+    ]);
 
-Route::resource('propertiescategs', PropertiescategController::class, [
-    'names' => [
-        'index' => 'propertiescategs'
-    ]
-]);
+    Route::resource('properties', PropertyController::class, [
+        'names' => [
+            'index' => 'properties'
+        ]
+    ]);
 
-Route::resource('properties', PropertyController::class, [
-    'names' => [
-        'index' => 'properties'
-    ]
-]);
-
-Route::resource('tags', TagController::class, [
-    'names' => [
-        'index' => 'tags'
-    ]
-]);
+    Route::resource('tags', TagController::class, [
+        'names' => [
+            'index' => 'tags'
+        ]
+    ]);
 
     Route::resource('tag_article', ArticleTagController::class, [
         'names' => [
@@ -90,9 +107,6 @@ Route::resource('tags', TagController::class, [
     Route::post('tag_article', [ArticleTagController::class, 'sync'])->name('tag_article.sync');
 
 });
-
-Route::delete('Newsletter/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.destroy');
-Route::post('Newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 
 //redirection url inconnues

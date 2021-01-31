@@ -20,6 +20,28 @@ class ArticleController extends Controller
         return view('admin.articles.index', ['articles' => $articles]);
     }
 
+    public function allactualites()
+    {
+        $articles = article::with(['tags' => function ($query) {
+            $query->select('id', 'title');
+        }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at']);
+
+        $articlescategs = Articlescateg::all();
+
+        return view('client.actualites', ['articles' => $articles, 'articlescategs' => $articlescategs]);
+    }
+
+    public function detailsarticle($article)
+    {
+        $article = article::with(['tags' => function ($query) {
+            $query->select('id', 'title');
+        }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at'])->find($article);
+
+        $articlescategs = Articlescateg::all();
+
+        return view('client.DetailsArticle', ['article' => $article, 'articlescategs' => $articlescategs]);
+    }
+
     public function create()
     {
         $articlescategs = articlescateg::pluck('name', 'id');
