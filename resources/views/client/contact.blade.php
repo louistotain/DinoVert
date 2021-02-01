@@ -1,13 +1,23 @@
 @extends('welcome')
 @section('content')
 
+    @php if (isset($message)){ @endphp
+
+    <div id="messageContact" class="row w-100 text-center text-white p-3 m-0" style="background-color: #455d6a;">
+        <div class="col-6 text-left">@php  echo $message; @endphp</div>
+        <div class="col-6 text-right"><button onclick="displayMessage()" style="outline: none;">X</button></div>
+    </div>
+
+    @php } @endphp
+
     <div class="contact1">
         <div class="container-contact1">
             <div class="contact1-pic js-tilt" data-tilt>
                 <img src="{{asset('img/img-01.png')}}">
             </div>
 
-            <form class="contact1-form validate-form" method="POST">
+            <form class="contact1-form validate-form" method="POST" action="{{ route('contact.send') }}">
+                @csrf
 
 				<h3 class="text-center">Contactez-nous</h3>
                 <br>
@@ -43,6 +53,12 @@
             </form>
         </div>
     </div>
+
+    <script>
+        function displayMessage() {
+            document.getElementById('messageContact').style.display = 'none';
+        }
+    </script>
 
 @endsection
 

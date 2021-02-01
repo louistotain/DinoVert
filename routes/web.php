@@ -3,6 +3,7 @@
 use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\ArticlescategController;
 use App\Http\Controllers\ArticleTagController;
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\NewsletterController;
 use App\Http\Controllers\PictureController;
 use App\Http\Controllers\PropertiescategController;
@@ -43,6 +44,8 @@ Route::get('/qui-sommmes-nous', function(){
 Route::get('/contact', function(){
     return view('client.contact');
 })->name('contact');
+
+Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
 
 
 /*------------JetStream---------------*/

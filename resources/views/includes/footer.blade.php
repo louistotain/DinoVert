@@ -18,3 +18,9 @@
         </div>
     </div>
 </section>
+
+<script>
+    function displayMessageNewsletter() {
+        document.getElementById('messageNewsletter').style.display = 'none';
+    }
+</script>
