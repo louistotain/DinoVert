@@ -34,7 +34,12 @@
     <div class="container">
         <div class="row p-4 d-flex justify-content-around">
             <div class="col-12 row d-flex justify-content-around">
-                <h5>Les dernières sorties -</h5>
+
+                <div class="row col-12 mb-5">
+                    <h5 class="mr-1">Les dernières sorties - </h5>
+                    <h5><a href="{{ route('biens_a_vendre') }}" style="color: #E7A83F;">Voir tout</a></h5>
+                </div>
+
 
                 @foreach($properties as $property)
 

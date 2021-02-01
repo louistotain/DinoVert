@@ -29,15 +29,13 @@
                     votre écoute, &nbsp;à vous conseiller, à évaluer au mieux votre bien, à le positionner sur le
                     marché, et à le commercialiser de la meilleure des manières.</p>
 
-                <p>&nbsp;</p>
 
-                <img src="{{asset('img/gif_contact.gif')}}" style="height: 250px;  width: 500px;">
+                <div class="col-12 pl-0 mt-2">
+                    <img class="text-left" src="{{asset('img/gif_contact.gif')}}" style="height: 250px;  width: 500px;">
+                </div>
 
-                <p>&nbsp;</p>
+                <p class="mt-4"><strong>Agence immobilière DinoVert</strong></p>
 
-                <p><strong>Agence immobilière DinoVert</strong></p>
-
-                <p>&nbsp;</p>
 
 
             </div>

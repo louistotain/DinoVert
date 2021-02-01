@@ -39,7 +39,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('wysiwygs')->insert([
             'name' => 'title_accueil',
-            'content' => '<div class="row text-center p-4"><div><h5>Maison,</h5><h5>Appartement,</h5><h5>Enclos à dinosaure</h5></div><div><p>Trouvez tout ce dont vous avez besoin avec juste un swipe</p></div></div>'
+            'content' => '<div class="row text-center p-4"><div class="col-12"><h5>Maison,</h5><h5>Appartement,</h5><h5>Enclos à dinosaure</h5></div><div class="col-12"><p>Trouvez tout ce dont vous avez besoin avec juste un swipe</p></div></div>'
         ]);
 
         DB::table('wysiwygs')->insert([
