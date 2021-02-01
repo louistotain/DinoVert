@@ -24,13 +24,7 @@
 
     <script>
         tinymce.init({
-            selector: '#title_dinovert',
-            toolbar_mode: 'floating',
-            plugins: "save",
-            toolbar: "save"
-        });
-        tinymce.init({
-            selector: '#under_title_dinovert',
+            selector: '.wysiwyg',
             toolbar_mode: 'floating',
             plugins: "save",
             toolbar: "save"

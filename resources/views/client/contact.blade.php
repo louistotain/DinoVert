@@ -23,22 +23,22 @@
                 <br>
 
                 <div class="wrap-input1 validate-input" data-validate="Name is required">
-                    <input class="input1" type="text" name="name" placeholder="Nom">
+                    <input class="input1" type="text" name="name" placeholder="Nom" required>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Valid email is required: ex@abc.xyz">
-                    <input class="input1" type="text" name="email" placeholder="Email">
+                    <input class="input1" type="text" name="email" placeholder="Email" required>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Subject is required">
-                    <input class="input1" type="text" name="subject" placeholder="Sujet">
+                    <input class="input1" type="text" name="subject" placeholder="Sujet" required>
                     <span class="shadow-input1"></span>
                 </div>
 
                 <div class="wrap-input1 validate-input" data-validate="Message is required">
-                    <textarea class="input1" name="message" placeholder="Message"></textarea>
+                    <textarea class="input1" name="message" placeholder="Message" required></textarea>
                     <span class="shadow-input1"></span>
                 </div>
 

@@ -7,6 +7,7 @@ use App\Models\Log;
 use App\Models\Picture;
 use App\Models\Propertiescateg;
 use App\Models\Property;
+use App\Models\Wysiwyg;
 use Illuminate\Http\Request;
 use Illuminate\Validation\ValidationException;
 
@@ -24,13 +25,15 @@ class PropertyController extends Controller
 
     public function latestproperties()
     {
+        $wysiwygs = Wysiwyg::all();
+
         $properties = Property::with(['pictures' => function ($query) {
             $query->select('id', 'url');
         }])->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at'])->sortByDesc('created_at')->take(3);
 
         $propertiescategs = Propertiescateg::all();
 
-        return view('client.accueil', ['properties' => $properties, 'propertiescategs' => $propertiescategs]);
+        return view('client.accueil', ['properties' => $properties, 'propertiescategs' => $propertiescategs, 'wysiwygs' => $wysiwygs]);
     }
 
     public function allproperties()

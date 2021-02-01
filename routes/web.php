@@ -9,6 +9,7 @@ use App\Http\Controllers\PictureController;
 use App\Http\Controllers\PropertiescategController;
 use App\Http\Controllers\PropertyController;
 use App\Http\Controllers\TagController;
+use App\Http\Controllers\WysiwygController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -22,8 +23,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-/*------------Client---------------*/
 
+/*------------Client---------------*/
 
 Route::get('/', [PropertyController::class, 'latestproperties'])->name('public_index');
 
@@ -46,6 +47,8 @@ Route::get('/contact', function(){
 })->name('contact');
 
 Route::post('/contact', [ContactController::class, 'send'])->name('contact.send');
+
+Route::put('/wysiwyg/{wysiwyg}', [WysiwygController::class, 'update'])->name('wysiwyg.update');
 
 
 /*------------JetStream---------------*/
