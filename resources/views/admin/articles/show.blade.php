@@ -1,7 +1,7 @@
 <x-app-layout>
     <x-slot name="header">
         <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-            {{ __('Biens') }} > show
+            {{ __('Articles') }} > show
         </h2>
     </x-slot>
 
@@ -80,8 +80,7 @@
                                     <a class="btn btn-light mr-3"
                                        href="{{route('articles.edit',['article' => $article->id])}}"
                                        role="button"
-                                       style="border-color: #9ca3af; float: left; margin-bottom: 10px;">Modifier ce
-                                        bien</a>
+                                       style="border-color: #9ca3af; float: left; margin-bottom: 10px;">Modifier cet article</a>
 
                                     {!!Form::open(['method' => 'DELETE', 'route' => ['articles.destroy', $article->id]])!!}
                                     {{Form::submit('Supprimer')}}
