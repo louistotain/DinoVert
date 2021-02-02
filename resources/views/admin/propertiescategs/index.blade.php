@@ -19,11 +19,11 @@
                                 <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>name</th>
-                                    <th>slug</th>
-                                    <th>created_at</th>
-                                    <th>updated_at</th>
-                                    <th>Delete</th>
+                                    <th>Nom</th>
+                                    <th>Slug</th>
+                                    <th>Date création</th>
+                                    <th>Date maj</th>
+                                    <th>Supprimer</th>
                                 </tr>
                                 </thead>
                                 <tbody>

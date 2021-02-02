@@ -11,26 +11,18 @@
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
+
                             {!! Form::model($propertiescateg, ['method' => 'PUT', 'route' => ['propertiescategs.update','propertiescateg' => $propertiescateg->id]])!!}
 
-                            <table class="table" id="table_edit_create">
-                                <thead>
-                                <tr>
-                                    <th>name</th>
-                                    <th>slug</th>
-                                    <th>envoyer</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    <td>{{Form::text('name',null)}}</td>
-                                    <td>{{Form::text('slug',null)}}</td>
-                                    <td>{{Form::submit('Envoyer')}}</td>
-                                </tr>
-                                </tbody>
-                            </table>
+                            <div class="m-2">
+                                <label for="price" style="font-weight: bold;">Nom :</label>
+                                {{Form::text('name',null)}}
+                            </div>
 
-                            {!! Form::close() !!}
+                            <div class="col-12 m-2 mt-4">
+                                {{Form::submit('Envoyer')}}
+                                {!! Form::close() !!}
+                            </div>
 
                         </div>
                     </div>

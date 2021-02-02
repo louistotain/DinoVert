@@ -5,9 +5,8 @@ namespace App\Http\Controllers;
 use App\Models\Article;
 use App\Models\Articlescateg;
 use App\Models\Log;
+use App\Models\Tag;
 use Illuminate\Http\Request;
-use Illuminate\Support\Str;
-use Illuminate\Validation\ValidationException;
 
 class ArticleController extends Controller
 {
@@ -17,7 +16,7 @@ class ArticleController extends Controller
             $query->select('id', 'title');
         }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at']);
 
-        return view('admin.articles.index', ['articles' => $articles]);
+        return view('admin.articles.index', ['articles' => $articles, 'articlescategs' => articlescateg::all()]);
     }
 
     public function allactualites()
@@ -45,28 +44,32 @@ class ArticleController extends Controller
     public function create()
     {
         $articlescategs = articlescateg::pluck('name', 'id');
-        return view('admin.articles.create', ['articlescategs' => $articlescategs]);
+        return view('admin.articles.create', ['articlescategs' => $articlescategs, 'articlescategs' => articlescateg::pluck('name', 'id'), 'tags' => Tag::pluck('title', 'id')]);
     }
 
     public function store(Request $request)
     {
-        try {
-            $this->validate($request, [
-                    'title' => 'required',
-                    'description' => 'required',
-                    'url_picture' => 'required',
-                    'articlescategs_id' => 'required',
-                ]
-            );
-        } catch (ValidationException $e) {
+
+        $this->validate($request, [
+                'title' => 'required',
+                'description' => 'required',
+                'url_picture' => 'required|url',
+                'tags.*' => 'required',
+                'articlescategs_id' => 'required',
+            ]
+        );
+
+        $datas = $request->except('_token', 'tags');
+
+        $article = Article::create($datas);
+
+        if ($request->tags) {
+            foreach ($request->tags as $tagRequest) {
+                $article->tags()->attach($tagRequest);
+            }
         }
 
-        $datas = $request->except('_token');
-        Article::create($datas);
-
-        Log::create(['name' => 'Article ajouté']);
-
-        return view('admin.articles.index', ['articles' => Article::all()]);
+        return view('admin.articles.index', ['articles' => Article::all(), 'articlescategs' => Articlescateg::all()]);
     }
 
 
@@ -76,34 +79,44 @@ class ArticleController extends Controller
             $query->select('id', 'title');
         }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at'])->find($article);
 
-        return view('admin.articles.show', ['article' => $articles]);
+        return view('admin.articles.show', ['article' => $articles, 'articlescategs' => articlescateg::all()]);
 
     }
 
     public function edit($article)
     {
         $articles = article::findOrFail($article);
-        return view('admin.articles.edit', ['article' => $articles]);
+        return view('admin.articles.edit', ['article' => $articles, 'articlescategs' => articlescateg::pluck('name', 'id'), 'tags' => Tag::all(), 'tagsPluck' => Tag::pluck('title', 'id')]);
     }
 
 
     public function update(Request $request, $article)
     {
 
-        try {
-            $this->validate($request, [
-                    'title' => 'required',
-                    'description' => 'required',
-                    'url_picture' => 'required',
-                    'articlescategs_id' => 'required',
-                ]
-            );
-        } catch (ValidationException $e) {
+        $this->validate($request, [
+                'title' => 'required',
+                'description' => 'required',
+                'url_picture' => 'required|url',
+                'tags.*' => 'required',
+                'articlescategs_id' => 'required',
+            ]
+        );
+
+        $article = article::findOrFail($article);
+
+        // clear relations et tags
+
+        $article->tags()->detach();
+
+        if ($request->tags) {
+            foreach ($request->tags as $tagRequest) {
+                $article->tags()->attach($tagRequest);
+            }
         }
 
-        $articles = article::findOrFail($article);
-        $articles->update($request->except('_token'));
-        return view('admin.articles.index', ['articles' => article::all()]);
+        $article->update($request->except('_token', 'tags'));
+
+        return view('admin.articles.index', ['articles' => article::all(), 'articlescategs' => articlescateg::all()]);
     }
 
 
@@ -114,7 +127,7 @@ class ArticleController extends Controller
         article::destroy($article);
         Log::create(['name' => 'Article supprimé']);
 
-        return view('admin.articles.index', ['articles' => article::all()]);
+        return view('admin.articles.index', ['articles' => article::all(), 'articlescategs' => articlescateg::all()]);
 
     }
 }

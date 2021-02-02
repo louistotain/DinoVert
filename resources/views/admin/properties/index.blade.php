@@ -19,17 +19,17 @@
                                 <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>price</th>
-                                    <th>location</th>
+                                    <th>Prix</th>
+                                    <th>Adresse</th>
                                     <th>m²</th>
-                                    <th>pieces</th>
-                                    <th>state</th>
-                                    <th>year_construction</th>
-                                    <th>description</th>
-                                    <th>propertiescategs_id</th>
-                                    <th>created_at</th>
-                                    <th>updated_at</th>
-                                    <th>Delete</th>
+                                    <th>Nb pieces</th>
+                                    <th>Etat</th>
+                                    <th>Année construction</th>
+                                    <th>Description</th>
+                                    <th>Catégorie</th>
+                                    <th>Date création</th>
+                                    <th>Date maj</th>
+                                    <th>Supprimer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -44,8 +44,14 @@
                                         <td>{{ $property->pieces }}</td>
                                         <td>{{ $property->state }}</td>
                                         <td>{{ $property->year_construction }}</td>
-                                        <td>{{ $property->description }}</td>
-                                        <td>{{ $property->propertiescategs_id }}</td>
+                                        <td>{{ Str::limit($property->description, 20) }}</td>
+
+                                        @foreach($propertiescategs as $propertiescateg)
+                                            @if($property->propertiescategs_id == $propertiescateg->id)
+                                                <td>{{ $propertiescateg->name }}</td>
+                                            @endif
+                                        @endforeach
+
                                         <td>{{ $property->created_at }}</td>
                                         <td>{{ $property->updated_at }}</td>
                                         <td>

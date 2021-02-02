@@ -19,15 +19,15 @@
                                 <thead>
                                 <tr>
                                     <th>id</th>
-                                    <th>title</th>
-                                    <th>description</th>
-                                    <th>slug</th>
-                                    <th>url_picture</th>
-                                    <th>tags</th>
-                                    <th>articlescategs_id</th>
-                                    <th>created_at</th>
-                                    <th>updated_at</th>
-                                    <th>Delete</th>
+                                    <th>Titre</th>
+                                    <th>Description</th>
+                                    <th>Slug</th>
+                                    <th>Url photo</th>
+                                    <th>Tags</th>
+                                    <th>Catégorie</th>
+                                    <th>Date création</th>
+                                    <th>Date maj</th>
+                                    <th>Supprimer</th>
                                 </tr>
                                 </thead>
                                 <tbody>
@@ -37,15 +37,22 @@
                                             <a style="color: #0d6efd; text-decoration: underline;" href="{{route('articles.show', ['article' => $article->id])}}">{{ $article->id }}</a>
                                         </td>
                                         <td>{{ $article->title }}</td>
-                                        <td>{{ $article->description }}</td>
+                                        <td>{{ Str::limit($article->description, 20) }}</td>
                                         <td>{{ $article->slug }}</td>
                                         <td>{{ $article->url_picture }}</td>
                                         <td>
                                             @foreach($article->tags as $tag)
-                                                {{ $tag->title.', ' ?? 'Pas de tags'}}
+                                                {{ $tag->title.' / ' ?? 'Pas de tags'}}
                                             @endforeach
                                         </td>
-                                        <td>{{ $article->articlescategs_id }}</td>
+
+                                        @foreach($articlescategs as $articlescateg)
+                                            @if($article->articlescategs_id == $articlescateg->id)
+                                                <td>{{ $articlescateg->name }}</td>
+                                            @endif
+                                        @endforeach
+
+
                                         <td>{{ $article->created_at }}</td>
                                         <td>{{ $article->updated_at }}</td>
                                         <td>

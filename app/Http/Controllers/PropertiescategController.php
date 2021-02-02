@@ -4,7 +4,6 @@ namespace App\Http\Controllers;
 
 use App\Models\Propertiescateg;
 use Illuminate\Http\Request;
-use Illuminate\Validation\ValidationException;
 
 class PropertiescategController extends Controller
 {
@@ -36,13 +35,11 @@ class PropertiescategController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $this->validate($request, [
-                    'name' => 'required',
-                ]
-            );
-        } catch (ValidationException $e) {
-        }
+
+        $this->validate($request, [
+                'name' => 'required',
+            ]
+        );
 
         $datas = $request->except('_token');
         propertiescateg::create($datas);
@@ -82,13 +79,10 @@ class PropertiescategController extends Controller
      */
     public function update(Request $request, $propertiescateg)
     {
-        try {
-            $this->validate($request, [
-                    'name' => 'required',
-                ]
-            );
-        } catch (ValidationException $e) {
-        }
+        $this->validate($request, [
+                'name' => 'required',
+            ]
+        );
 
         $propertiescategs = propertiescateg::findOrFail($propertiescateg);
         $propertiescategs->update($request->except('_token'));

@@ -80,12 +80,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']]
         ]
     ]);
 
-    Route::resource('pictures', PictureController::class, [
-        'names' => [
-            'index' => 'pictures'
-        ]
-    ]);
-
     Route::resource('propertiescategs', PropertiescategController::class, [
         'names' => [
             'index' => 'propertiescategs'
@@ -104,13 +98,6 @@ Route::group(['prefix' => 'admin', 'middleware' => ['auth:sanctum', 'verified']]
         ]
     ]);
 
-    Route::resource('tag_article', ArticleTagController::class, [
-        'names' => [
-            'index' => 'tag_article'
-        ]
-    ]);
-
-    Route::post('tag_article', [ArticleTagController::class, 'sync'])->name('tag_article.sync');
 
 });
 

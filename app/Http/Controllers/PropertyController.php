@@ -9,7 +9,6 @@ use App\Models\Propertiescateg;
 use App\Models\Property;
 use App\Models\Wysiwyg;
 use Illuminate\Http\Request;
-use Illuminate\Validation\ValidationException;
 
 class PropertyController extends Controller
 {
@@ -20,7 +19,7 @@ class PropertyController extends Controller
      */
     public function index()
     {
-        return view('admin.properties.index', ['properties' => Property::all()]);
+        return view('admin.properties.index', ['properties' => Property::all(), 'propertiescategs' => Propertiescateg::all()]);
     }
 
     public function latestproperties()
@@ -138,28 +137,33 @@ class PropertyController extends Controller
      */
     public function store(Request $request)
     {
-        try {
-            $this->validate($request, [
-                    'price' => 'required',
-                    'location' => 'required',
-                    'm²' => 'required',
-                    'pieces' => 'required',
-                    'state' => 'required',
-                    'year_construction' => 'required',
-                    'description' => 'required',
-                    'propertiescategs_id' => 'required',
-                ]
-            );
-        } catch (ValidationException $e) {
-        }
 
-        $datas = $request->except('_token');
-        Property::create($datas);
+        $this->validate($request, [
+                'price' => 'required',
+                'location' => 'required',
+                'm²' => 'required',
+                'pieces' => 'required',
+                'state' => 'required',
+                'year_construction' => 'required',
+                'description' => 'required',
+                'url.*' => 'required|url',
+                'propertiescategs_id' => 'required',
+            ]
+        );
+
+        $datas = $request->except('_token', 'url');
+
+        $property = Property::create($datas);
+
+        foreach ($request->url as $url) {
+            $picture = Picture::create(['url' => $url]);
+            $property->pictures()->attach($picture->id);
+        };
 
         Log::create(['name' => 'Bien ajouté']);
         event(BienAjoute::broadcast());
 
-        return view('admin.properties.index', ['properties' => Property::all()]);
+        return view('admin.properties.index', ['properties' => Property::all(), 'propertiescategs' => Propertiescateg::all()]);
     }
 
     /**
@@ -171,7 +175,7 @@ class PropertyController extends Controller
     public function show($property)
     {
         $properties = Property::findOrFail($property);
-        return view('admin.properties.show', ['property' => $properties]);
+        return view('admin.properties.show', ['property' => $properties, 'propertiescategs' => Propertiescateg::all()]);
     }
 
     /**
@@ -183,7 +187,7 @@ class PropertyController extends Controller
     public function edit($property)
     {
         $properties = property::findOrFail($property);
-        return view('admin.properties.edit', ['property' => $properties]);
+        return view('admin.properties.edit', ['property' => $properties, 'propertiescategs' => propertiescateg::pluck('name', 'id')]);
     }
 
     /**
@@ -195,24 +199,49 @@ class PropertyController extends Controller
      */
     public function update(Request $request, $property)
     {
-        try {
-            $this->validate($request, [
-                    'price' => 'required',
-                    'location' => 'required',
-                    'm²' => 'required',
-                    'pieces' => 'required',
-                    'state' => 'required',
-                    'year_construction' => 'required',
-                    'description' => 'required',
-                    'propertiescategs_id' => 'required',
-                ]
-            );
-        } catch (ValidationException $e) {
+
+        $this->validate($request, [
+                'price' => 'required',
+                'location' => 'required',
+                'm²' => 'required',
+                'pieces' => 'required',
+                'state' => 'required',
+                'year_construction' => 'required',
+                'description' => 'required',
+                'url.*' => 'required|url',
+                'propertiescategs_id' => 'required',
+            ]
+        );
+
+
+        $properties = Property::with(['pictures' => function ($query) {
+            $query->select('id', 'url');
+        }])->findOrFail($property);
+
+        $ids = [];
+        foreach ($properties->pictures as $picture) {
+            array_push($ids, $picture->id);
         }
 
-        $properties = property::findOrFail($property);
-        $properties->update($request->except('_token'));
-        return view('admin.properties.index', ['properties' => property::all()]);
+        $property = Property::findOrFail($property);
+
+        // clear relations et images
+
+        $property->pictures()->detach();
+
+        foreach($ids as $id) {
+            Picture::destroy(['id' => $id]);
+        }
+
+        foreach ($request->url as $url) {
+            $picture = Picture::create(['url' => $url]);
+            $property->pictures()->attach($picture->id);
+        };
+
+        $property->update($request->except('_token', 'url'));
+
+
+        return view('admin.properties.index', ['properties' => property::all(), 'propertiescategs' => Propertiescateg::all()]);
     }
 
     /**
@@ -223,6 +252,7 @@ class PropertyController extends Controller
      */
     public function destroy($property)
     {
+        property::findOrFail($property)->pictures()->detach();
 
         foreach (picture::all() as $picture) {
             if ($picture['properties_id'] == $property) {
@@ -234,6 +264,6 @@ class PropertyController extends Controller
 
         Log::create(['name' => 'Bien supprimé']);
 
-        return view('admin.properties.index', ['properties' => property::all()]);
+        return view('admin.properties.index', ['properties' => property::all(), 'propertiescategs' => Propertiescateg::all()]);
     }
 }

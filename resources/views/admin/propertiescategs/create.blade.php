@@ -5,6 +5,16 @@
         </h2>
     </x-slot>
 
+    @if ($errors->any())
+        <div class="alert alert-danger">
+            <ul>
+                @foreach ($errors->all() as $error)
+                    <li>{{ $error }}</li>
+                @endforeach
+            </ul>
+        </div>
+    @endif
+
     <main>
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
@@ -12,22 +22,18 @@
                     <div class="row d-flex justify-content-center">
                         <div class="col-11 m-5">
 
-                            <table class="table" id="table_edit_create">
-                                <thead>
-                                <tr>
-                                    <th>name</th>
-                                    <th>envoyer</th>
-                                </tr>
-                                </thead>
-                                <tbody>
-                                <tr>
-                                    {!! Form::open(['route'=>'propertiescategs.store'])!!}
-                                    <td>{{Form::text('name',null)}}</td>
-                                    <td>{{Form::submit('Envoyer')}}</td>
-                                    {!! Form::close() !!}
-                                </tr>
-                                </tbody>
-                            </table>
+                            {!! Form::open(['route'=>'propertiescategs.store'])!!}
+
+                            <div class="m-2">
+                                <label for="name" style="font-weight: bold;">Nom :</label>
+                                {{Form::text('name',null)}}
+                            </div>
+
+                            <div class="col-12 m-2 mt-4">
+                                <td>{{Form::submit('Envoyer')}}</td>
+                            </div>
+
+                            {!! Form::close() !!}
 
                         </div>
                     </div>
