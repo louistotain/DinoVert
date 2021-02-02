@@ -17,27 +17,27 @@
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('properties') }}">
+                    <x-jet-nav-link href="{{ route('properties') }}" :active="request()->routeIs(['properties','properties.*'])">
                         Biens
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden spsace-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('propertiescategs') }}">
+                    <x-jet-nav-link href="{{ route('propertiescategs') }}" :active="request()->routeIs(['propertiescategs','propertiescategs.*'])">
                         Catégories biens
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('articles') }}">
+                    <x-jet-nav-link href="{{ route('articles') }}" :active="request()->routeIs(['articles','articles.*'])">
                         Articles
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('articlescategs') }}">
+                    <x-jet-nav-link href="{{ route('articlescategs') }}" :active="request()->routeIs(['articlescategs','articlescategs.*'])">
                         Catégories articles
                     </x-jet-nav-link>
                 </div>
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
-                    <x-jet-nav-link href="{{ route('tags') }}">
+                    <x-jet-nav-link href="{{ route('tags') }}" :active="request()->routeIs(['tags','tags.*'])">
                         Tags
                     </x-jet-nav-link>
                 </div>

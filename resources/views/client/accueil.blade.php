@@ -8,7 +8,7 @@
                 @method('PUT')
                 <div class="wysiwyg">
                     @endauth
-                        {!! $wysiwygs[0]->content !!}
+                    {!! $wysiwygs[0]->content !!}
                     @if (Auth::check())
                 </div>
             </form>
@@ -23,7 +23,7 @@
                 @method('PUT')
                 <div class="wysiwyg">
                     @endauth
-                        {!! $wysiwygs[1]->content !!}
+                    {!! $wysiwygs[1]->content !!}
                     @if (Auth::check())
                 </div>
             </form>
@@ -44,23 +44,26 @@
                 @foreach($properties as $property)
 
                     <div class="col-3">
+                        <a href="{{route('biens_a_vendre.details', ['property' => $property->id])}}" style="text-decoration: none; color: unset;">
 
-                        @if($property->pictures->isEmpty())
-                            <img style="width: 300px; height: 200px;" src="https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg">
-                        @else
-                            <img style="width: 300px; height: 200px;" src="{{ $property->pictures->first()->url }}">
-                        @endif
-
-                        @foreach($propertiescategs as $propertiescateg)
-                            @if($property->propertiescategs_id == $propertiescateg->id)
-                                <h5>{{ $propertiescateg->name }}</h5>
+                            @if($property->pictures->isEmpty())
+                                <img style="width: 300px; height: 200px;"
+                                     src="https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg">
+                            @else
+                                <img style="width: 300px; height: 200px;" src="{{ $property->pictures->first()->url }}">
                             @endif
-                        @endforeach
 
-                        <p>{{ $property->price }}€</p>
-                        <p>{{ $property->location }}</p>
-                        <p>{{ $property->m² }} m²</p>
+                            @foreach($propertiescategs as $propertiescateg)
+                                @if($property->propertiescategs_id == $propertiescateg->id)
+                                    <h5>{{ $propertiescateg->name }}</h5>
+                                @endif
+                            @endforeach
 
+                            <p>{{ $property->price }}€</p>
+                            <p>{{ $property->location }}</p>
+                            <p>{{ $property->m² }} m²</p>
+
+                        </a>
                     </div>
 
                 @endforeach

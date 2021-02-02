@@ -7,19 +7,21 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
+        @php $actual_link = parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", PHP_URL_PATH);   @endphp
+
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
+                <li class="nav-item">
+                    <a class="nav-link @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp " href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('actualites') }}">Actualités</a>
+                    <a class="nav-link @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp " href="{{ route('actualites') }}">Actualités</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('qui_sommmes_nous') }}">Qui sommes-nous ?</a>
+                    <a class="nav-link @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp " href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="{{ route('contact') }}">Contact</a>
+                    <a class="nav-link @php  if ($actual_link == '/contact'){ echo 'active'; }  @endphp " href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>
             @auth()

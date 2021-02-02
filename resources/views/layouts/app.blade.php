@@ -34,6 +34,9 @@
         <script src="{{ mix('js/app.js') }}" defer></script>
 
     </head>
+
+    @php $actual_link = parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", PHP_URL_PATH);   @endphp
+
     <body class="font-sans antialiased">
         <x-jet-banner />
 

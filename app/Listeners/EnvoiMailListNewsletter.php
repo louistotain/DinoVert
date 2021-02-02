@@ -4,6 +4,7 @@ namespace App\Listeners;
 
 use App\Events\BienAjoute;
 use App\Models\Newsletter;
+use App\Models\Property;
 use Illuminate\Support\Facades\Mail;
 
 class EnvoiMailListNewsletter
@@ -26,6 +27,7 @@ class EnvoiMailListNewsletter
      */
     public function handle(BienAjoute $event)
     {
+
         foreach (Newsletter::all() as $UserMail) {
             $email = $UserMail->email;
             $id = $UserMail->id;

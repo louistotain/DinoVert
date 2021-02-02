@@ -38,9 +38,9 @@ Route::post('/biens-a-vendre', [PropertyController::class, 'categproperties'])->
 Route::get('/actualites', [ArticleController::class, 'allactualites'])->name('actualites');
 Route::get('/actualites/{article}', [ArticleController::class, 'detailsarticle'])->name('actualites.details');
 
-Route::get('/qui-sommmes-nous', function(){
+Route::get('/qui-sommes-nous', function(){
     return view('client.qui_sommes_nous');
-})->name('qui_sommmes_nous');
+})->name('qui_sommes_nous');
 
 Route::get('/contact', function(){
     return view('client.contact');
