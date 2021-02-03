@@ -5,11 +5,11 @@
 
         <div class="row p-4 d-flex justify-content-around">
             <div class="col-12 mb-3"><h4>Actualités</h4></div>
-            <div class="col-12 row">
+            <div class="col-12 row Items">
 
                 @foreach($articles as $article)
 
-                        <a href="{{route('actualites.details', ['article' => $article->id])}}" class="col-3" style="text-decoration: none; color: unset;">
+                        <a href="{{route('actualites.details', ['article' => $article->id])}}" class="col-12 col-sm-6 col-lg-3" style="text-decoration: none; color: unset;">
 
                             <img style="width: 300px; height: 200px;" src="{{ $article->url_picture }}">
 
@@ -21,7 +21,7 @@
                                 @endif
                             @endforeach
 
-                            <p>
+                            <p style="margin-bottom: 1rem;">
                             @foreach($article->tags as $tag)
                                 {{ $tag->title.' ' ?? 'Pas de tags'}}
                             @endforeach

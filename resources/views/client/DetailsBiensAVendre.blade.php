@@ -1,10 +1,10 @@
 @extends('welcome')
 @section('content')
 
-    <div class="row p-4 d-flex justify-content-around w-100">
-        <div class="col-12 row">
+    <div class="row p-4 d-flex justify-content-around w-100" style="padding: 0 !important; margin: 20px 0 !important;">
+        <div class="col-12 row ItemsDetails d-flex justify-content-around">
 
-            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 700px; height: 400px;">
+            <div id="myCarousel" class="carousel slide" data-ride="carousel" style="width: 700px; height: 400px; margin-bottom: 20px;">
                 <ol class="carousel-indicators">
 
                     @php $i=0; @endphp
@@ -55,12 +55,12 @@
                         @endif
                     @endforeach
 
-                    <p>{{ $property->price }}€</p>
-                    <p>{{ $property->location }}</p>
-                    <p>{{ $property->pieces }}</p>
-                    <p>{{ $property->state }}</p>
-                    <p>{{ $property->year_construction }}</p>
-                    <p>{{ $property->description }}</p>
+                    <p>Prix : {{ $property->price }}€</p>
+                    <p>Adresse : {{ $property->location }}</p>
+                    <p>Nombre de pièces : {{ $property->pieces }}</p>
+                    <p>Etat : {{ $property->state }}</p>
+                    <p>Année de construction : {{ $property->year_construction }}</p>
+                    <p>Description : {{ $property->description }}</p>
 
                 </div>
 

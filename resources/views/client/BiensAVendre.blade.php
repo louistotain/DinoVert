@@ -41,7 +41,7 @@
         </div>
 
         <div class="row p-4 d-flex justify-content-around">
-            <div class="col-12 row">
+            <div class="col-12 row Items">
 
                 @if($properties->isEmpty())
                     <p class="text-center">Aucun résultat</p>
@@ -49,7 +49,7 @@
 
                 @foreach($properties as $property)
 
-                        <a href="{{route('biens_a_vendre.details', ['property' => $property->id])}}" class="col-3" style="text-decoration: none; color: unset;">
+                        <a href="{{route('biens_a_vendre.details', ['property' => $property->id])}}" class="col-12 col-sm-6 col-lg-3" style="text-decoration: none; color: unset;">
 
                             @if($property->pictures->isEmpty())
                                 <img style="width: 300px; height: 200px;"
@@ -66,7 +66,7 @@
 
                             <p>{{ $property->price }}€</p>
                             <p>{{ $property->location }}</p>
-                            <p>{{ $property->m² }} m²</p>
+                            <p style="margin-bottom: 1em;">{{ $property->m² }} m²</p>
 
                         </a>
 

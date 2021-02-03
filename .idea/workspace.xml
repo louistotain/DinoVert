@@ -12,8 +12,13 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/DetailsArticle.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/DetailsArticle.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/DetailsBiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/DetailsBiensAVendre.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -215,7 +220,7 @@
       <workItem from="1612184951364" duration="71407000" />
       <workItem from="1612336849867" duration="19393000" />
       <workItem from="1612359788218" duration="17000" />
-      <workItem from="1612372204550" duration="15604000" />
+      <workItem from="1612372204550" duration="18230000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -490,7 +495,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612381010136</updated>
     </task>
-    <option name="localTasksCounter" value="40" />
+    <task id="LOCAL-00040" summary="Page d'acceuil 100% style fini (reponsive aussi)">
+      <created>1612389853615</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1612389853615</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -510,7 +522,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Factories tout ok" />
     <MESSAGE value="Factories OK + controller etc newsletter ok" />
     <MESSAGE value="Validations OK" />
     <MESSAGE value="Update + Logs OK + commencement event envoi mails" />
@@ -535,7 +546,8 @@
     <MESSAGE value="Jquery accueil header : 70% (bugs mais dans l'idée c'est ça)" />
     <MESSAGE value="Jquery accueil header menu : 80%" />
     <MESSAGE value="wysitruc responsive : OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="wysitruc responsive : OK" />
+    <MESSAGE value="Page d'acceuil 100% style fini (reponsive aussi)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Page d'acceuil 100% style fini (reponsive aussi)" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -546,10 +558,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog/0.0.1368.872@0.0.1368.872" timestamp="1612164656659" />
-    <state x="415" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612313657045">
+    <state x="415" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1612391967670">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="415" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1368.872@0.0.1368.872" timestamp="1612313657045" />
+    <state x="415" y="191" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1368.872@0.0.1368.872" timestamp="1612391967670" />
     <state x="433" y="267" key="ANALYSIS_DLG_com.intellij.analysis.BaseAnalysisAction$1" timestamp="1611003844263">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -582,10 +594,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612381011443">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612389855128">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612381011443" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612389855128" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

@@ -43,8 +43,18 @@
     height: 20px !important;
 }
 
-.DernieresVentes p{
+.Items p{
     margin-bottom: 0;
+    color: #455D6A !important;
+}
+
+.ItemsDetails p{
+    margin-bottom: 0.5rem;
+    color: #455D6A !important;
+}
+
+.Items h1, .Items h2, .Items h3, .Items h4, .Items h5{
+    color: #455D6A !important;
 }
 
 

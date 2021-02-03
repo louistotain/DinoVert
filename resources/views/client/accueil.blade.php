@@ -39,7 +39,7 @@
     </div>
 
 
-    <div class="container DernieresVentes">
+    <div class="container Items">
         <div class="row p-4 d-flex justify-content-around">
             <div class="col-12 row d-flex justify-content-around">
 
