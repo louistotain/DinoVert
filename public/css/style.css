@@ -2,25 +2,75 @@
     box-sizing: border-box;
 }
 
+.btn_SavPlus {
+    color: #E7A83F !important;
+    border-color: #E7A83F !important;
+    outline: none !important;
+}
+
+.btn_SavPlus:hover,.btn_SavPlus:focus, .btn-primary:active, .btn-primary:visited {
+    color: white !important;
+    border-color: transparent !important;
+    background-color: #E7A83F !important;
+    box-shadow: none !important;
+}
+
+
+.contactezNous{
+    margin-left: 0 !important;
+}
+
+@media (min-width: 576px) {
+    .contactezNous{
+        margin-left: 3rem !important;
+    }
+}
+
+@media (min-width: 768px) {
+    .contactezNous{
+        margin-left: 7rem !important;
+    }
+}
+
+@media (min-width: 992px) {
+    .contactezNous{
+        margin-left: 13rem !important;
+    }
+}
+
+.svgAccueil svg{
+    width: 60px !important;
+    height: 20px !important;
+}
+
+.DernieresVentes p{
+    margin-bottom: 0;
+}
+
+
+.background_main_contact {
+    background: no-repeat url("../img/auc1vxt6d5f312.jpg") 50% 50%;
+}
+
 .tox-tinymce {
     height: 50vh !important;
     width: 80vw !important;
     margin: auto !important;
 }
 
-.navbar-light .navbar-toggler{
+.navbar-light .navbar-toggler {
     color: transparent !important;
     border-color: transparent !important;
 }
 
-.nav_accueil_transparent{
+.nav_accueil_transparent {
     background-color: transparent !important;
     z-index: 999 !important;
     position: fixed;
     width: 100%;
 }
 
-.nav_accueil_white{
+.nav_accueil_white {
     background-color: white !important;
     z-index: 999 !important;
     position: fixed;
@@ -45,7 +95,6 @@
         opacity: 0;
     }
 }
-
 
 
 .gnBraM {
