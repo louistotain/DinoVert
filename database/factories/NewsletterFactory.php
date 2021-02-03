@@ -18,11 +18,13 @@ class NewsletterFactory extends Factory
      * Define the model's default state.
      *
      * @return array
+     * @throws \Exception
      */
     public function definition()
     {
         return [
             'email' => 'info.dinovert@gmail.com',
+            'token' => bin2hex(random_bytes(78))
         ];
     }
 }

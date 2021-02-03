@@ -28,7 +28,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [PropertyController::class, 'latestproperties'])->name('public_index');
 
-Route::delete('Newsletter/{id}', [NewsletterController::class, 'destroy'])->name('newsletter.destroy');
+Route::get('Newsletter/{token}', [NewsletterController::class, 'destroy']);
+
 Route::post('Newsletter', [NewsletterController::class, 'store'])->name('newsletter.store');
 
 Route::get('/biens-a-vendre', [PropertyController::class, 'allproperties'])->name('biens_a_vendre');

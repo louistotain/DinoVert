@@ -11,7 +11,11 @@ class NewsletterController extends Controller
     public function store(Request $request)
     {
         $previousUrl = app('url')->previous();
+
         $datas = $request->except('_token');
+        $token = ['token' => bin2hex(random_bytes(78))];
+
+        $datas = array_merge($datas, $token);
 
         $newsletter = Newsletter::where('email','=',$request->email)->get();
 
@@ -24,10 +28,16 @@ class NewsletterController extends Controller
 
     }
 
-    public function destroy($id)
+    public function destroy($token)
     {
-        dd($id);
-        //Newsletter::destroy($id);
-        //return redirect('/');
+        foreach (Newsletter::all() as $email){
+            if ($email->token == $token){
+                $id = $email->id;
+            }
+        }
+
+        Newsletter::destroy($id);
+
+        return redirect('/')->withInput(['NewsletterDesc' => 'true']);
     }
 }

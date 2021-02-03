@@ -114,4 +114,16 @@
 @endif
 
 
+@if(old('NewsletterDesc') == 'true')
+    @php $messageNewsletter = 'Vous êtes maintenant désinscrit à la newsletter' @endphp
+
+    <div id="messageNewsletter" class="row w-100 text-center text-white p-3 m-0" style="background-color: darkorange;">
+        <div class="col-6 text-left">@php  echo $messageNewsletter; @endphp</div>
+        <div class="col-6 text-right">
+            <button onclick="displayMessageNewsletter()" style="outline: none;">X</button>
+        </div>
+    </div>
+@endif
+
+
 

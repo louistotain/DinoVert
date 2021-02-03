@@ -5,6 +5,8 @@ namespace App\Listeners;
 use App\Events\BienAjoute;
 use App\Models\Newsletter;
 use App\Models\Property;
+use App\Models\propertiescateg;
+use App\Listeners\Form;
 use Illuminate\Support\Facades\Mail;
 
 class EnvoiMailListNewsletter
@@ -28,22 +30,34 @@ class EnvoiMailListNewsletter
     public function handle(BienAjoute $event)
     {
 
+        $NewProperty = '<h2>Un nouveau bien est disponible !</h2>';
+
+        $NewProperty .= '<img style="width: 300px; height: 200px;" src="'.Property::all()->last()->pictures->first()->url.'">';
+
+        foreach (propertiescateg::all() as $propertiescateg) {
+            if (Property::all()->last()->propertiescategs_id == $propertiescateg->id) {
+                $NewProperty .= '<h4>'.$propertiescateg->name.'</h4>';
+            }
+        }
+
+        $NewProperty .= '<p>'.Property::all()->last()->price.'€</p>'.'<p>'.Property::all()->last()->location.'</p>'.'<p>'.Property::all()->last()->m².'m²</p>';
+
         foreach (Newsletter::all() as $UserMail) {
             $email = $UserMail->email;
-            $id = $UserMail->id;
-            Mail::send([], [], function ($message) use ($email, $id) {
+
+            $_token = $UserMail->token;
+
+            $urlToken = '<a href="'.route('public_index').'/Newsletter/'.$_token.'">Se désinscrire de la Newsletter</a>';
+
+            Mail::send([], [], function ($message) use ($email, $NewProperty, $urlToken) {
                 $message->to($email)
                     ->subject('Un nouveau bien est disponible !')
                     ->setBody('
 
-                               <h1>"Fiche nouveau bien"</h1>
+                               '.$NewProperty.'
                                <br>
 
-                               <form method="POST" action="'.route('newsletter.destroy',['id' => $id]).'" accept-charset="UTF-8">
-                               <input name="_method" type="hidden" value="DELETE">
-                               <input name="_token" type="hidden" value="K6i8krc1wtXqoXlLPNnEPfbExKfooEO1X8ivq7LR">
-                               <input type="submit" value="Se désinscrire de la Newsletter">
-                               </form>
+                               '.$urlToken.'
 
                               ', 'text/html');
             });

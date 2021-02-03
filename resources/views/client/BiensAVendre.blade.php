@@ -1,6 +1,7 @@
 @extends('welcome')
 @section('content')
 
+
     <div class="container">
         <div class="s003">
             <form action="{{ route('biens_a_vendre.categ') }}" method="POST">
