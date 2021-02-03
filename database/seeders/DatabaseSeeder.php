@@ -44,7 +44,7 @@ class DatabaseSeeder extends Seeder
 
         DB::table('wysiwygs')->insert([
             'name' => 'under_title_accueil',
-            'content' => '<div class="row text-left p-3 d-flex justify-content-around"><div class="col-6"><h5>Notre agence immobilière vous met le meilleurs à disposition toute l\'année.</h5 ></div ></div ><div class="row text-left p-3 d-flex justify-content-around" ><div class="col-6" ><p > Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua . At vero eos et accusam et justo duo dolores et ea rebum . Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet . Lorem ipsum </p ></div ></div >'
+            'content' => '<div class="row text-left pt-5 pb-3 d-flex justify-content-around"><div class="col-8"><h3 style="font-family: Helvetica Now Text">Notre agence immobilière vous met le meilleurs à disposition toute l\'année.</h3 ></div ></div ><div class="row text-left pb-5 d-flex justify-content-around" ><div class="col-8" ><p > Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua . At vero eos et accusam et justo duo dolores et ea rebum . Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet . Lorem ipsum </p ></div ></div >'
         ]);
 
     }

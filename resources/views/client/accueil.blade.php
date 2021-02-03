@@ -17,7 +17,7 @@
     </div>
 
 
-    <div class="container-fluid" style="background: #70818a2b;">
+    <div class="container-fluid" style="background: #70818a2b; color: #455D6A">
         @if (Auth::check())
             <form method="post" class="mt-5 mb-5" action="{{route('wysiwyg.update',$wysiwygs[1]->id)}}">
                 @csrf
