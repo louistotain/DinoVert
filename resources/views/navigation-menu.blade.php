@@ -179,6 +179,31 @@
                 {{ __('Dashboard') }}
             </x-jet-responsive-nav-link>
         </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('properties') }}" :active="request()->routeIs(['properties','properties.*'])">
+                Biens
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('propertiescategs') }}" :active="request()->routeIs(['propertiescategs','propertiescategs.*'])">
+                Catégories biens
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('articles') }}" :active="request()->routeIs(['articles','articles.*'])">
+                Articles
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('articlescategs') }}" :active="request()->routeIs(['articlescategs','articlescategs.*'])">
+                Catégories articles
+            </x-jet-responsive-nav-link>
+        </div>
+        <div class="pt-2 pb-3 space-y-1">
+            <x-jet-responsive-nav-link href="{{ route('tags') }}" :active="request()->routeIs(['tags','tags.*'])">
+                Tags
+            </x-jet-responsive-nav-link>
+        </div>
 
         <!-- Responsive Settings Options -->
         <div class="pt-4 pb-1 border-t border-gray-200">
