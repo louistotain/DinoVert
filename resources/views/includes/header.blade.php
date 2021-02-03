@@ -6,24 +6,24 @@
             <span class="navbar-toggler-icon"></span>
         </button>
 
-        <a class="navbar-brand" href="{{ route('public_index') }}"><img id="logo" src="{{asset('img/logo_png.png')}}" height="50"
-                                                                        width="50"></a>
+        <a class="navbar-brand" href="{{ route('public_index') }}"><img id="logo" class="m-auto" src="{{asset('img/logo_png.png')}}" height="50"
+                                                                        width="50"><h5 class="textHeader" >DinoVert</h5></a>
 
         @php $actual_link = parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", PHP_URL_PATH);   @endphp
 
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item">
-                    <a class="nav-link @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp " href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
+            <ul class="navbar-nav mr-auto m-lg-auto">
+                <li class="nav-item mr-0 mr-lg-5">
+                    <a class="nav-link textHeader @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp " href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp " href="{{ route('actualites') }}">Actualités</a>
+                <li class="nav-item mr-0 mr-lg-5">
+                    <a class="nav-link textHeader @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp " href="{{ route('actualites') }}">Actualités</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp " href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>
+                <li class="nav-item mr-0 mr-lg-5">
+                    <a class="nav-link textHeader @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp " href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link @php  if ($actual_link == '/contact'){ echo 'active'; }  @endphp " href="{{ route('contact') }}">Contact</a>
+                <li class="nav-item mr-0 mr-lg-5">
+                    <a class="nav-link textHeader @php  if ($actual_link == '/contact'){ echo 'active'; }  @endphp " href="{{ route('contact') }}">Contact</a>
                 </li>
             </ul>
             @auth()

@@ -2,6 +2,11 @@
     box-sizing: border-box;
 }
 
+.navbar-light .navbar-toggler{
+    color: transparent !important;
+    border-color: transparent !important;
+}
+
 .nav_accueil_transparent{
     background-color: transparent !important;
     z-index: 999 !important;

@@ -85,7 +85,9 @@
     <script>
 
         $(document).ready(function () {
-            $('.nav-link').addClass('text-white');
+            $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_white.png)');
+
+            $('.textHeader').addClass('text-white');
             $('#logo').attr('src', '../img/logo_noirblanc_png.png' );
             $('nav.navbar').addClass('nav_accueil_transparent');
         });
@@ -99,7 +101,9 @@
             var scroll = $(window).scrollTop();
 
             if (localStorage['scroll'] > scroll) {
-                $('.nav-link').removeClass('text-white');
+                $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_black.png)');
+
+                $('.textHeader').removeClass('text-white');
                 $('#logo').attr('src', '../img/logo_png.png' );
                 $('nav.navbar').removeClass('d-none');
                 $('nav.navbar').removeClass('nav_accueil_transparent');
@@ -107,14 +111,18 @@
             }
 
             if (localStorage['scroll'] < scroll) {
-                $('.nav-link').removeClass('text-white');
+                $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_black.png)');
+
+                $('.textHeader').removeClass('text-white');
                 $('#logo').attr('src', '../img/logo_png.png' );
                 $('nav.navbar').removeClass('nav_accueil_white');
                 $('nav.navbar').addClass('d-none');
             }
 
             if (scroll == 0) {
-                $('.nav-link').addClass('text-white');
+                $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_white.png)');
+
+                $('.textHeader').addClass('text-white');
                 $('#logo').attr('src', '../img/logo_noirblanc_png.png' );
                 $('nav.navbar').removeClass('d-none');
                 $('nav.navbar').removeClass('nav_accueil_white');
@@ -127,7 +135,9 @@
                 var scroll = $(window).scrollTop();
 
                 if (scroll == 0) {
-                    $('.nav-link').removeClass('text-white');
+                    $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_black.png)');
+
+                    $('.textHeader').removeClass('text-white');
                     $('#logo').attr('src', '../img/logo_png.png' );
                     $('nav.navbar').removeClass('d-none');
                     $(this).removeClass('nav_accueil_transparent');
@@ -138,7 +148,9 @@
                 var scroll = $(window).scrollTop();
 
                 if (scroll == 0) {
-                    $('.nav-link').addClass('text-white');
+                    $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_white.png)');
+
+                    $('.textHeader').addClass('text-white');
                     $('#logo').attr('src', '../img/logo_noirblanc_png.png' );
                     $('nav.navbar').removeClass('d-none');
                     $(this).removeClass('nav_accueil_white');
