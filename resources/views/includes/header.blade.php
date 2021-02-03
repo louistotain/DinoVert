@@ -1,11 +1,13 @@
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="{{ route('public_index') }}"><img src="{{asset('img/logo_png.png')}}" height="50"
-                                                                        width="50"></a>
+
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
                 aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
+
+        <a class="navbar-brand" href="{{ route('public_index') }}"><img id="logo" src="{{asset('img/logo_png.png')}}" height="50"
+                                                                        width="50"></a>
 
         @php $actual_link = parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", PHP_URL_PATH);   @endphp
 

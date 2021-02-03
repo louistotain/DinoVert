@@ -24,7 +24,7 @@
         <div class="col-1" style="margin-top: 40px !important; padding-left: 0; padding-right: 0;"></div>
         <div class="col-11 text-white" style="margin-top: 40px !important; padding-left: 0; padding-right: 0;">
             <div class="row">
-                <div class="col-3">
+                <div class="mb-4 col-12 col-sm-6 col-lg-3 mb-lg-0">
                     <p>Biens à vendre</p>
                     <div class="col-8 line-footer"></div>
 
@@ -44,7 +44,7 @@
                     </form>
 
                 </div>
-                <div class="col-3">
+                <div class="mb-4 col-12 col-sm-6 col-lg-3 mb-lg-0">
                     <p>Réseaux sociaux</p>
                     <div class="col-8 line-footer"></div>
                     <p>Twitter</p>
@@ -52,13 +52,13 @@
                     <p>Pinterest</p>
                     <p>Linkedin</p>
                 </div>
-                <div class="col-3">
+                <div class="mb-4 col-12 col-sm-6 col-lg-3 mb-lg-0">
                     <p>Nous contacter</p>
                     <div class="col-8 line-footer"></div>
                     <p>Tel : 0200000000</p>
                     <p><a href="{{ route('contact') }}" class="text-white"> Contactez-nous </a></p>
                 </div>
-                <div class="col-3">
+                <div class="mb-4 col-12 col-sm-6 col-lg-3 mb-lg-0">
                     <p>Mentions Légales</p>
                     <div class="col-8 line-footer"></div>
                     <p><a href="{{ route('conditions_utilisations') }}" class="text-white"> Conditions d'utilisation </a></p>

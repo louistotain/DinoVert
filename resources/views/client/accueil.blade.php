@@ -1,7 +1,8 @@
 @extends('welcome')
 @section('content')
 
-    <div class="container-fluid">
+    <div class="container-fluid background_main d-flex align-items-center justify-content-center text-white"
+         style="height: 100vh;">
         @if (Auth::check())
             <form method="post" class="mt-5 mb-5" action="{{route('wysiwyg.update',$wysiwygs[0]->id)}}">
                 @csrf
@@ -30,6 +31,15 @@
         @endauth
     </div>
 
+    <div height="812" class="sc-oULiq gnBraM">
+        <span class="sc-AxiKw cbpYqP">
+            <svg height="15" width="15" viewBox="0 0 15 15" xmlns="http://www.w3.org/2000/svg" role="img">
+                <path d="m15 5.41-7.5 7.91-7.5-7.91 1.95-1.95 5.55 5.83 5.55-5.83z">
+                </path>
+            </svg>
+        </span>
+    </div>
+
 
     <div class="container">
         <div class="row p-4 d-flex justify-content-around">
@@ -43,8 +53,9 @@
 
                 @foreach($properties as $property)
 
-                    <div class="col-3">
-                        <a href="{{route('biens_a_vendre.details', ['property' => $property->id])}}" style="text-decoration: none; color: unset;">
+                    <div class="col-12 col-sm-6 col-lg-3 d-flex justify-content-around">
+                        <a href="{{route('biens_a_vendre.details', ['property' => $property->id])}}"
+                           style="text-decoration: none; color: unset;">
 
                             @if($property->pictures->isEmpty())
                                 <img style="width: 300px; height: 200px;"
@@ -70,6 +81,76 @@
             </div>
         </div>
     </div>
+
+    <script>
+
+        $(document).ready(function () {
+            $('.nav-link').addClass('text-white');
+            $('#logo').attr('src', '../img/logo_noirblanc_png.png' );
+            $('nav.navbar').addClass('nav_accueil_transparent');
+        });
+
+        $(window).scroll(function () {
+
+            if (localStorage['scroll'] == null) {
+                localStorage['scroll'] = 0;
+            }
+
+            var scroll = $(window).scrollTop();
+
+            if (localStorage['scroll'] > scroll) {
+                $('.nav-link').removeClass('text-white');
+                $('#logo').attr('src', '../img/logo_png.png' );
+                $('nav.navbar').removeClass('d-none');
+                $('nav.navbar').removeClass('nav_accueil_transparent');
+                $('nav.navbar').addClass('nav_accueil_white');
+            }
+
+            if (localStorage['scroll'] < scroll) {
+                $('.nav-link').removeClass('text-white');
+                $('#logo').attr('src', '../img/logo_png.png' );
+                $('nav.navbar').removeClass('nav_accueil_white');
+                $('nav.navbar').addClass('d-none');
+            }
+
+            if (scroll == 0) {
+                $('.nav-link').addClass('text-white');
+                $('#logo').attr('src', '../img/logo_noirblanc_png.png' );
+                $('nav.navbar').removeClass('d-none');
+                $('nav.navbar').removeClass('nav_accueil_white');
+                $('nav.navbar').addClass('nav_accueil_transparent');
+            }
+
+
+            $('nav.navbar').hover(function () {
+
+                var scroll = $(window).scrollTop();
+
+                if (scroll == 0) {
+                    $('.nav-link').removeClass('text-white');
+                    $('#logo').attr('src', '../img/logo_png.png' );
+                    $('nav.navbar').removeClass('d-none');
+                    $(this).removeClass('nav_accueil_transparent');
+                    $(this).addClass('nav_accueil_white');
+                }
+            }, function () {
+
+                var scroll = $(window).scrollTop();
+
+                if (scroll == 0) {
+                    $('.nav-link').addClass('text-white');
+                    $('#logo').attr('src', '../img/logo_noirblanc_png.png' );
+                    $('nav.navbar').removeClass('d-none');
+                    $(this).removeClass('nav_accueil_white');
+                    $(this).addClass('nav_accueil_transparent');
+                }
+
+            });
+
+            localStorage['scroll'] = scroll;
+
+        });
+    </script>
 
 @endsection
 

@@ -11,17 +11,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/client/conditions_utilisations.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/client/cookies.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/client/politique_confidentialite.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/auc1vxt6d5f312.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/public/img/fond home_png.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -194,6 +191,7 @@
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\includes" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public" />
@@ -220,7 +218,9 @@
       <workItem from="1611404558022" duration="54376000" />
       <workItem from="1611857315960" duration="103856000" />
       <workItem from="1612184951364" duration="71407000" />
-      <workItem from="1612336849867" duration="10417000" />
+      <workItem from="1612336849867" duration="19393000" />
+      <workItem from="1612359788218" duration="17000" />
+      <workItem from="1612372204550" duration="5302000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -467,7 +467,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612316301603</updated>
     </task>
-    <option name="localTasksCounter" value="36" />
+    <task id="LOCAL-00036" summary="Vues mentions légales + style footer">
+      <created>1612347590904</created>
+      <option name="number" value="00036" />
+      <option name="presentableId" value="LOCAL-00036" />
+      <option name="project" value="LOCAL" />
+      <updated>1612347590904</updated>
+    </task>
+    <option name="localTasksCounter" value="37" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -487,7 +494,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="properties : OK 100% (boutons etc)" />
     <MESSAGE value="categories biens + pictures : Tout ok + dashboard ok" />
     <MESSAGE value="toute les factories OK" />
     <MESSAGE value="Tout admin OK" />
@@ -512,7 +518,8 @@
     <MESSAGE value="Update ADMIN : OK 100% YES" />
     <MESSAGE value="Header dynamique css client admin" />
     <MESSAGE value="Newsletter : Full OK ( bien dans le mail + désinscription)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Newsletter : Full OK ( bien dans le mail + désinscription)" />
+    <MESSAGE value="Vues mentions légales + style footer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Vues mentions légales + style footer" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -559,10 +566,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612316318699">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612347601519">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612316318699" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612347601519" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -571,14 +578,14 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1611607001880" />
-    <state x="358" y="215" width="672" height="677" key="run.anything.popup" timestamp="1612318174658">
+    <state x="359" y="216" width="672" height="677" key="run.anything.popup" timestamp="1612355446491">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="358" y="215" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612318174658" />
-    <state x="370" y="207" width="672" height="678" key="search.everywhere.popup" timestamp="1612312787057">
+    <state x="359" y="216" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612355446491" />
+    <state x="372" y="209" width="672" height="678" key="search.everywhere.popup" timestamp="1612356607317">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="370" y="207" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1612312787057" />
+    <state x="372" y="209" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1612356607317" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
