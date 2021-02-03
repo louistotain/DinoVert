@@ -12,6 +12,8 @@
 
     <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/v/dt/dt-1.10.23/datatables.min.css"/>
 
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
+
     <!-- Scripts -->
     <script src="{{ mix('js/app.js') }}" defer></script>
 

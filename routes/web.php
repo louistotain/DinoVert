@@ -43,6 +43,18 @@ Route::get('/qui-sommes-nous', function(){
     return view('client.qui_sommes_nous');
 })->name('qui_sommes_nous');
 
+Route::get('/conditions_utilisations', function(){
+    return view('client.conditions_utilisations');
+})->name('conditions_utilisations');
+
+Route::get('/cookies', function(){
+    return view('client.cookies');
+})->name('cookies');
+
+Route::get('/politique_confidentialite', function(){
+    return view('client.politique_confidentialite');
+})->name('politique_confidentialite');
+
 Route::get('/contact', function(){
     return view('client.contact');
 })->name('contact');

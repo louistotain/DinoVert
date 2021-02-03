@@ -37,13 +37,23 @@ table {
     width: 100% !important;
 }
 
+.line-footer {
+    border-top: 1px solid darkgrey;
+    margin-top: -10px;
+    margin-bottom: 10px;
+}
+
 .newsletter {
-    padding: 80px 0;
+    padding: 30px 0;
     background: #1C282E;
 }
 
+.footerProperty:hover{
+    text-decoration: underline;
+}
+
 .newsletter .content {
-    max-width: 650px;
+    max-width: 735px;
     margin: 0 auto;
     text-align: center;
     position: relative;
@@ -976,11 +986,15 @@ textarea.input1 + .shadow-input1 {
     }
 }
 
-[name='url[]'], [name='tags[]']{
+[name='url[]'], [name='tags[]'] {
     width: 100%;
 }
 
-[name='table_index_length']{
+select:focus {
+    border-color: white !important;
+}
+
+[name='table_index_length'] {
     width: 60px;
 }
 

@@ -1,7 +1,6 @@
 @extends('welcome')
 @section('content')
 
-
     <div class="container">
         <div class="s003">
             <form action="{{ route('biens_a_vendre.categ') }}" method="POST">
@@ -13,8 +12,12 @@
                                 <option id="main_categ"></option>
 
                                 @foreach($propertiescategs as $propertiescateg)
-                                    <option
-                                        value="@php echo $propertiescateg->id; @endphp">@php echo $propertiescateg->name; @endphp</option>
+                                    @if(isset($mainCategName) && $propertiescateg->name == $mainCategName)
+                                        <option value="0">Tout</option>
+                                    @else
+                                        <option
+                                            value="@php echo $propertiescateg->id; @endphp">@php echo $propertiescateg->name; @endphp</option>
+                                    @endif
                                 @endforeach
 
                             </select>

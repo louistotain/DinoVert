@@ -91,15 +91,21 @@ class PropertyController extends Controller
         } else {
 
             $propertycateg = Propertiescateg::findOrFail($request->categorie);
-
             $propertiescategs = Propertiescateg::all();
+
             $properties = Property::with(['pictures' => function ($query) {
                 $query->select('id', 'url');
-            }])->where('propertiescategs_id', '=', $propertycateg->id)
-                ->where('description', 'LIKE', "%{$request->search}%")
+            }])->where('price', 'LIKE', "%{$request->search}%")
+                ->orwhere('location', 'LIKE', "%{$request->search}%")
+                ->orwhere('m²', 'LIKE', "%{$request->search}%")
+                ->orwhere('pieces', 'LIKE', "%{$request->search}%")
+                ->orwhere('state', 'LIKE', "%{$request->search}%")
+                ->orwhere('year_construction', 'LIKE', "%{$request->search}%")
+                ->orwhere('description', 'LIKE', "%{$request->search}%")
                 ->get(['id', 'price', 'location', 'm²', 'pieces', 'state', 'year_construction', 'description', 'propertiescategs_id', 'created_at', 'updated_at']);
 
-            return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs, 'mainCategName' => $propertycateg->name, 'mainCategId' => $propertycateg->id, 'search' => $request->search]);
+
+            return view('client.BiensAVendre', ['properties' => $properties, 'propertiescategs' => $propertiescategs, 'mainCategName' => 'Tout', 'mainCategId' => 0, 'search' => $request->search]);
 
         }
     }

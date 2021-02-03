@@ -4,6 +4,7 @@
     <div class="container">
 
         <div class="row p-4 d-flex justify-content-around">
+            <div class="col-12 mb-3"><h4>Actualités</h4></div>
             <div class="col-12 row">
 
                 @foreach($articles as $article)

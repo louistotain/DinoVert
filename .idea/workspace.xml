@@ -11,14 +11,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/client/conditions_utilisations.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/cookies.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/client/politique_confidentialite.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/NewsletterController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/NewsletterController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Listeners/EnvoiMailListNewsletter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Listeners/EnvoiMailListNewsletter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Models/Newsletter.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Newsletter.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/NewsletterFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/NewsletterFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/migrations/2021_01_28_183154_create_newsletters_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2021_01_28_183154_create_newsletters_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/footer.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -176,7 +178,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/admin/tags" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/client" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -184,17 +186,17 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\client" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tags" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\includes" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tags" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\client" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\includes" />
     </key>
   </component>
   <component name="RunManager">
@@ -217,7 +219,8 @@
       <workItem from="1611173754198" duration="4847000" />
       <workItem from="1611404558022" duration="54376000" />
       <workItem from="1611857315960" duration="103856000" />
-      <workItem from="1612184951364" duration="67086000" />
+      <workItem from="1612184951364" duration="71407000" />
+      <workItem from="1612336849867" duration="10417000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -457,7 +460,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612308003521</updated>
     </task>
-    <option name="localTasksCounter" value="35" />
+    <task id="LOCAL-00035" summary="Newsletter : Full OK ( bien dans le mail + désinscription)">
+      <created>1612316301603</created>
+      <option name="number" value="00035" />
+      <option name="presentableId" value="LOCAL-00035" />
+      <option name="project" value="LOCAL" />
+      <updated>1612316301603</updated>
+    </task>
+    <option name="localTasksCounter" value="36" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -477,7 +487,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="properties : OK" />
     <MESSAGE value="properties : OK 100% (boutons etc)" />
     <MESSAGE value="categories biens + pictures : Tout ok + dashboard ok" />
     <MESSAGE value="toute les factories OK" />
@@ -502,13 +511,14 @@
     <MESSAGE value="Update ADMIN : articles biens" />
     <MESSAGE value="Update ADMIN : OK 100% YES" />
     <MESSAGE value="Header dynamique css client admin" />
-    <option name="LAST_COMMIT_MESSAGE" value="Header dynamique css client admin" />
+    <MESSAGE value="Newsletter : Full OK ( bien dans le mail + désinscription)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Newsletter : Full OK ( bien dans le mail + désinscription)" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1611783236682">
+    <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1368.872@0.0.1368.872" timestamp="1611783236682" />
+    <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1368.872@0.0.1368.872" timestamp="1612345884051" />
     <state x="427" y="0" key="#com.intellij.refactoring.rename.AutomaticRenamingDialog" timestamp="1612164656659">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -545,14 +555,14 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="247" height="198" key="ShowFilterAction_Filter_Popup/0.0.1368.872@0.0.1368.872" timestamp="1611004067615" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1612175468455">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1612344356917">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612175468455" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612308004772">
+    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612316318699">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612308004772" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612316318699" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -561,10 +571,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1611607001880" />
-    <state x="356" y="213" width="672" height="677" key="run.anything.popup" timestamp="1612271687243">
+    <state x="358" y="215" width="672" height="677" key="run.anything.popup" timestamp="1612318174658">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="356" y="213" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612271687243" />
+    <state x="358" y="215" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612318174658" />
     <state x="370" y="207" width="672" height="678" key="search.everywhere.popup" timestamp="1612312787057">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
