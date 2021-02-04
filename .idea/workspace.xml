@@ -11,8 +11,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/navigation-menu.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -169,7 +169,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/client" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -214,7 +214,11 @@
       <workItem from="1612184951364" duration="71407000" />
       <workItem from="1612336849867" duration="19393000" />
       <workItem from="1612359788218" duration="17000" />
-      <workItem from="1612372204550" duration="18706000" />
+      <workItem from="1612372204550" duration="18871000" />
+      <workItem from="1612393992430" duration="22000" />
+      <workItem from="1612394362561" duration="7000" />
+      <workItem from="1612394386788" duration="29000" />
+      <workItem from="1612423510239" duration="23000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -503,7 +507,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612392382302</updated>
     </task>
-    <option name="localTasksCounter" value="42" />
+    <task id="LOCAL-00042" summary="nav admin reposnive OK">
+      <created>1612392881480</created>
+      <option name="number" value="00042" />
+      <option name="presentableId" value="LOCAL-00042" />
+      <option name="project" value="LOCAL" />
+      <updated>1612392881480</updated>
+    </task>
+    <option name="localTasksCounter" value="43" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -523,7 +534,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Validations OK" />
     <MESSAGE value="Update + Logs OK + commencement event envoi mails" />
     <MESSAGE value="Update Newsletter controller etc Events + 3 derniers bien en ventes OK" />
     <MESSAGE value="Newsletter + img url aussi tt ça : Full OK" />
@@ -548,7 +558,8 @@
     <MESSAGE value="wysitruc responsive : OK" />
     <MESSAGE value="Page d'acceuil 100% style fini (reponsive aussi)" />
     <MESSAGE value="Partie client OK 95% ( pb jquery header)" />
-    <option name="LAST_COMMIT_MESSAGE" value="Partie client OK 95% ( pb jquery header)" />
+    <MESSAGE value="nav admin reposnive OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="nav admin reposnive OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -571,10 +582,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="459" y="351" key="ComposerInitDialogKey/0.0.1368.872@0.0.1368.872" timestamp="1611601137679" />
-    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1612276401920">
+    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1612394012108">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1612276401920" />
+    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1612394012108" />
     <state x="561" y="338" key="Github.ShareDialog" timestamp="1610997876594">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -595,10 +606,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612392383765">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612392882708">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612392383765" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612392882708" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
