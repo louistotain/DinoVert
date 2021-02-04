@@ -85,7 +85,7 @@
             <h1 class="text-white">Qui sommes</h1>
             <h1 class="text-white">-nous ?</h1>
 
-            <a href="{{ route('contact') }}">
+            <a href="{{ route('qui_sommes_nous') }}">
                 <button type="button" class="btn btn-outline-primary btn_SavPlus">En savoir plus</button>
             </a>
 
