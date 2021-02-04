@@ -55,7 +55,7 @@
     <title>DinoVert</title>
 
 </head>
-<body>
+<body id="{{$view_name}}">
 
 @include('includes.header')
 

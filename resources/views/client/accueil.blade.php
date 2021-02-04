@@ -4,7 +4,7 @@
     <div class="container-fluid background_main d-flex align-items-center justify-content-center text-white"
          style="height: 100vh;">
         @if (Auth::check())
-            <form method="post" class="mt-5 mb-5" action="{{route('wysiwyg.update',$wysiwygs[0]->id)}}">
+            <form method="post" id="First_wysiwyg" class="mb-5" action="{{route('wysiwyg.update',$wysiwygs[0]->id)}}">
                 @csrf
                 @method('PUT')
                 <div class="wysiwyg">

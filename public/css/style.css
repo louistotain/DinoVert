@@ -2,6 +2,7 @@
     box-sizing: border-box;
 }
 
+
 .btn_SavPlus {
     color: #E7A83F !important;
     border-color: #E7A83F !important;
@@ -183,6 +184,25 @@ table {
     margin-top: -10px;
     margin-bottom: 10px;
 }
+
+
+#client-accueil #messageNewsletter{
+    top: 108px;
+    position: absolute;
+}
+
+
+#First_wysiwyg {
+    margin-top: 7rem;
+    margin-bottom: 5rem;
+}
+
+@media (min-width: 702px) {
+    #First_wysiwyg{
+        margin-top: 3rem;
+    }
+}
+
 
 .newsletter {
     padding: 30px 0;
