@@ -102,11 +102,47 @@
     <script>
 
         $(document).ready(function () {
+
+            window.scrollTo(0, 0);
+
             $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_white.png)');
 
             $('.textHeader').addClass('text-white');
             $('#logo').attr('src', '../img/logo_noirblanc_png.png');
             $('nav.navbar').addClass('nav_accueil_transparent');
+
+
+            $('nav.navbar').hover(function () {
+
+                var scroll = $(window).scrollTop();
+
+                console.log(scroll);
+
+                if (scroll == 0) {
+                    $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_black.png)');
+
+                    $('.textHeader').removeClass('text-white');
+                    $('#logo').attr('src', '../img/logo_png.png');
+                    $('nav.navbar').removeClass('d-none');
+                    $(this).removeClass('nav_accueil_transparent');
+                    $(this).addClass('nav_accueil_white');
+                }
+            }, function () {
+
+                var scroll = $(window).scrollTop();
+
+                if (scroll == 0) {
+                    $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_white.png)');
+
+                    $('.textHeader').addClass('text-white');
+                    $('#logo').attr('src', '../img/logo_noirblanc_png.png');
+                    $('nav.navbar').removeClass('d-none');
+                    $(this).removeClass('nav_accueil_white');
+                    $(this).addClass('nav_accueil_transparent');
+                }
+
+            });
+
         });
 
         $(window).scroll(function () {
@@ -145,36 +181,6 @@
                 $('nav.navbar').removeClass('nav_accueil_white');
                 $('nav.navbar').addClass('nav_accueil_transparent');
             }
-
-
-            $('nav.navbar').hover(function () {
-
-                var scroll = $(window).scrollTop();
-
-                if (scroll == 0) {
-                    $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_black.png)');
-
-                    $('.textHeader').removeClass('text-white');
-                    $('#logo').attr('src', '../img/logo_png.png');
-                    $('nav.navbar').removeClass('d-none');
-                    $(this).removeClass('nav_accueil_transparent');
-                    $(this).addClass('nav_accueil_white');
-                }
-            }, function () {
-
-                var scroll = $(window).scrollTop();
-
-                if (scroll == 0) {
-                    $('.navbar-toggler-icon').css('background-image', 'url(../img/burger_white.png)');
-
-                    $('.textHeader').addClass('text-white');
-                    $('#logo').attr('src', '../img/logo_noirblanc_png.png');
-                    $('nav.navbar').removeClass('d-none');
-                    $(this).removeClass('nav_accueil_white');
-                    $(this).addClass('nav_accueil_transparent');
-                }
-
-            });
 
             localStorage['scroll'] = scroll;
 

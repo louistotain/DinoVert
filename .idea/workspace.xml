@@ -11,7 +11,6 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Merise_UML_Maquette/Lien maquette.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
     </list>
@@ -178,18 +177,19 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\Merise_UML_Maquette" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
+      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\client" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\admin\tags" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
       <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views\includes" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\img" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\resources\views" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public\js" />
-      <recent name="C:\Users\louis\Desktop\Projet_DinoVert\DinoVert\public" />
     </key>
   </component>
   <component name="RunManager">
@@ -221,7 +221,7 @@
       <workItem from="1612394386788" duration="29000" />
       <workItem from="1612423510239" duration="137000" />
       <workItem from="1612423664782" duration="4000" />
-      <workItem from="1612423867617" duration="4717000" />
+      <workItem from="1612423867617" duration="5978000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -531,7 +531,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612426691564</updated>
     </task>
-    <option name="localTasksCounter" value="45" />
+    <task id="LOCAL-00045" summary="Ajout Merise UML et Lien maquette">
+      <created>1612433201347</created>
+      <option name="number" value="00045" />
+      <option name="presentableId" value="LOCAL-00045" />
+      <option name="project" value="LOCAL" />
+      <updated>1612433201347</updated>
+    </task>
+    <option name="localTasksCounter" value="46" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -551,7 +558,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Newsletter + img url aussi tt ça : Full OK" />
     <MESSAGE value="correction bug 3 derniers biens en ventes" />
     <MESSAGE value="update WYSIWYG TinyMCE + navbar accueil Admin" />
     <MESSAGE value="update migrations seeder factories + Structure code + Biens a vendre + début formulaire" />
@@ -576,7 +582,8 @@
     <MESSAGE value="nav admin reposnive OK" />
     <MESSAGE value="add .env" />
     <MESSAGE value="reponsive et bien placé message erreur page acceuil" />
-    <option name="LAST_COMMIT_MESSAGE" value="reponsive et bien placé message erreur page acceuil" />
+    <MESSAGE value="Ajout Merise UML et Lien maquette" />
+    <option name="LAST_COMMIT_MESSAGE" value="Ajout Merise UML et Lien maquette" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -623,10 +630,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612426694877">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612433204108">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612426694877" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612433204108" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
