@@ -12,8 +12,6 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
     </list>
@@ -225,7 +223,7 @@
       <workItem from="1612423510239" duration="137000" />
       <workItem from="1612423664782" duration="4000" />
       <workItem from="1612423867617" duration="14166000" />
-      <workItem from="1612617228596" duration="3012000" />
+      <workItem from="1612617228596" duration="8999000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -549,7 +547,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612434440539</updated>
     </task>
-    <option name="localTasksCounter" value="47" />
+    <task id="LOCAL-00047" summary="Navabar jquery OKKKK">
+      <created>1612621033230</created>
+      <option name="number" value="00047" />
+      <option name="presentableId" value="LOCAL-00047" />
+      <option name="project" value="LOCAL" />
+      <updated>1612621033232</updated>
+    </task>
+    <option name="localTasksCounter" value="48" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -569,7 +574,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update WYSIWYG TinyMCE + navbar accueil Admin" />
     <MESSAGE value="update migrations seeder factories + Structure code + Biens a vendre + début formulaire" />
     <MESSAGE value="update pas d'images bien" />
     <MESSAGE value="Biens OK à 80% ( pb form recherche : nom categ dans la dropdown et recherhe + categ (with orwith))" />
@@ -594,7 +598,8 @@
     <MESSAGE value="reponsive et bien placé message erreur page acceuil" />
     <MESSAGE value="Ajout Merise UML et Lien maquette" />
     <MESSAGE value="correction bug scroll nav bar header" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction bug scroll nav bar header" />
+    <MESSAGE value="Navabar jquery OKKKK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Navabar jquery OKKKK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -641,10 +646,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612434441921">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612621037069">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612434441921" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612621037069" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

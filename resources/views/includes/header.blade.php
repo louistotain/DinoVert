@@ -1,44 +1,57 @@
 <nav class="navbar navbar-expand-lg navbar-light nav_accueil">
     <div class="container">
 
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-
-        <a class="navbar-brand" href="{{ route('public_index') }}"><img id="logo" class="m-auto" src="{{asset('img/logo_png.png')}}" height="50"
-                                                                        width="50"><h5 class="textHeader" >DinoVert</h5></a>
-
         @php $actual_link = parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", PHP_URL_PATH);   @endphp
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto m-lg-auto">
-                <li class="nav-item mr-0 mr-lg-5">
-                    <a class="nav-link textHeader @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp " href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
+        <div class="row w-100">
+            <ul class="col-12 d-flex flex-row align-items-center">
+                <li>
+                    <button class="navbar-brand d-flex flex-row align-items-center">
+                        <img id="menu_burger" class="m-auto" src="{{asset('img/burger_white.png')}}" height="40" width="40">
+                        <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Menu</p>
+                    </button>
                 </li>
                 <li class="nav-item mr-0 mr-lg-5">
-                    <a class="nav-link textHeader @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp " href="{{ route('actualites') }}">Actualités</a>
+                    <a style="color: black" class="textHeader nav-link @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp "
+                       href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
                 </li>
                 <li class="nav-item mr-0 mr-lg-5">
-                    <a class="nav-link textHeader @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp " href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>
+                    <a style="color: black" class="nav-link textHeader @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp "
+                       href="{{ route('actualites') }}">Actualités</a>
                 </li>
-                <li class="nav-item mr-0 mr-lg-5">
-                    <a class="nav-link textHeader @php  if ($actual_link == '/contact'){ echo 'active'; }  @endphp " href="{{ route('contact') }}">Contact</a>
+                <li>
+                    <a class="navbar-brand" href="{{ route('public_index') }}">
+                        <img id="logo" class="m-auto" src="{{asset('img/logo_png.png')}}" height="50" width="50">
+                        <h5 class="textHeader">DinoVert</h5>
+                    </a>
+                <li>
+                    <button class="navbar-brand d-flex flex-row align-items-center">
+                        <img id="menu_search" class="m-auto" src="{{asset('img/search_white.png')}}" height="40" width="40">
+                        <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Recherche</p>
+                    </button>
                 </li>
-            </ul>
-            @auth()
-                <!-- Settings Dropdown -->
-                    <div class="ml-3 relative">
-                        <x-jet-dropdown align="right" width="48">
-                            <x-slot name="trigger">
-                                @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
-                                    <button
-                                        class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
-                                        <img class="h-8 w-8 rounded-full object-cover"
-                                             src="{{ Auth::user()->profile_photo_url }}" alt="{{ Auth::user()->name }}"/>
-                                    </button>
-                                @else
-                                    <span class="inline-flex rounded-md">
+{{--                <li class="nav-item mr-0 mr-lg-5">--}}
+{{--                    <a class="nav-link textHeader @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp "--}}
+{{--                       href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>--}}
+{{--                </li>--}}
+{{--                <li class="nav-item mr-0 mr-lg-5">--}}
+{{--                    <a class="nav-link textHeader @php  if ($actual_link == '/contact'){ echo 'active'; }  @endphp "--}}
+{{--                       href="{{ route('contact') }}">Contact</a>--}}
+{{--                </li>--}}
+                @auth()
+                    <li>
+                        <div class="ml-3 relative">
+                            <x-jet-dropdown align="right" width="48">
+                                <x-slot name="trigger">
+                                    @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
+                                        <button
+                                            class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition duration-150 ease-in-out">
+                                            <img class="h-8 w-8 rounded-full object-cover"
+                                                 src="{{ Auth::user()->profile_photo_url }}"
+                                                 alt="{{ Auth::user()->name }}"/>
+                                        </button>
+                                    @else
+                                        <span class="inline-flex rounded-md">
                                     <button type="button"
                                             class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition ease-in-out duration-150">
                                         {{ Auth::user()->name }}
@@ -51,43 +64,45 @@
                                         </svg>
                                     </button>
                                 </span>
-                                @endif
-                            </x-slot>
+                                    @endif
+                                </x-slot>
 
-                            <x-slot name="content">
-                                <!-- Account Management -->
-                                <div class="block px-4 py-2 text-xs text-gray-400">
-                                    {{ __('Manage Account') }}
-                                </div>
+                                <x-slot name="content">
+                                    <!-- Account Management -->
+                                    <div class="block px-4 py-2 text-xs text-gray-400">
+                                        {{ __('Manage Account') }}
+                                    </div>
 
-                                <x-jet-dropdown-link href="{{ route('dashboard') }}">
-                                    {{ __('Dashboard') }}
-                                </x-jet-dropdown-link>
-
-                                @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
-                                    <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
-                                        {{ __('API Tokens') }}
+                                    <x-jet-dropdown-link href="{{ route('dashboard') }}">
+                                        {{ __('Dashboard') }}
                                     </x-jet-dropdown-link>
-                                @endif
 
-                                <div class="border-t border-gray-100"></div>
+                                    @if (Laravel\Jetstream\Jetstream::hasApiFeatures())
+                                        <x-jet-dropdown-link href="{{ route('api-tokens.index') }}">
+                                            {{ __('API Tokens') }}
+                                        </x-jet-dropdown-link>
+                                    @endif
 
-                                <!-- Authentication -->
-                                <form method="POST" action="{{ route('logout') }}">
-                                    @csrf
+                                    <div class="border-t border-gray-100"></div>
 
-                                    <x-jet-dropdown-link href="{{ route('logout') }}"
-                                                         onclick="event.preventDefault();
+                                    <!-- Authentication -->
+                                    <form method="POST" action="{{ route('logout') }}">
+                                        @csrf
+
+                                        <x-jet-dropdown-link href="{{ route('logout') }}"
+                                                             onclick="event.preventDefault();
                                                 this.closest('form').submit();">
-                                        {{ __('Logout') }}
-                                    </x-jet-dropdown-link>
-                                </form>
-                            </x-slot>
-                        </x-jet-dropdown>
-                    </div>
+                                            {{ __('Logout') }}
+                                        </x-jet-dropdown-link>
+                                    </form>
+                                </x-slot>
+                            </x-jet-dropdown>
+                        </div>
+                    </li>
+                @endauth
+            </ul>
         </div>
-            @endauth
-        </div>
+
     </div>
 </nav>
 
