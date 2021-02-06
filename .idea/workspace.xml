@@ -12,7 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -221,7 +224,8 @@
       <workItem from="1612394386788" duration="29000" />
       <workItem from="1612423510239" duration="137000" />
       <workItem from="1612423664782" duration="4000" />
-      <workItem from="1612423867617" duration="5978000" />
+      <workItem from="1612423867617" duration="14166000" />
+      <workItem from="1612617228596" duration="3012000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -538,7 +542,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612433201347</updated>
     </task>
-    <option name="localTasksCounter" value="46" />
+    <task id="LOCAL-00046" summary="correction bug scroll nav bar header">
+      <created>1612434440539</created>
+      <option name="number" value="00046" />
+      <option name="presentableId" value="LOCAL-00046" />
+      <option name="project" value="LOCAL" />
+      <updated>1612434440539</updated>
+    </task>
+    <option name="localTasksCounter" value="47" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -558,7 +569,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="correction bug 3 derniers biens en ventes" />
     <MESSAGE value="update WYSIWYG TinyMCE + navbar accueil Admin" />
     <MESSAGE value="update migrations seeder factories + Structure code + Biens a vendre + début formulaire" />
     <MESSAGE value="update pas d'images bien" />
@@ -583,7 +593,8 @@
     <MESSAGE value="add .env" />
     <MESSAGE value="reponsive et bien placé message erreur page acceuil" />
     <MESSAGE value="Ajout Merise UML et Lien maquette" />
-    <option name="LAST_COMMIT_MESSAGE" value="Ajout Merise UML et Lien maquette" />
+    <MESSAGE value="correction bug scroll nav bar header" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction bug scroll nav bar header" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -630,10 +641,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612433204108">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612434441921">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612433204108" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612434441921" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -646,10 +657,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="359" y="216" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612355446491" />
-    <state x="373" y="210" width="672" height="678" key="search.everywhere.popup" timestamp="1612378387601">
+    <state x="374" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1612443158212">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="373" y="210" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1612378387601" />
+    <state x="374" y="211" width="672" height="678" key="search.everywhere.popup/0.0.1368.872@0.0.1368.872" timestamp="1612443158212" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

@@ -2,6 +2,50 @@
     box-sizing: border-box;
 }
 
+#background_QSN {
+    background: no-repeat url("../img/auc1vxt6d5f312.jpg") 50% 50%;
+}
+
+.background_tremble_QSN {
+    animation: shake 0.5s;
+}
+
+@keyframes shake {
+    0% {
+        transform: translate(1px, 1px) rotate(0deg);
+    }
+    10% {
+        transform: translate(-1px, -2px) rotate(-1deg);
+    }
+    20% {
+        transform: translate(-3px, 0px) rotate(1deg);
+    }
+    30% {
+        transform: translate(3px, 2px) rotate(0deg);
+    }
+    40% {
+        transform: translate(1px, -1px) rotate(1deg);
+    }
+    50% {
+        transform: translate(-1px, 2px) rotate(-1deg);
+    }
+    60% {
+        transform: translate(-3px, 1px) rotate(0deg);
+    }
+    70% {
+        transform: translate(3px, 1px) rotate(-1deg);
+    }
+    80% {
+        transform: translate(-1px, -1px) rotate(1deg);
+    }
+    90% {
+        transform: translate(1px, 2px) rotate(0deg);
+    }
+    100% {
+        transform: translate(1px, -2px) rotate(-1deg);
+    }
+}
+
 
 .btn_SavPlus {
     color: #E7A83F !important;
@@ -9,7 +53,7 @@
     outline: none !important;
 }
 
-.btn_SavPlus:hover,.btn_SavPlus:focus, .btn-primary:active, .btn-primary:visited {
+.btn_SavPlus:hover, .btn_SavPlus:focus, .btn-primary:active, .btn-primary:visited {
     color: white !important;
     border-color: transparent !important;
     background-color: #E7A83F !important;
@@ -17,50 +61,45 @@
 }
 
 
-.contactezNous{
+.contactezNous {
     margin-left: 0 !important;
 }
 
 @media (min-width: 576px) {
-    .contactezNous{
+    .contactezNous {
         margin-left: 3rem !important;
     }
 }
 
 @media (min-width: 768px) {
-    .contactezNous{
+    .contactezNous {
         margin-left: 7rem !important;
     }
 }
 
 @media (min-width: 992px) {
-    .contactezNous{
+    .contactezNous {
         margin-left: 13rem !important;
     }
 }
 
-.svgAccueil svg{
+.svgAccueil svg {
     width: 60px !important;
     height: 20px !important;
 }
 
-.Items p{
+.Items p {
     margin-bottom: 0;
     color: #455D6A !important;
 }
 
-.ItemsDetails p{
+.ItemsDetails p {
     margin-bottom: 0.5rem;
     color: #455D6A !important;
 }
 
-.Items h1, .Items h2, .Items h3, .Items h4, .Items h5{
+.Items h1, .Items h2, .Items h3, .Items h4, .Items h5 {
     color: #455D6A !important;
-}
-
-
-.background_main_contact {
-    background: no-repeat url("../img/auc1vxt6d5f312.jpg") 50% 50%;
 }
 
 .tox-tinymce {
@@ -70,26 +109,59 @@
 }
 
 .navbar-light .navbar-toggler {
-    color: transparent !important;
-    border-color: transparent !important;
+    color: transparent;
+    border-color: transparent;
+}
+
+
+/* navbar */
+
+#client-accueil .nav_accueil {
+    background-color: transparent;
+    z-index: 999;
+    position: fixed;
+    width: 100%;
 }
 
 .nav_accueil_transparent {
-    background-color: transparent !important;
-    z-index: 999 !important;
-    position: fixed;
-    width: 100%;
+    background: transparent !important;
+}
+
+.nav_accueil_white_to_transparent {
+    animation: white_to_transparent 0.3s !important;
+    -webkit-animation-fill-mode: forwards !important;
 }
 
 .nav_accueil_white {
-    background-color: white !important;
-    z-index: 999 !important;
-    position: fixed;
-    width: 100%;
-    animation: opacityON 1s;
+    background: white !important;
+    animation: display_block 0.3s !important;
+    -webkit-animation-fill-mode: forwards !important;
 }
 
-@keyframes opacityON {
+.nav_accueil_display_none {
+    animation: display_none 0.3s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+@keyframes white_to_transparent {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+
+@keyframes display_none {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes display_block {
     from {
         opacity: 0;
     }
@@ -98,15 +170,7 @@
     }
 }
 
-@keyframes opacityOFF {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
-}
-
+/*  animation fleche accueil   */
 
 .gnBraM {
     left: 48.4%;
@@ -186,7 +250,7 @@ table {
 }
 
 
-#client-accueil #messageNewsletter{
+#client-accueil #messageNewsletter {
     top: 108px;
     position: absolute;
 }
@@ -198,7 +262,7 @@ table {
 }
 
 @media (min-width: 702px) {
-    #First_wysiwyg{
+    #First_wysiwyg {
         margin-top: 3rem;
     }
 }

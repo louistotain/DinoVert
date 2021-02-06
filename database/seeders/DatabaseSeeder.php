@@ -33,6 +33,7 @@ class DatabaseSeeder extends Seeder
             'name' => 'Appartement',
             'slug' => Str::slug('Appartement')
         ]);
+
         DB::table('propertiescategs')->insert([
             'name' => 'Maison individuelle',
             'slug' => Str::slug('Maison individuelle')
