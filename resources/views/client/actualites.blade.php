@@ -11,7 +11,7 @@
 
                         <a href="{{route('actualites.details', ['article' => $article->id])}}" class="col-12 col-sm-6 col-lg-3" style="text-decoration: none; color: unset;">
 
-                            <img style="width: 300px; height: 200px;" src="{{ $article->url_picture }}">
+                            <img class="img_Actualites" src="{{ $article->url_picture }}">
 
                             <h5>{{ $article->title }}</h5>
 

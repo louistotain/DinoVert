@@ -55,7 +55,7 @@
                                 <img style="width: 300px; height: 200px;"
                                      src="https://pyrenees.media.tourinsoft.eu/upload/Pasd-ImagesDisponible-ba91bb1444f84ed392cd463caa4d074f.jpg">
                             @else
-                                <img style="width: 300px; height: 200px;" src="{{ $property->pictures->first()->url }}">
+                                <img class="img_biensAVendre" src="{{ $property->pictures->first()->url }}">
                             @endif
 
                             @foreach($propertiescategs as $propertiescateg)

@@ -12,8 +12,11 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,14 +227,7 @@
       <workItem from="1612423664782" duration="4000" />
       <workItem from="1612423867617" duration="14166000" />
       <workItem from="1612617228596" duration="12095000" />
-      <workItem from="1612712116362" duration="4324000" />
-    </task>
-    <task id="LOCAL-00001" summary="Ajout JetStream">
-      <created>1610999946685</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1610999946686</updated>
+      <workItem from="1612712116362" duration="5133000" />
     </task>
     <task id="LOCAL-00002" summary="update 3 : test unversioned files">
       <created>1611000188551</created>
@@ -569,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612693814469</updated>
     </task>
-    <option name="localTasksCounter" value="50" />
+    <task id="LOCAL-00050" summary="Update Navbar : responsive OK">
+      <created>1612718479634</created>
+      <option name="number" value="00050" />
+      <option name="presentableId" value="LOCAL-00050" />
+      <option name="project" value="LOCAL" />
+      <updated>1612718479635</updated>
+    </task>
+    <option name="localTasksCounter" value="51" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -589,7 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Biens OK à 80% ( pb form recherche : nom categ dans la dropdown et recherhe + categ (with orwith))" />
     <MESSAGE value="pages actualités et article + page qui sommes nous et contact OK ( page contact faire back )" />
     <MESSAGE value="Page contact OK" />
     <MESSAGE value="validator contact" />
@@ -614,7 +616,8 @@
     <MESSAGE value="Navabar jquery OKKKK" />
     <MESSAGE value="update 1 menu navbar" />
     <MESSAGE value="update 2 menu navbar PC ok" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 2 menu navbar PC ok" />
+    <MESSAGE value="Update Navbar : responsive OK" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update Navbar : responsive OK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -661,10 +664,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612693818618">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612718483084">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612693818618" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612718483084" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
