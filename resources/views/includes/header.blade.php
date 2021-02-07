@@ -4,10 +4,10 @@
         @php $actual_link = parse_url("http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]", PHP_URL_PATH);   @endphp
 
         <div class="row w-100">
-            <ul class="col-12 d-flex flex-row align-items-center">
+            <ul class="col-7 d-flex flex-row align-items-center justify-content-around">
                 <li>
                     <button class="navbar-brand d-flex flex-row align-items-center">
-                        <img id="menu_burger" class="m-auto" src="{{asset('img/burger_white.png')}}" height="40" width="40">
+                        <img id="menu_burger" class="m-auto" src="{{asset('img/burger_black.png')}}" height="40" width="40">
                         <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Menu</p>
                     </button>
                 </li>
@@ -24,12 +24,6 @@
                         <img id="logo" class="m-auto" src="{{asset('img/logo_png.png')}}" height="50" width="50">
                         <h5 class="textHeader">DinoVert</h5>
                     </a>
-                <li>
-                    <button class="navbar-brand d-flex flex-row align-items-center">
-                        <img id="menu_search" class="m-auto" src="{{asset('img/search_white.png')}}" height="40" width="40">
-                        <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Recherche</p>
-                    </button>
-                </li>
 {{--                <li class="nav-item mr-0 mr-lg-5">--}}
 {{--                    <a class="nav-link textHeader @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp "--}}
 {{--                       href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>--}}
@@ -100,6 +94,14 @@
                         </div>
                     </li>
                 @endauth
+            </ul>
+            <ul class="col-5 d-flex flex-row align-items-center justify-content-end">
+                <li>
+                    <button class="navbar-brand d-flex flex-row align-items-center">
+                        <img id="menu_search" class="m-auto" src="{{asset('img/search_black.png')}}" height="40" width="40">
+                        <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Recherche</p>
+                    </button>
+                </li>
             </ul>
         </div>
 
