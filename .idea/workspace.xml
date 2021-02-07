@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -223,7 +223,8 @@
       <workItem from="1612423510239" duration="137000" />
       <workItem from="1612423664782" duration="4000" />
       <workItem from="1612423867617" duration="14166000" />
-      <workItem from="1612617228596" duration="11001000" />
+      <workItem from="1612617228596" duration="12095000" />
+      <workItem from="1612712116362" duration="4324000" />
     </task>
     <task id="LOCAL-00001" summary="Ajout JetStream">
       <created>1610999946685</created>
@@ -561,7 +562,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612630813638</updated>
     </task>
-    <option name="localTasksCounter" value="49" />
+    <task id="LOCAL-00049" summary="update 2 menu navbar PC ok">
+      <created>1612693814469</created>
+      <option name="number" value="00049" />
+      <option name="presentableId" value="LOCAL-00049" />
+      <option name="project" value="LOCAL" />
+      <updated>1612693814469</updated>
+    </task>
+    <option name="localTasksCounter" value="50" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -581,7 +589,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="update pas d'images bien" />
     <MESSAGE value="Biens OK à 80% ( pb form recherche : nom categ dans la dropdown et recherhe + categ (with orwith))" />
     <MESSAGE value="pages actualités et article + page qui sommes nous et contact OK ( page contact faire back )" />
     <MESSAGE value="Page contact OK" />
@@ -606,7 +613,8 @@
     <MESSAGE value="correction bug scroll nav bar header" />
     <MESSAGE value="Navabar jquery OKKKK" />
     <MESSAGE value="update 1 menu navbar" />
-    <option name="LAST_COMMIT_MESSAGE" value="update 1 menu navbar" />
+    <MESSAGE value="update 2 menu navbar PC ok" />
+    <option name="LAST_COMMIT_MESSAGE" value="update 2 menu navbar PC ok" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -629,10 +637,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="459" y="351" key="ComposerInitDialogKey/0.0.1368.872@0.0.1368.872" timestamp="1611601137679" />
-    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1612424811611">
+    <state x="465" y="191" key="FileChooserDialogImpl" timestamp="1612715190994">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1612424811611" />
+    <state x="465" y="191" key="FileChooserDialogImpl/0.0.1368.872@0.0.1368.872" timestamp="1612715190994" />
     <state x="561" y="338" key="Github.ShareDialog" timestamp="1610997876594">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -649,14 +657,14 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="247" height="198" key="ShowFilterAction_Filter_Popup/0.0.1368.872@0.0.1368.872" timestamp="1611004067615" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1612344356917">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1612716220663">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612344356917" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612630815357">
+    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612693818618">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612630815357" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612693818618" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -665,10 +673,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1612424925133" />
-    <state x="359" y="216" width="672" height="677" key="run.anything.popup" timestamp="1612355446491">
+    <state x="360" y="217" width="672" height="677" key="run.anything.popup" timestamp="1612715126208">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="359" y="216" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612355446491" />
+    <state x="360" y="217" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612715126208" />
     <state x="374" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1612443158212">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

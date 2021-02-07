@@ -156,6 +156,8 @@
 
     <script>
 
+        //Easter egg
+
         $(document).ready(function () {
             var i = 0;
             $('#background_QSN').click(function () {
@@ -170,6 +172,7 @@
             });
         });
 
+        // Animation NavBar menu
 
         $(document).ready(function () {
 
@@ -261,6 +264,74 @@
             localStorage['scroll'] = scroll;
 
         });
+
+
+
+        // Menu responsive
+
+        var ul_search = $('#ul_search');
+
+        var li_search = $('#li_search');
+        var li_BAV = $('#li_BAV');
+        var li_Actualites = $('#li_Actualites');
+
+        var li_menu_burger_p = $('#li_menu_burger p')
+        var li_search_p = $('#li_search p');
+
+        $(document).ready(function () {
+            var width = $(window).width();
+            if (width < 1200){
+
+                $('#li_BAV').remove();
+                $('#li_Actualites').remove();
+                $('#ul_search').remove();
+                $('#li_search').remove();
+
+                $('#li_logo').after(li_search);
+                $('#ul_nav').removeClass('col-7').addClass('col-12');
+            }
+            if (width < 768){
+                $('#li_menu_burger p').remove();
+                $('#li_search p').remove();
+            }
+        });
+
+
+
+        $(window).resize(function() {
+            var width = $(window).width();
+
+            if (width < 1200){
+                $('#li_BAV').remove();
+                $('#li_Actualites').remove();
+                $('#ul_search').remove();
+                $('#li_search').remove();
+
+                $('#li_logo').after(li_search);
+                $('#ul_nav').removeClass('col-7').addClass('col-12');
+            }
+            if (width > 1200){
+                $('#li_menu_burger').after(li_BAV);
+                $('#li_BAV').after(li_Actualites);
+                $('#li_search').remove();
+
+                $('#ul_nav').removeClass('col-12').addClass('col-7');
+
+                $('#ul_nav').after(ul_search);
+                $('#ul_search').append(li_search);
+
+            }
+
+            if (width < 768){
+                $('#li_menu_burger p').remove();
+                $('#li_search p').remove();
+            }
+            if (width > 768){
+                $('#menu_burger').after(li_menu_burger_p);
+                $('#menu_search').after(li_search_p);
+            }
+        });
+
     </script>
 
 @endsection
