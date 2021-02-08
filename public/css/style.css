@@ -3,6 +3,23 @@
 }
 
 
+.navbar_burger{
+    width: 90%;
+}
+
+@media (min-width: 768px) {
+    .navbar_burger {
+        width: 70%;
+    }
+}
+
+@media (min-width: 1200px) {
+    .navbar_burger {
+        width: 50%;
+    }
+}
+
+
 
 .img_biensAVendre, .img_Actualites{
     width: 100%;
@@ -130,6 +147,11 @@
 
 /* navbar */
 
+.navbar_burger{
+    transform: translateX(-100%);
+}
+
+
 #client-accueil .nav_accueil {
     background-color: transparent;
     z-index: 999;
@@ -153,9 +175,44 @@
 }
 
 .nav_accueil_display_none {
+    animation: display_none 0.5s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+
+
+.nav_burger_display_block{
+    animation: display_block 0.3s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.nav_burger_display_none{
     animation: display_none 0.3s !important;
     -webkit-animation-fill-mode: forwards !important;
 }
+
+.nav_burger_animation_none{
+    animation: display_none_burger 1s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.nav_burger_animation_block{
+    animation: display_block_burger 0.5s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.bg_burger_block{
+    animation: display_block 0.5s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.bg_burger_none{
+    animation: display_none_bg_burger 0.5s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+
+
 
 @keyframes white_to_transparent {
     from {
@@ -166,12 +223,44 @@
     }
 }
 
+@keyframes display_none_burger {
+    from {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    to {
+        opacity: 0;
+    }
+}
+
+@keyframes display_block_burger {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes display_none_bg_burger {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+
 @keyframes display_none {
     from {
         opacity: 1;
     }
     to {
         opacity: 0;
+        transform: translateY(-100%);
     }
 }
 

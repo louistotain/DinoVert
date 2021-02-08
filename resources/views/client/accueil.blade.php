@@ -188,9 +188,9 @@
 
             $('nav.navbar').hover(function () {
 
-                var scroll = $(window).scrollTop();
+                $('nav.navbar').removeClass('nav_burger_display_block')
 
-                console.log(scroll);
+                var scroll = $(window).scrollTop();
 
                 if (scroll == 0) {
                     $('#menu_burger').attr('src', '../img/burger_black.png');
@@ -222,6 +222,8 @@
         });
 
         $(window).scroll(function () {
+
+            $('nav.navbar').removeClass('nav_burger_display_block')
 
             if (localStorage['scroll'] == null) {
                 localStorage['scroll'] = 0;

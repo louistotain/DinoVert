@@ -76,7 +76,10 @@
         </div>
     </div>
 
+    <script src="{{asset('js/extention/choices.js')}}"></script>
+
     <script type="text/javascript">
+
         document.getElementById("main_categ").innerText = '<?php if (isset($mainCategName)) {
             echo $mainCategName;
         } else {
@@ -94,6 +97,13 @@
         } else {
             echo null;
         } ?>';
+
+
+        const choices = new Choices('[data-trigger]',
+            {
+                searchEnabled: false,
+                itemSelectText: '',
+            });
 
     </script>
 

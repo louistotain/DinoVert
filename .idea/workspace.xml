@@ -15,7 +15,6 @@
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/accueil.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -173,7 +172,7 @@
     <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../../../../wamp64/www/Extranet_Tremblaye" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="run.code.analysis.last.selected.profile" value="pProject Default" />
@@ -227,14 +226,8 @@
       <workItem from="1612423664782" duration="4000" />
       <workItem from="1612423867617" duration="14166000" />
       <workItem from="1612617228596" duration="12095000" />
-      <workItem from="1612712116362" duration="5133000" />
-    </task>
-    <task id="LOCAL-00002" summary="update 3 : test unversioned files">
-      <created>1611000188551</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1611000188551</updated>
+      <workItem from="1612712116362" duration="6487000" />
+      <workItem from="1612804587531" duration="14475000" />
     </task>
     <task id="LOCAL-00003" summary="Header + header logo jetstream">
       <created>1611004958903</created>
@@ -572,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612718479635</updated>
     </task>
-    <option name="localTasksCounter" value="51" />
+    <task id="LOCAL-00051" summary="correction bugs responsive mobile biens a vendre + actualités">
+      <created>1612719413069</created>
+      <option name="number" value="00051" />
+      <option name="presentableId" value="LOCAL-00051" />
+      <option name="project" value="LOCAL" />
+      <updated>1612719413069</updated>
+    </task>
+    <option name="localTasksCounter" value="52" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="pages actualités et article + page qui sommes nous et contact OK ( page contact faire back )" />
     <MESSAGE value="Page contact OK" />
     <MESSAGE value="validator contact" />
     <MESSAGE value="WYSIWYG OK" />
@@ -617,7 +616,8 @@
     <MESSAGE value="update 1 menu navbar" />
     <MESSAGE value="update 2 menu navbar PC ok" />
     <MESSAGE value="Update Navbar : responsive OK" />
-    <option name="LAST_COMMIT_MESSAGE" value="Update Navbar : responsive OK" />
+    <MESSAGE value="correction bugs responsive mobile biens a vendre + actualités" />
+    <option name="LAST_COMMIT_MESSAGE" value="correction bugs responsive mobile biens a vendre + actualités" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612345884051">
@@ -664,10 +664,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612718483084">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612719414260">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612718483084" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612719414260" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -676,10 +676,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1612424925133" />
-    <state x="360" y="217" width="672" height="677" key="run.anything.popup" timestamp="1612715126208">
+    <state x="363" y="220" width="672" height="677" key="run.anything.popup" timestamp="1612818164623">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="360" y="217" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612715126208" />
+    <state x="363" y="220" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612818164623" />
     <state x="374" y="211" width="672" height="678" key="search.everywhere.popup" timestamp="1612443158212">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
