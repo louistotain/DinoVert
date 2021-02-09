@@ -57,10 +57,7 @@
 </head>
 <body id="{{$view_name}}">
 
-<div class="bg_navbar_burger d-none"
-     style="height: 100vh; width: 100%; background: #00000090; position: fixed; z-index: 9999; top: 0;">
-    <div class="navbar_burger" style="height: 100vh; background: #1C282E; position: relative; z-index: 10000;"></div>
-</div>
+@include('includes.header_burger')
 
 @include('includes.header')
 
@@ -143,17 +140,35 @@
 
             $('.navbar_burger').removeClass('nav_burger_animation_none').addClass('nav_burger_animation_block');
 
+
             $(document).mouseup(function (e) {
-                var container = $(".navbar_burger");
-                if (!container.is(e.target) && container.has(e.target).length === 0) {
-                    $('nav.navbar').removeClass('nav_burger_display_none').addClass('nav_burger_display_block');
 
-                    $('.bg_navbar_burger').removeClass('nav_burger_animation_block').addClass('bg_burger_none');
+                if ($('.bg_navbar_burger')[0].className == 'bg_navbar_burger nav_burger_animation_block') {
 
-                    $('.navbar_burger').removeClass('nav_burger_animation_block').addClass('nav_burger_animation_none');
+                    var container = $(".navbar_burger");
+                    if (!container.is(e.target) && container.has(e.target).length === 0) {
+                        $('nav.navbar').removeClass('nav_burger_display_none').addClass('nav_burger_display_block');
 
-                    $('body').removeClass('overflow-hidden');
+                        $('.bg_navbar_burger').removeClass('nav_burger_animation_block').addClass('bg_burger_none');
+
+                        $('.navbar_burger').removeClass('nav_burger_animation_block').addClass('nav_burger_animation_none');
+
+                        $('body').removeClass('overflow-hidden');
+                    }
+
+                    $('#menu_croix').click(function () {
+
+                        $('nav.navbar').removeClass('nav_burger_display_none').addClass('nav_burger_display_block');
+
+                        $('.bg_navbar_burger').removeClass('nav_burger_animation_block').addClass('bg_burger_none');
+
+                        $('.navbar_burger').removeClass('nav_burger_animation_block').addClass('nav_burger_animation_none');
+
+                        $('body').removeClass('overflow-hidden');
+                    });
+
                 }
+
             });
 
         });
