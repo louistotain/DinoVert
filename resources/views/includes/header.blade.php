@@ -7,16 +7,19 @@
             <ul class="col-7 d-flex flex-row align-items-center justify-content-around" id="ul_nav">
                 <li id="li_menu_burger">
                     <button class="navbar-brand d-flex flex-row align-items-center m-auto">
-                        <img id="menu_burger" class="m-auto" src="{{asset('img/burger_black.png')}}" height="40" width="40">
+                        <img id="menu_burger" class="m-auto" src="{{asset('img/burger_black.png')}}" height="40"
+                             width="40">
                         <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Menu</p>
                     </button>
                 </li>
                 <li id="li_BAV" style="margin-right: -70px; margin-left: -30px;">
-                    <a style="color: black" class="textHeader nav-link @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp "
+                    <a style="color: black"
+                       class="textHeader nav-link @php  if ($actual_link == '/biens-a-vendre'){ echo 'active'; }  @endphp "
                        href="{{ route('biens_a_vendre') }}">Biens à vendre</a>
                 </li>
                 <li id="li_Actualites">
-                    <a style="color: black" class="nav-link textHeader @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp "
+                    <a style="color: black"
+                       class="nav-link textHeader @php  if ($actual_link == '/actualites'){ echo 'active'; }  @endphp "
                        href="{{ route('actualites') }}">Actualités</a>
                 </li>
                 <li id="li_logo">
@@ -24,14 +27,7 @@
                         <img id="logo" class="m-auto" src="{{asset('img/logo_png.png')}}" height="50" width="50">
                         <h5 class="textHeader">DinoVert</h5>
                     </a>
-{{--                <li class="nav-item mr-0 mr-lg-5" id="li_QSN">--}}
-{{--                    <a class="nav-link textHeader @php  if ($actual_link == '/qui-sommes-nous'){ echo 'active'; }  @endphp "--}}
-{{--                       href="{{ route('qui_sommes_nous') }}">Qui sommes-nous ?</a>--}}
-{{--                </li>--}}
-{{--                <li class="nav-item mr-0 mr-lg-5" id="li_Contact">--}}
-{{--                    <a class="nav-link textHeader @php  if ($actual_link == '/contact'){ echo 'active'; }  @endphp "--}}
-{{--                       href="{{ route('contact') }}">Contact</a>--}}
-{{--                </li>--}}
+
                 @auth()
                     <li id="li_admin">
                         <div class="ml-3 relative">
@@ -98,7 +94,8 @@
             <ul class="col-5 d-flex flex-row align-items-center justify-content-end" id="ul_search">
                 <li id="li_search">
                     <button class="navbar-brand d-flex flex-row align-items-center m-auto">
-                        <img id="menu_search" class="m-auto" src="{{asset('img/search_black.png')}}" height="40" width="40">
+                        <img id="menu_search" class="m-auto" src="{{asset('img/search_black.png')}}" height="40"
+                             width="40">
                         <p class="textHeader nav-link m-0 p-0" style="font-size: 1rem;">Recherche</p>
                     </button>
                 </li>

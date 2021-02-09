@@ -2,6 +2,18 @@
     box-sizing: border-box;
 }
 
+#scrollbar_burger::-webkit-scrollbar{
+    display: none;
+}
+
+.ATyBL_burger, .cbpYqP_burger{
+    background-color: white;
+    width: 40px;
+    height: 40px;
+    border-radius: 20px;
+    margin: auto;
+    display: flex!important;
+}
 
 #menu_croix{
     margin-left: 3vw;
@@ -127,6 +139,22 @@
     width: 60px !important;
     height: 20px !important;
 }
+
+.svgAccueil_burger svg {
+    width: 50px !important;
+    height: 15px !important;
+}
+
+
+.Items_burger p{
+    margin-bottom: 0;
+    color: white !important;
+}
+
+.Items_burger h1, .Items_burger h2, .Items_burger h3, .Items_burger h4, .Items_burger h5 {
+    color: white !important;
+}
+
 
 .Items p {
     margin-bottom: 0;
