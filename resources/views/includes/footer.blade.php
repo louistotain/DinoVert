@@ -74,4 +74,13 @@
     function displayMessageNewsletter() {
         document.getElementById('messageNewsletter').style.display = 'none';
     }
+
+
+    $(document).ready(function () {
+        if ($(document.body).height() < $(window).height()) {
+            $('section.newsletter').attr('style', 'position: fixed!important; bottom: 0px; width: 100%;');
+        }
+    });
+
+
 </script>

@@ -41,6 +41,16 @@
 }
 
 
+.navbar_search {
+    height: 100vh !important;
+}
+
+@media (min-width: 768px) {
+    .navbar_search {
+        height: 50vh !important;
+    }
+}
+
 
 .img_biensAVendre, .img_Actualites{
     width: 100%;
