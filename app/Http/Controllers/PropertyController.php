@@ -90,7 +90,6 @@ class PropertyController extends Controller
 
         } else {
 
-            $propertycateg = Propertiescateg::findOrFail($request->categorie);
             $propertiescategs = Propertiescateg::all();
 
             $properties = Property::with(['pictures' => function ($query) {

@@ -24,7 +24,7 @@
                         </div>
                     </div>
                     <div class="input-field second-wrap">
-                        <input name="search" id="search" type="text" placeholder="Recherche"/>
+                        <input value="@if(isset($search)) @php echo $search; @endphp @endif" name="search" id="search" type="text" placeholder="Recherche"/>
                     </div>
                     <div class="input-field third-wrap">
                         <button class="btn-search d-flex justify-content-around align-items-center" type="submit">
@@ -90,12 +90,6 @@
             echo $mainCategId;
         } else {
             echo 0;
-        } ?>';
-
-        document.getElementById("search").value = '<?php if (isset($search)) {
-            echo $search;
-        } else {
-            echo null;
         } ?>';
 
 
