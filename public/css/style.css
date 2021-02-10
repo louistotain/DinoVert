@@ -15,12 +15,12 @@
     display: flex!important;
 }
 
-#menu_croix{
+#menu_croix_burger, #menu_croix_search{
     margin-left: 3vw;
     padding-top: 2.5rem;
 }
 
-#menu_croix:hover{
+#menu_croix_burger:hover, #menu_croix_search:hover{
     cursor: pointer;
 }
 
@@ -184,10 +184,6 @@
 
 /* navbar */
 
-.navbar_burger{
-    transform: translateX(-100%);
-}
-
 
 #client-accueil .nav_accueil {
     background-color: transparent;
@@ -217,6 +213,39 @@
 }
 
 
+@keyframes white_to_transparent {
+    from {
+        background-color: white;
+    }
+    to {
+        background-color: transparent;
+    }
+}
+@keyframes display_none {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+
+@keyframes display_block {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* navbar burger */
+
+.navbar_burger{
+    transform: translateX(-100%);
+}
 
 .nav_burger_display_block{
     animation: display_block 0.3s !important;
@@ -249,17 +278,6 @@
 }
 
 
-
-
-@keyframes white_to_transparent {
-    from {
-        background-color: white;
-    }
-    to {
-        background-color: transparent;
-    }
-}
-
 @keyframes display_none_burger {
     from {
         opacity: 1;
@@ -279,7 +297,6 @@
         transform: translateX(0);
     }
 }
-
 @keyframes display_none_bg_burger {
     from {
         opacity: 1;
@@ -291,7 +308,41 @@
 }
 
 
-@keyframes display_none {
+/* navbar search */
+
+
+.nav_search_animation_block{
+    animation: display_block_search 0.5s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.bg_search_none{
+    animation: display_none_bg_search 0.5s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.nav_search_display_block{
+    animation: display_block 0.3s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+.nav_search_animation_none{
+    animation: display_none_search 1s !important;
+    -webkit-animation-fill-mode: forwards !important;
+}
+
+
+@keyframes display_block_search {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes display_none_bg_search {
     from {
         opacity: 1;
     }
@@ -301,14 +352,18 @@
     }
 }
 
-@keyframes display_block {
+@keyframes display_none_search {
     from {
-        opacity: 0;
+        opacity: 1;
+        transform: translateY(0);
     }
     to {
-        opacity: 1;
+        opacity: 0;
     }
 }
+
+
+
 
 /*  animation fleche accueil   */
 

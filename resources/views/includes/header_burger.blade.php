@@ -4,7 +4,7 @@
 
         <div class="row m-auto w-100 d-flex justify-content-start pb-4">
             <div class="col-4 col-sm-5">
-                <img id="menu_croix" src="{{asset('img/croix_white.png')}}" height="60" width="60">
+                <img id="menu_croix_burger" src="{{asset('img/croix_white.png')}}" height="60" width="60">
             </div>
             <div class="col-7 d-flex justify-content-start align-items-center">
                 <a class="navbar-brand">

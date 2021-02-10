@@ -43,11 +43,11 @@ class DatabaseSeeder extends Seeder
             'slug' => Str::slug('Enclos à dinosaure')
         ]);
 
-        Article::factory(6)
+        Article::factory(50)
             ->hasAttached(Tag::factory()->count(2))
             ->create();
 
-        Property::factory(6)
+        Property::factory(50)
             ->hasAttached(Picture::factory()->count(2))
             ->create();
 

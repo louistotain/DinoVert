@@ -57,6 +57,8 @@
 </head>
 <body id="{{$view_name}}">
 
+@include('includes.header_search')
+
 @include('includes.header_burger')
 
 @include('includes.header')
@@ -130,6 +132,9 @@
         }
     });
 
+
+    // menu burger
+
     $(document).ready(function () {
 
         $('#li_menu_burger').click(function () {
@@ -156,13 +161,64 @@
                         $('body').removeClass('overflow-hidden');
                     }
 
-                    $('#menu_croix').click(function () {
+                    $('#menu_croix_burger').click(function () {
 
                         $('nav.navbar').removeClass('nav_burger_display_none').addClass('nav_burger_display_block');
 
                         $('.bg_navbar_burger').removeClass('nav_burger_animation_block').addClass('bg_burger_none');
 
                         $('.navbar_burger').removeClass('nav_burger_animation_block').addClass('nav_burger_animation_none');
+
+                        $('body').removeClass('overflow-hidden');
+                    });
+
+                }
+
+            });
+
+        });
+    });
+
+
+    // menu search
+
+    $(document).ready(function () {
+
+        if ($('body')[0].id == 'client-BiensAVendre') {
+            $('#li_search').remove();
+        }
+
+        $('#li_search').click(function () {
+            $('body').addClass('overflow-hidden');
+            $('nav.navbar').removeClass('nav_search_display_block').addClass('nav_search_display_none');
+
+            $('.bg_navbar_search').removeClass('d-none').removeClass('bg_search_none').addClass('nav_search_animation_block');
+
+            $('.navbar_search').removeClass('nav_search_animation_none').addClass('nav_search_animation_block');
+
+
+            $(document).mouseup(function (e) {
+
+                if ($('.bg_navbar_search')[0].className == 'bg_navbar_search nav_search_animation_block') {
+
+                    var container = $(".navbar_search");
+                    if (!container.is(e.target) && container.has(e.target).length === 0) {
+                        $('nav.navbar').removeClass('nav_burger_display_none').addClass('nav_burger_display_block');
+
+                        $('.bg_navbar_search').removeClass('nav_search_animation_block').addClass('bg_search_none');
+
+                        $('.navbar_search').removeClass('nav_search_animation_block').addClass('nav_search_animation_none');
+
+                        $('body').removeClass('overflow-hidden');
+                    }
+
+                    $('#menu_croix_search').click(function () {
+
+                        $('nav.navbar').removeClass('nav_burger_display_none').addClass('nav_burger_display_block');
+
+                        $('.bg_navbar_search').removeClass('nav_search_animation_block').addClass('bg_search_none');
+
+                        $('.navbar_search').removeClass('nav_search_animation_block').addClass('nav_search_animation_none');
 
                         $('body').removeClass('overflow-hidden');
                     });
