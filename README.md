@@ -29,7 +29,7 @@ Copier/coller "https://github.com/louistotain/DinoVert.git" puis cloner le repos
 
 Ensuite créer une table ayant le nom de votre variable d'environnement "DB_DATABASE" dans le .env.
 
-Enfin, lancer la commande "composer install" puis une fois fini "npm run dev". Il ne reste plus cas faire
+Enfin, lancer la commande "composer install" puis une fois fini "npm install" puis "npm run dev". Il ne reste plus cas faire
 les migrations et le seeder avec "php artisan migrate:refresh --seed"
 
 Vous pouvez maintenant lancer et profiter du site avec "php artisan serve" !
