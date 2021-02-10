@@ -2,6 +2,10 @@
     box-sizing: border-box;
 }
 
+#scrollbar_burger .absolute{
+    position: relative !important;
+}
+
 .page-item.disabled .page-link{
     background-color: #ececec ;
     border-color: white ;

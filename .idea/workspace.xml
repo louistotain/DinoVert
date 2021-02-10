@@ -14,6 +14,8 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/public/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/public/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/includes/header_burger.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/includes/header_burger.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,14 +229,7 @@
       <workItem from="1612712116362" duration="6487000" />
       <workItem from="1612804587531" duration="14657000" />
       <workItem from="1612823465715" duration="16559000" />
-      <workItem from="1612947331904" duration="15240000" />
-    </task>
-    <task id="LOCAL-00011" summary="properties : OK 100% (boutons etc)">
-      <created>1611693243660</created>
-      <option name="number" value="00011" />
-      <option name="presentableId" value="LOCAL-00011" />
-      <option name="project" value="LOCAL" />
-      <updated>1611693243660</updated>
+      <workItem from="1612947331904" duration="16096000" />
     </task>
     <task id="LOCAL-00012" summary="categories biens + pictures : Tout ok + dashboard ok">
       <created>1611698362438</created>
@@ -572,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612964043221</updated>
     </task>
-    <option name="localTasksCounter" value="60" />
+    <task id="LOCAL-00060" summary="pagination style">
+      <created>1612966137532</created>
+      <option name="number" value="00060" />
+      <option name="presentableId" value="LOCAL-00060" />
+      <option name="project" value="LOCAL" />
+      <updated>1612966137532</updated>
+    </task>
+    <option name="localTasksCounter" value="61" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +594,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Newsletter : Full OK ( bien dans le mail + désinscription)" />
     <MESSAGE value="Vues mentions légales + style footer" />
     <MESSAGE value="Jquery accueil header : 70% (bugs mais dans l'idée c'est ça)" />
     <MESSAGE value="Jquery accueil header menu : 80%" />
@@ -617,7 +618,8 @@
     <MESSAGE value="correction bug resize nav search" />
     <MESSAGE value="navbar search OK 100%" />
     <MESSAGE value="pagination actualités" />
-    <option name="LAST_COMMIT_MESSAGE" value="pagination actualités" />
+    <MESSAGE value="pagination style" />
+    <option name="LAST_COMMIT_MESSAGE" value="pagination style" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612949778861">
@@ -664,10 +666,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612964044656">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612966138515">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612964044656" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612966138515" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>

@@ -27,9 +27,11 @@
                         <img id="logo" class="m-auto" src="{{asset('img/logo_png.png')}}" height="50" width="50">
                         <h5 class="textHeader">DinoVert</h5>
                     </a>
-
+                </li>
+            </ul>
+            <ul class="col-5 d-flex flex-row align-items-center justify-content-end" id="ul_search">
                 @auth()
-                    <li id="li_admin">
+                    <li id="li_admin" style="margin-right: 2vw;">
                         <div class="ml-3 relative">
                             <x-jet-dropdown align="right" width="48">
                                 <x-slot name="trigger">
@@ -90,8 +92,6 @@
                         </div>
                     </li>
                 @endauth
-            </ul>
-            <ul class="col-5 d-flex flex-row align-items-center justify-content-end" id="ul_search">
                 <li id="li_search">
                     <button class="navbar-brand d-flex flex-row align-items-center m-auto">
                         <img id="menu_search" class="m-auto" src="{{asset('img/search_black.png')}}" height="40"
