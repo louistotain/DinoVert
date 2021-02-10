@@ -23,7 +23,7 @@ class ArticleController extends Controller
     {
         $articles = article::with(['tags' => function ($query) {
             $query->select('id', 'title');
-        }])->get(['id', 'title', 'description', 'slug', 'url_picture', 'articlescategs_id', 'created_at', 'updated_at']);
+        }])->paginate(6);
 
         $articlescategs = Articlescateg::all();
 

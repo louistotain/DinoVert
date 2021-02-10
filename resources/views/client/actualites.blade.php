@@ -33,6 +33,31 @@
 
             </div>
         </div>
+
+        <nav class="d-flex justify-content-center align-items-center">
+            <ul class="pagination">
+
+                <li class="page-item @if($articles->currentPage() == 1) disabled  @endif">
+                    <a class="page-link" href="{{route('actualites', 'page='.($articles->currentPage() - 1) )}}">Previous</a>
+                </li>
+
+                @for($i = 1; $i <= $articles->lastPage(); $i++)
+                    @if($i == $articles->currentPage())
+                        <li class="page-item active">
+                            <a class="page-link" href="{{route('actualites', 'page='.$i )}}">@php echo $i; @endphp <span
+                                    class="sr-only">(current)</span></a>
+                        </li>
+                    @else
+                        <li class="page-item"><a class="page-link" href="{{route('actualites', 'page='.$i )}}">@php echo $i; @endphp</a></li>
+                    @endif
+                @endfor
+
+                <li class="page-item @if($articles->currentPage() == $articles->lastPage()) disabled @endif">
+                    <a class="page-link" href="{{route('actualites', 'page='.($articles->currentPage() + 1) )}}">Next</a>
+                </li>
+            </ul>
+        </nav>
+
     </div>
 
 @endsection

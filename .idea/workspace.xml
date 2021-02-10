@@ -12,8 +12,9 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PropertyController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/ArticleController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/BiensAVendre.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/client/actualites.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,14 +228,7 @@
       <workItem from="1612712116362" duration="6487000" />
       <workItem from="1612804587531" duration="14657000" />
       <workItem from="1612823465715" duration="16559000" />
-      <workItem from="1612947331904" duration="8555000" />
-    </task>
-    <task id="LOCAL-00009" summary="updates routes controllers view properties">
-      <created>1611615279509</created>
-      <option name="number" value="00009" />
-      <option name="presentableId" value="LOCAL-00009" />
-      <option name="project" value="LOCAL" />
-      <updated>1611615279509</updated>
+      <workItem from="1612947331904" duration="13148000" />
     </task>
     <task id="LOCAL-00010" summary="properties : OK">
       <created>1611690603891</created>
@@ -572,7 +566,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612956405438</updated>
     </task>
-    <option name="localTasksCounter" value="58" />
+    <task id="LOCAL-00058" summary="navbar search OK 100%">
+      <created>1612956924011</created>
+      <option name="number" value="00058" />
+      <option name="presentableId" value="LOCAL-00058" />
+      <option name="project" value="LOCAL" />
+      <updated>1612956924011</updated>
+    </task>
+    <option name="localTasksCounter" value="59" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +593,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Update ADMIN : OK 100% YES" />
     <MESSAGE value="Header dynamique css client admin" />
     <MESSAGE value="Newsletter : Full OK ( bien dans le mail + désinscription)" />
     <MESSAGE value="Vues mentions légales + style footer" />
@@ -617,7 +617,8 @@
     <MESSAGE value="navbar search : responsive + animations OK" />
     <MESSAGE value="navbar search responsive Full OK + footer fixed bottom" />
     <MESSAGE value="correction bug resize nav search" />
-    <option name="LAST_COMMIT_MESSAGE" value="correction bug resize nav search" />
+    <MESSAGE value="navbar search OK 100%" />
+    <option name="LAST_COMMIT_MESSAGE" value="navbar search OK 100%" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612949778861">
@@ -664,10 +665,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612956406546">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612956925448">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612956406546" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612956925448" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -676,10 +677,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1612424925133" />
-    <state x="364" y="221" width="672" height="677" key="run.anything.popup" timestamp="1612955402319">
+    <state x="365" y="222" width="672" height="677" key="run.anything.popup" timestamp="1612962952371">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="364" y="221" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612955402319" />
+    <state x="365" y="222" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612962952371" />
     <state x="377" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1612908737060">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
