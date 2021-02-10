@@ -9,15 +9,15 @@
 
                 @foreach($articles as $article)
 
-                    <a href="{{route('actualites.details', ['article' => $article->id])}}" class="col-12 d-flex mb-5"
+                    <a href="{{route('actualites.details', ['article' => $article->id])}}" class="row w-100 d-flex mb-5"
                        style="text-decoration: none; color: unset;">
 
-                        <div class="col-6">
+                        <div class="col-12 col-sm-5 col-lg-4">
                             <img class="img_Actualites" src="{{ $article->url_picture }}">
                         </div>
 
 
-                        <div class="col-6">
+                        <div class="col-12 col-sm-7 col-lg-8 mt-3">
                             <h5>{{ $article->title }}</h5>
 
                             @foreach($articlescategs as $articlescateg)
@@ -32,7 +32,7 @@
                                 @endforeach
                             </p>
 
-                            <p>Description : {{ $article->description }}</p>
+                            <p>Description : {{ Str::limit($article->description, 100) }}</p>
                         </div>
 
                     </a>
