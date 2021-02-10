@@ -12,10 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Merise_UML_Maquette/Lien maquette.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0_Merise_UML_Maquette/Lien maquette.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Merise_UML_Maquette/MERISE DinoVert FINAL Louis TOTAIN.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/0_Merise_UML_Maquette/MERISE DinoVert FINAL Louis TOTAIN.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Merise_UML_Maquette/cas utilisation dinovert.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/0_Merise_UML_Maquette/cas utilisation dinovert.PNG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -229,14 +226,7 @@
       <workItem from="1612712116362" duration="6487000" />
       <workItem from="1612804587531" duration="14657000" />
       <workItem from="1612823465715" duration="16559000" />
-      <workItem from="1612947331904" duration="17340000" />
-    </task>
-    <task id="LOCAL-00015" summary="Factories tout ok">
-      <created>1611864660434</created>
-      <option name="number" value="00015" />
-      <option name="presentableId" value="LOCAL-00015" />
-      <option name="project" value="LOCAL" />
-      <updated>1611864660434</updated>
+      <workItem from="1612947331904" duration="19988000" />
     </task>
     <task id="LOCAL-00016" summary="Factories OK + controller etc newsletter ok">
       <created>1611864703015</created>
@@ -574,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612967831085</updated>
     </task>
-    <option name="localTasksCounter" value="64" />
+    <task id="LOCAL-00064" summary="TOUT EST OKKK">
+      <created>1612968310205</created>
+      <option name="number" value="00064" />
+      <option name="presentableId" value="LOCAL-00064" />
+      <option name="project" value="LOCAL" />
+      <updated>1612968310205</updated>
+    </task>
+    <option name="localTasksCounter" value="65" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -594,7 +591,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="wysitruc responsive : OK" />
     <MESSAGE value="Page d'acceuil 100% style fini (reponsive aussi)" />
     <MESSAGE value="Partie client OK 95% ( pb jquery header)" />
     <MESSAGE value="nav admin reposnive OK" />
@@ -619,7 +615,8 @@
     <MESSAGE value="btn admin responsive" />
     <MESSAGE value="style + responsive actualités" />
     <MESSAGE value="fichier bizarre" />
-    <option name="LAST_COMMIT_MESSAGE" value="fichier bizarre" />
+    <MESSAGE value="TOUT EST OKKK" />
+    <option name="LAST_COMMIT_MESSAGE" value="TOUT EST OKKK" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612949778861">
@@ -662,14 +659,14 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="247" height="198" key="ShowFilterAction_Filter_Popup/0.0.1368.872@0.0.1368.872" timestamp="1611004067615" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1612716220663">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1612969937090">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612967832265">
+    <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612969937090" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612968312253">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612967832265" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612968312253" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
@@ -678,10 +675,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state x="505" y="52" width="577" height="566" key="find.popup/0.0.1368.872@0.0.1368.872" timestamp="1612424925133" />
-    <state x="365" y="222" width="672" height="677" key="run.anything.popup" timestamp="1612962952371">
+    <state x="366" y="223" width="672" height="677" key="run.anything.popup" timestamp="1612969320297">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="365" y="222" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612962952371" />
+    <state x="366" y="223" width="672" height="677" key="run.anything.popup/0.0.1368.872@0.0.1368.872" timestamp="1612969320297" />
     <state x="377" y="214" width="672" height="678" key="search.everywhere.popup" timestamp="1612908737060">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
