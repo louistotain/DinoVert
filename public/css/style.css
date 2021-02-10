@@ -2,6 +2,33 @@
     box-sizing: border-box;
 }
 
+.page-item.disabled .page-link{
+    background-color: #ececec ;
+    border-color: white ;
+    color: #a7a7a7;
+}
+
+.page-link{
+    background-color: #efefef ;
+    color: black ;
+    border-color: white ;
+}
+
+.page-link, .page-link:hover, .page-link:focus{
+    box-shadow: none !important;
+}
+
+.page-link:hover{
+    background-color: #efefef ;
+    border-color: white ;
+    color: black ;
+}
+
+.page-item.active .page-link{
+    background-color: #E7A83F ;
+    border-color: white;
+}
+
 #scrollbar_burger::-webkit-scrollbar{
     display: none;
 }

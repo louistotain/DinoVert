@@ -35,10 +35,10 @@
         </div>
 
         <nav class="d-flex justify-content-center align-items-center">
-            <ul class="pagination">
+            <ul class="pagination w-100 justify-content-center align-items-center flex-wrap">
 
                 <li class="page-item @if($articles->currentPage() == 1) disabled  @endif">
-                    <a class="page-link" href="{{route('actualites', 'page='.($articles->currentPage() - 1) )}}">Previous</a>
+                    <a class="page-link" href="{{route('actualites', 'page='.($articles->currentPage() - 1) )}}">Précédent</a>
                 </li>
 
                 @for($i = 1; $i <= $articles->lastPage(); $i++)
@@ -53,7 +53,7 @@
                 @endfor
 
                 <li class="page-item @if($articles->currentPage() == $articles->lastPage()) disabled @endif">
-                    <a class="page-link" href="{{route('actualites', 'page='.($articles->currentPage() + 1) )}}">Next</a>
+                    <a class="page-link" href="{{route('actualites', 'page='.($articles->currentPage() + 1) )}}">Suivant</a>
                 </li>
             </ul>
         </nav>
