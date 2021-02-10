@@ -12,7 +12,10 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/svcsd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Merise_UML_Maquette/Lien maquette.txt" beforeDir="false" afterPath="$PROJECT_DIR$/0_Merise_UML_Maquette/Lien maquette.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Merise_UML_Maquette/MERISE DinoVert FINAL Louis TOTAIN.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/0_Merise_UML_Maquette/MERISE DinoVert FINAL Louis TOTAIN.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Merise_UML_Maquette/cas utilisation dinovert.PNG" beforeDir="false" afterPath="$PROJECT_DIR$/0_Merise_UML_Maquette/cas utilisation dinovert.PNG" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeders/DatabaseSeeder.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -226,14 +229,7 @@
       <workItem from="1612712116362" duration="6487000" />
       <workItem from="1612804587531" duration="14657000" />
       <workItem from="1612823465715" duration="16559000" />
-      <workItem from="1612947331904" duration="16961000" />
-    </task>
-    <task id="LOCAL-00014" summary="Tout admin OK">
-      <created>1611787041225</created>
-      <option name="number" value="00014" />
-      <option name="presentableId" value="LOCAL-00014" />
-      <option name="project" value="LOCAL" />
-      <updated>1611787041225</updated>
+      <workItem from="1612947331904" duration="17340000" />
     </task>
     <task id="LOCAL-00015" summary="Factories tout ok">
       <created>1611864660434</created>
@@ -571,7 +567,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612967793813</updated>
     </task>
-    <option name="localTasksCounter" value="63" />
+    <task id="LOCAL-00063" summary="fichier bizarre">
+      <created>1612967831085</created>
+      <option name="number" value="00063" />
+      <option name="presentableId" value="LOCAL-00063" />
+      <option name="project" value="LOCAL" />
+      <updated>1612967831085</updated>
+    </task>
+    <option name="localTasksCounter" value="64" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +594,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Jquery accueil header menu : 80%" />
     <MESSAGE value="wysitruc responsive : OK" />
     <MESSAGE value="Page d'acceuil 100% style fini (reponsive aussi)" />
     <MESSAGE value="Partie client OK 95% ( pb jquery header)" />
@@ -616,7 +618,8 @@
     <MESSAGE value="pagination style" />
     <MESSAGE value="btn admin responsive" />
     <MESSAGE value="style + responsive actualités" />
-    <option name="LAST_COMMIT_MESSAGE" value="style + responsive actualités" />
+    <MESSAGE value="fichier bizarre" />
+    <option name="LAST_COMMIT_MESSAGE" value="fichier bizarre" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612949778861">
@@ -663,10 +666,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612716220663" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612967795588">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612967832265">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612967795588" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612967832265" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
