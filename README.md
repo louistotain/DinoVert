@@ -9,7 +9,7 @@ Ce site est un site de vente Immobilière assez spécial car on peut y vendre : 
 
 <p>- Des Maisons,</p>
 <p>- Des Appartements,</p>
-<h5>- Et des Enclos à dinosaures.</h5>
+<h3>- Et des Enclos à dinosaures.</h3>
 
 <br>
 <p>On peut aussi y consulter des articles.</p>

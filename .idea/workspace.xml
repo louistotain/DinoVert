@@ -226,14 +226,7 @@
       <workItem from="1612804587531" duration="14657000" />
       <workItem from="1612823465715" duration="16559000" />
       <workItem from="1612947331904" duration="19988000" />
-      <workItem from="1612971225432" duration="275000" />
-    </task>
-    <task id="LOCAL-00016" summary="Factories OK + controller etc newsletter ok">
-      <created>1611864703015</created>
-      <option name="number" value="00016" />
-      <option name="presentableId" value="LOCAL-00016" />
-      <option name="project" value="LOCAL" />
-      <updated>1611864703015</updated>
+      <workItem from="1612971225432" duration="335000" />
     </task>
     <task id="LOCAL-00017" summary="Validations OK">
       <created>1611866743039</created>
@@ -571,7 +564,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612968310205</updated>
     </task>
-    <option name="localTasksCounter" value="65" />
+    <task id="LOCAL-00065" summary="update README.md">
+      <created>1612971514355</created>
+      <option name="number" value="00065" />
+      <option name="presentableId" value="LOCAL-00065" />
+      <option name="project" value="LOCAL" />
+      <updated>1612971514356</updated>
+    </task>
+    <option name="localTasksCounter" value="66" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -591,7 +591,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Page d'acceuil 100% style fini (reponsive aussi)" />
     <MESSAGE value="Partie client OK 95% ( pb jquery header)" />
     <MESSAGE value="nav admin reposnive OK" />
     <MESSAGE value="add .env" />
@@ -616,7 +615,8 @@
     <MESSAGE value="style + responsive actualités" />
     <MESSAGE value="fichier bizarre" />
     <MESSAGE value="TOUT EST OKKK" />
-    <option name="LAST_COMMIT_MESSAGE" value="TOUT EST OKKK" />
+    <MESSAGE value="update README.md" />
+    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612949778861">
@@ -663,10 +663,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612969937090" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612968312253">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612971516721">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612968312253" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612971516721" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
