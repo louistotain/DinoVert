@@ -12,7 +12,7 @@
   <component name="ChangeListManager">
     <list default="true" id="3a05cd41-dd68-4c22-900d-ee7371258ccc" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/guest.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -227,14 +227,7 @@
       <workItem from="1612804587531" duration="14657000" />
       <workItem from="1612823465715" duration="16559000" />
       <workItem from="1612947331904" duration="19988000" />
-      <workItem from="1612971225432" duration="502000" />
-    </task>
-    <task id="LOCAL-00018" summary="Update + Logs OK + commencement event envoi mails">
-      <created>1611873780596</created>
-      <option name="number" value="00018" />
-      <option name="presentableId" value="LOCAL-00018" />
-      <option name="project" value="LOCAL" />
-      <updated>1611873780596</updated>
+      <workItem from="1612971225432" duration="604000" />
     </task>
     <task id="LOCAL-00019" summary="Update Newsletter controller etc Events + 3 derniers bien en ventes OK">
       <created>1611930261016</created>
@@ -572,7 +565,14 @@
       <option name="project" value="LOCAL" />
       <updated>1612971569289</updated>
     </task>
-    <option name="localTasksCounter" value="67" />
+    <task id="LOCAL-00067" summary="update title app.blade.php">
+      <created>1612971744283</created>
+      <option name="number" value="00067" />
+      <option name="presentableId" value="LOCAL-00067" />
+      <option name="project" value="LOCAL" />
+      <updated>1612971744283</updated>
+    </task>
+    <option name="localTasksCounter" value="68" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -592,7 +592,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
-    <MESSAGE value="Partie client OK 95% ( pb jquery header)" />
     <MESSAGE value="nav admin reposnive OK" />
     <MESSAGE value="add .env" />
     <MESSAGE value="reponsive et bien placé message erreur page acceuil" />
@@ -617,7 +616,8 @@
     <MESSAGE value="fichier bizarre" />
     <MESSAGE value="TOUT EST OKKK" />
     <MESSAGE value="update README.md" />
-    <option name="LAST_COMMIT_MESSAGE" value="update README.md" />
+    <MESSAGE value="update title app.blade.php" />
+    <option name="LAST_COMMIT_MESSAGE" value="update title app.blade.php" />
   </component>
   <component name="WindowStateProjectService">
     <state x="455" y="234" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1612949778861">
@@ -664,10 +664,10 @@
       <screen x="0" y="0" width="1368" height="872" />
     </state>
     <state width="498" height="446" key="SwitcherDM/0.0.1368.872@0.0.1368.872" timestamp="1612969937090" />
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612971571538">
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2" timestamp="1612971745422">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
-    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612971571538" />
+    <state x="277" y="165" key="Vcs.Push.Dialog.v2/0.0.1368.872@0.0.1368.872" timestamp="1612971745422" />
     <state x="286" y="47" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1612182039240">
       <screen x="0" y="0" width="1368" height="872" />
     </state>
